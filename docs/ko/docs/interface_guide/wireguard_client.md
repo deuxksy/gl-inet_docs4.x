@@ -1,569 +1,570 @@
-# Set Up WireGuard Client on GL.iNet Routers
+# GL.iNet 라우터에 WireGuard 클라이언트 설정
 
-**Note**: This guide applies to firmware v4.7 and later. For earlier versions, please refer [here](wireguard_client_v4.6.md).
+**참고**: 이 가이드는 펌웨어 v4.7 이상에 적용됩니다. 이전 버전은 [여기](wireguard_client_v4.6.md)를 참조하세요.
 
 ---
 
-WireGuard® is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography. It aims to be faster, simpler, leaner, and more useful than IPsec, while avoiding the massive headache. It intends to be considerably more performant than OpenVPN.
+WireGuard®는 최신 암호화 기술을 활용하는 매우 간단하면서도 빠르고 현대적인 VPN입니다. IPsec보다 빠르고, 간단하고, 가볍고, 유용하면서도 대규모 두통을 피하는 것을 목표로 합니다. OpenVPN보다 상당히 뛰어난 성능을 제공합니다.
 
-To set up WireGuard client on a GL.iNet router, watch this video or refer to the steps below.
+GL.iNet 라우터에 WireGuard 클라이언트를 설정하려면 이 동영상을 시청하거나 아래 단계를 참조하세요.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VIRcjB9k62A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 
-Before you start, ensure you have an active subscription with a VPN service provider that supports WireGuard manual configuration. Click [here](https://www.gl-inet.com/solutions/vpn/){target="_blank"} to check the WireGuard providers compatible with GL.iNet.
+시작하기 전에 WireGuard 수동 설정을 지원하는 VPN 서비스 제공업체와 활성 구독이 있는지 확인하세요. GL.iNet과 호환되는 WireGuard 제공업체를 확인하려면 [여기](https://www.gl-inet.com/solutions/vpn/){target="_blank"}를 클릭하세요.
 
-Generally, you need to visit the official website of the VPN service provider you subscribed first, obtain the configuration file, and upload it to the router to set it as a WireGuard client. If you don't know how to get the configuration file, refer to [this link](../tutorials/how_to_get_configuration_files_from_wireguard_service_providers.md) or contact their support.
+일반적으로 먼저 구독한 VPN 서비스 제공업체의 공식 웹사이트를 방문하여 설정 파일을 가져온 다음 라우터에 업로드하여 WireGuard 클라이언트로 설정해야 합니다. 설정 파일을 가져오는 방법을 모르는 경우 [이 링크](../tutorials/how_to_get_configuration_files_from_wireguard_service_providers.md)를 참조하거나 지원팀에 문의하세요.
 
-You can set up a WireGuard client via the web Admin Panel or [mobile app](../faq/mobile_app.md). 
+[모바일 앱](../faq/mobile_app.md) 또는 웹 관리 패널을 통해 WireGuard 클라이언트를 설정할 수 있습니다.
 
-- **The mobile app** integrates some WireGuard service providers, such as AzireVPN, Mullvad VPN, OVPN, StrongVPN, PIA VPN, etc., which means you can easily set it up by simply entering the login credentials of the WireGuard service you subscribed to. Open the app and follow the on-screen instructions to set up.
+- **모바일 앱**은 AzireVPN, Mullvad VPN, OVPN, StrongVPN, PIA VPN 등 일부 WireGuard 서비스 제공업체를 통합하므로 구독한 WireGuard 서비스의 로그인 자격 증명을 입력하기만 하면 쉽게 설정할 수 있습니다. 앱을 열고 화면의 지시에 따라 설정하세요.
 
-- **The web Admin Panel** not only integrates some WireGuard service providers, but also provides an entry for manual configuration. You can either enter the credentials of your subscribed WireGuard service for quick setup, or manually upload a configuration file to complete the setup.
+- **웹 관리 패널**은 일부 WireGuard 서비스 제공업체를 통합할 뿐만 아니라 수동 설정을 위한 항목도 제공합니다. 구독한 WireGuard 서비스의 자격 증명을 입력하여 빠르게 설정하거나 설정 파일을 수동으로 업로드하여 설정을 완료할 수 있습니다.
 
-Below are steps to set up via the web admin panel. Select the corresponding WireGuard service provider below to quickly locate the step-by-step instructions.
+아래는 웹 관리 패널을 통해 설정하는 단계입니다. 해당 WireGuard 서비스 제공업체를 선택하여 단계별 지침을 빠르게 찾으세요.
 
-* [Set Up AzireVPN](#set-up-azirevpn)
-* [Set Up Hide.me](#set-up-hideme)
-* [Set Up IPVanish](#set-up-ipvanish)
-* [Set Up Mullvad](#set-up-mullvad)
-* [Set Up NordVPN](#set-up-nordvpn)
-* [Set Up PIA (Private Internet Access)](#set-up-pia-private-internet-access)
-* [Set up PureVPN](#set-up-purevpn)
-* [Set Up Surfshark](#set-up-surfshark)
-* [Set Up WireGuard Client Manually (for other providers)](#set-up-wireguard-client-manually-for-other-providers)
+* [AzireVPN 설정](#set-up-azirevpn)
+* [Hide.me 설정](#set-up-hideme)
+* [IPVanish 설정](#set-up-ipvanish)
+* [Mullvad 설정](#set-up-mullvad)
+* [NordVPN 설정](#set-up-nordvpn)
+* [PIA (Private Internet Access) 설정](#set-up-pia-private-internet-access)
+* [PureVPN 설정](#set-up-purevpn)
+* [Surfshark 설정](#set-up-surfshark)
+* [Windscribe 설정](#set-up-windscribe)
+* [WireGuard 클라이언트 수동 설정 (기타 제공업체)](#set-up-wireguard-client-manually-for-other-providers)
 
-## Set Up AzireVPN {#set-up-azirevpn}
+## AzireVPN 설정 {#set-up-azirevpn}
 
-[AzireVPN](https://www.azirevpn.com/aff/9x7wisg4){target="_blank"} is privacy-minded VPN service providing secure, modern and robust tunnels such as WireGuard.
+[AzireVPN](https://www.azirevpn.com/aff/9x7wisg4){target="_blank"}은 보안, 현대적이고 강력한 터널(예: WireGuard)을 제공하는 개인 정보 보호 중심의 VPN 서비스입니다.
 
-Watch this video to set up AzireVPN on GL.iNet routers via the web Admin Panel or mobile app.
+웹 관리 패널 또는 모바일 앱을 통해 GL.iNet 라우터에 AzireVPN을 설정하려면 이 동영상을 시청하세요.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ra93wlDIekA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Or follow the steps below to set up AzireVPN via web Admin Panel.
+또는 아래 단계에 따라 웹 관리 패널을 통해 AzireVPN을 설정하세요.
 
-In the web Admin Panel, go to **VPN** -> **WireGuard Client** -> **AzireVPN**.
+웹 관리 패널에서 **VPN** -> **WireGuard Client** -> **AzireVPN**으로 이동합니다.
 
-1. Input **Username** and **Password**, then click **Save and Continue**. It will generate configuration files for each server.
+1. **Username**과 **Password**를 입력한 다음 **Save and Continue**를 클릭하세요. 각 서버에 대한 설정 파일이 생성됩니다.
 
-    ![azirevpn login](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_azirevpn/azirevpn1.png){class="glboxshadow"}
+    ![azirevpn login](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_azirevpn/azirevpn1.png){class="glboxshadow"}
 
-2. Start a connection.
+2. 연결 시작합니다.
 
-    Select your preferred server, and click the three-dot icon on the right to start a connection.
+    원하는 서버를 선택하고 오른쪽의 점 3개 아이콘을 클릭하여 연결을 시작합니다.
 
-    ![azirevpn start](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_azirevpn/azirevpn2.png){class="glboxshadow"}
+    ![azirevpn start](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_azirevpn/azirevpn2.png){class="glboxshadow"}
 
-    Once connected, a green dot will appear next to the configuration file.
+    연결되면 설정 파일 옆에 녹색 점이 나타납니다.
 
-    ![azirevpn connected](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_azirevpn/azirevpn3.png){class="glboxshadow"}
-    
-    And the VPN connection details will be displayed on the **VPN Dashboard**.
+    ![azirevpn connected](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_azirevpn/azirevpn3.png){class="glboxshadow"}
 
-    ![azirevpn connection status](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_azirevpn/azirevpn4.png){class="glboxshadow"}
+    그리고 **VPN Dashboard**에 VPN 연결 세부 정보가 표시됩니다.
 
-3. Update servers.
+    ![azirevpn connection status](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_azirevpn/azirevpn4.png){class="glboxshadow"}
 
-    You can click **Update Servers** to obtain the latest available server list, avoiding connection failures caused by server maintenance or shutdown.
+3. 서버 업데이트합니다.
 
-    ![azirevpn update servers](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_azirevpn/azirevpn5.png){class="glboxshadow"}
+    **Update Servers**를 클릭하여 최신 사용 가능한 서버 목록을 가져와 서버 유지 관리 또는 종료로 인한 연결 실패를 방지하세요.
 
-4. Edit credentials or logout.
+    ![azirevpn update servers](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_azirevpn/azirevpn5.png){class="glboxshadow"}
 
-    Click the gear icon to edit your login credentials or log out.
+4. 자격 증명 편집 또는 로그아웃합니다.
 
-    ![azirevpn edit credentials or logout](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_azirevpn/azirevpn6.png){class="glboxshadow"}
+    기어 아이콘을 클릭하여 로그인 자격 증명을 편집하거나 로그아웃하세요.
 
-5. Go renew.
+    ![azirevpn edit credentials or logout](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_azirevpn/azirevpn6.png){class="glboxshadow"}
 
-    If you click **Go Renew**, you will be re-directed to the official website to renew your subscription.
+5. 구독 갱신합니다.
 
-    ![azirevpn go renew](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_azirevpn/azirevpn7.png){class="glboxshadow"}
+    **Go Renew**를 클릭하면 구독을 갱신하기 위해 공식 웹사이트로 리디렉션됩니다.
 
-6. Delete All.
+    ![azirevpn go renew](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_azirevpn/azirevpn7.png){class="glboxshadow"}
 
-    You can click **Delete All** to delete all configuration files with one click, and choose whether to delete the private and public keys simultaneously.
+6. 모두 삭제합니다.
 
-    ![azirevpn delete](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_azirevpn/azirevpn8.png){class="glboxshadow"}
+    **Delete All**을 클릭하여 클릭 한 번으로 모든 설정 파일을 삭제하고 개인 키와 공개 키를 동시에 삭제할지 선택할 수 있습니다.
 
-## Set Up Hide.me {#set-up-hideme}
+    ![azirevpn delete](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_azirevpn/azirevpn8.png){class="glboxshadow"}
 
-[Official Website](https://www.hideipvpn.com/){target="_blank"}
+## Hide.me 설정 {#set-up-hideme}
 
-In the web Admin Panel, go to **VPN** -> **WireGuard Client** -> **Hide.me**.
+[공식 웹사이트](https://www.hideipvpn.com/){target="_blank"}
 
-1. Input **Username** and **Password**, then click **Save and Continue**. It will generate configuration files for each server.
+웹 관리 패널에서 **VPN** -> **WireGuard Client** -> **Hide.me**로 이동합니다.
 
-    ![hideme login](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_hidemevpn/hideme1.png){class="glboxshadow"}
+1. **Username**과 **Password**를 입력한 다음 **Save and Continue**를 클릭하세요. 각 서버에 대한 설정 파일이 생성됩니다.
 
-2. Start a connection.
+    ![hideme login](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_hidemevpn/hideme1.png){class="glboxshadow"}
 
-    Select your preferred server, and click the three-dot icon on the right to start a connection.
+2. 연결 시작합니다.
 
-    ![hideme start](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_hidemevpn/hideme2.png){class="glboxshadow"}
+    원하는 서버를 선택하고 오른쪽의 점 3개 아이콘을 클릭하여 연결을 시작합니다.
 
-    Once connected, a green dot will appear next to the configuration file.
+    ![hideme start](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_hidemevpn/hideme2.png){class="glboxshadow"}
 
-    ![hideme connected](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_hidemevpn/hideme3.png){class="glboxshadow"}
+    연결되면 설정 파일 옆에 녹색 점이 나타납니다.
 
-    And the VPN connection details will be displayed on the **VPN Dashboard**.
+    ![hideme connected](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_hidemevpn/hideme3.png){class="glboxshadow"}
 
-    ![hideme connection status](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_hidemevpn/hideme4.png){class="glboxshadow"}
+    그리고 **VPN Dashboard**에 VPN 연결 세부 정보가 표시됩니다.
 
-3. Update servers.
+    ![hideme connection status](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_hidemevpn/hideme4.png){class="glboxshadow"}
 
-    You can click **Update Servers** to obtain the latest available server list, avoiding connection failures caused by server maintenance or shutdown.
+3. 서버 업데이트합니다.
 
-    ![hideme update servers](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_hidemevpn/hideme5.png){class="glboxshadow"}
+    **Update Servers**를 클릭하여 최신 사용 가능한 서버 목록을 가져와 서버 유지 관리 또는 종료로 인한 연결 실패를 방지하세요.
 
-4. Edit credentials or logout.
+    ![hideme update servers](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_hidemevpn/hideme5.png){class="glboxshadow"}
 
-    Click the gear icon to edit your login credentials or log out.
+4. 자격 증명 편집 또는 로그아웃합니다.
 
-    ![hideme edit credentials or logout](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_hidemevpn/hideme6.png){class="glboxshadow"}
+    기어 아이콘을 클릭하여 로그인 자격 증명을 편집하거나 로그아웃하세요.
 
-5. Delete All.
+    ![hideme edit credentials or logout](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_hidemevpn/hideme6.png){class="glboxshadow"}
 
-    You can click **Delete All** to delete all configuration files with one click, and choose whether to delete the private and public keys simultaneously.
+5. 모두 삭제합니다.
 
-    ![hide.me delete](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_hidemevpn/hideme7.png){class="glboxshadow"}
+    **Delete All**을 클릭하여 클릭 한 번으로 모든 설정 파일을 삭제하고 개인 키와 공개 키를 동시에 삭제할지 선택할 수 있습니다.
 
-## Set Up IPVanish {#set-up-ipvanish}
+    ![hide.me delete](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_hidemevpn/hideme7.png){class="glboxshadow"}
 
-[Official Website](https://affiliate.ipvanish.com/aff_c?offer_id=1&aff_id=3073){target="_blank"}
+## IPVanish 설정 {#set-up-ipvanish}
 
-In the web Admin Panel, go to **VPN** -> **WireGuard Client** -> **IPVanish**.
+[공식 웹사이트](https://affiliate.ipvanish.com/aff_c?offer_id=1&aff_id=3073){target="_blank"}
 
-1. Input **Username** and **Password**, then click **Save and Continue**. It will generate configuration files for each server.
+웹 관리 패널에서 **VPN** -> **WireGuard Client** -> **IPVanish**로 이동합니다.
 
-    ![ipvanish login](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_ipvanish/ipvanish1.png){class="glboxshadow"}
+1. **Username**과 **Password**를 입력한 다음 **Save and Continue**를 클릭하세요. 각 서버에 대한 설정 파일이 생성됩니다.
 
-2. Select servers.
+    ![ipvanish login](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_ipvanish/ipvanish1.png){class="glboxshadow"}
 
-    Select the server(s) you want to connect to, and click **Apply**.
+2. 서버를 선택합니다.
 
-    ![ipvanish select servers](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_ipvanish/ipvanish2.png){class="glboxshadow"}
+    연결하려는 서버를 선택하고 **Apply**를 클릭하세요.
 
-3. Start a connection.
+    ![ipvanish select servers](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_ipvanish/ipvanish2.png){class="glboxshadow"}
 
-    Select your preferred server, and click the three-dot icon on the right to start a connection.
+3. 연결 시작합니다.
 
-    ![ipvanish start](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_ipvanish/ipvanish3.png){class="glboxshadow"}
+    원하는 서버를 선택하고 오른쪽의 점 3개 아이콘을 클릭하여 연결을 시작합니다.
 
-    Once connected, a green dot will appear next to the configuration file.
+    ![ipvanish start](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_ipvanish/ipvanish3.png){class="glboxshadow"}
 
-    ![ipvanish connected](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_ipvanish/ipvanish4.png){class="glboxshadow"}
+    연결되면 설정 파일 옆에 녹색 점이 나타납니다.
 
-    And the VPN connection details will be displayed on the **VPN Dashboard**.
+    ![ipvanish connected](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_ipvanish/ipvanish4.png){class="glboxshadow"}
 
-    ![ipvanish connection status](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_ipvanish/ipvanish5.png){class="glboxshadow"}
+    그리고 **VPN Dashboard**에 VPN 연결 세부 정보가 표시됩니다.
 
-4. Update servers.
+    ![ipvanish connection status](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_ipvanish/ipvanish5.png){class="glboxshadow"}
 
-    You can click **Update Servers** to obtain the latest available server list, avoiding connection failures caused by server maintenance or shutdown.
+4. 서버 업데이트합니다.
 
-    ![ipvanish update servers](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_ipvanish/ipvanish6.png){class="glboxshadow"}
+    **Update Servers**를 클릭하여 최신 사용 가능한 서버 목록을 가져와 서버 유지 관리 또는 종료로 인한 연결 실패를 방지하세요.
 
-5. Edit credentials or logout.
+    ![ipvanish update servers](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_ipvanish/ipvanish6.png){class="glboxshadow"}
 
-    Click the gear icon to edit your login credentials or log out.
+5. 자격 증명 편집 또는 로그아웃합니다.
 
-    ![ipvanish edit credentials or logout](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_ipvanish/ipvanish7.png){class="glboxshadow"}
+    기어 아이콘을 클릭하여 로그인 자격 증명을 편집하거나 로그아웃하세요.
 
-6. Delete All.
+    ![ipvanish edit credentials or logout](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_ipvanish/ipvanish7.png){class="glboxshadow"}
 
-    You can click **Delete All** to delete all configuration files with one click, and choose whether to delete the private and public keys simultaneously.
+6. 모두 삭제합니다.
 
-    ![ipvanish delete](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_ipvanish/ipvanish8.png){class="glboxshadow"}
+    **Delete All**을 클릭하여 클릭 한 번으로 모든 설정 파일을 삭제하고 개인 키와 공개 키를 동시에 삭제할지 선택할 수 있습니다.
 
-## Set Up Mullvad {#set-up-mullvad}
+    ![ipvanish delete](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_ipvanish/ipvanish8.png){class="glboxshadow"}
 
-[Mullvad](https://mullvad.net/){target="_blank"} is a VPN service that helps keep your online activity, identity, and location private.
+## Mullvad 설정 {#set-up-mullvad}
 
-In the web Admin Panel, go to **VPN** -> **WireGuard Client** -> **Mullvad**.
+[Mullvad](https://mullvad.net/){target="_blank"}은 온라인 활동, 신원 및 위치를 비공개로 유지하는 데 도움이 되는 VPN 서비스입니다.
 
-1. Input **Account**, then click **Save and Continue**. It will generate configuration files for each server.
+웹 관리 패널에서 **VPN** -> **WireGuard Client** -> **Mullvad**로 이동합니다.
 
-    ![mullvad login](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_mullvad/mullvad1.png){class="glboxshadow"}
+1. **Account**를 입력한 다음 **Save and Continue**를 클릭하세요. 각 서버에 대한 설정 파일이 생성됩니다.
 
-2. Select servers.
+    ![mullvad login](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_mullvad/mullvad1.png){class="glboxshadow"}
 
-    Select the server(s) you want to connect to, and click **Apply**.
+2. 서버를 선택합니다.
 
-    ![mullvad select server](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_mullvad/mullvad2.png){class="glboxshadow"}
+    연결하려는 서버를 선택하고 **Apply**를 클릭하세요.
 
-3. Start a connection.
+    ![mullvad select server](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_mullvad/mullvad2.png){class="glboxshadow"}
 
-    Select your preferred server, and click the three-dot icon on the right to start a connection.
+3. 연결 시작합니다.
 
-    ![mullvad start](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_mullvad/mullvad3.png){class="glboxshadow"}
-    
-    Once connected, a green dot will appear next to the configuration file.
+    원하는 서버를 선택하고 오른쪽의 점 3개 아이콘을 클릭하여 연결을 시작합니다.
 
-    ![mullvad connected](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_mullvad/mullvad4.png){class="glboxshadow"}
+    ![mullvad start](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_mullvad/mullvad3.png){class="glboxshadow"}
 
-    And the VPN connection details will be displayed on the **VPN Dashboard**.
+    연결되면 설정 파일 옆에 녹색 점이 나타납니다.
 
-    ![mullvad connection status](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_mullvad/mullvad5.png){class="glboxshadow"}
+    ![mullvad connected](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_mullvad/mullvad4.png){class="glboxshadow"}
 
-4. Update servers.
+    그리고 **VPN Dashboard**에 VPN 연결 세부 정보가 표시됩니다.
 
-    You can click **Update Servers** to obtain the latest available server list, avoiding connection failures caused by server maintenance or shutdown.
+    ![mullvad connection status](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_mullvad/mullvad5.png){class="glboxshadow"}
 
-    ![mullvad update servers](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_mullvad/mullvad6.png){class="glboxshadow"}
+4. 서버 업데이트합니다.
 
-5. Edit credentials or logout.
+    **Update Servers**를 클릭하여 최신 사용 가능한 서버 목록을 가져와 서버 유지 관리 또는 종료로 인한 연결 실패를 방지하세요.
 
-    Click the gear icon to edit your login credentials or log out.
+    ![mullvad update servers](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_mullvad/mullvad6.png){class="glboxshadow"}
 
-    ![mullvad edit credentials or logout](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_mullvad/mullvad7.png){class="glboxshadow"}
+5. 자격 증명 편집 또는 로그아웃합니다.
 
-6. Go renew.
+    기어 아이콘을 클릭하여 로그인 자격 증명을 편집하거나 로그아웃하세요.
 
-    If you click **Go Renew**, you will be re-directed to the official website to renew your subscription.
+    ![mullvad edit credentials or logout](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_mullvad/mullvad7.png){class="glboxshadow"}
 
-    ![mullvad go renew](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_mullvad/mullvad8.png){class="glboxshadow"}
+6. 구독 갱신합니다.
 
-7. Delete All.
+    **Go Renew**를 클릭하면 구독을 갱신하기 위해 공식 웹사이트로 리디렉션됩니다.
 
-    You can click **Delete All** to delete all configuration files with one click, and choose whether to delete the private and public keys simultaneously.
+    ![mullvad go renew](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_mullvad/mullvad8.png){class="glboxshadow"}
 
-    ![mullvad delete](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_mullvad/mullvad9.png){class="glboxshadow"}
+7. 모두 삭제합니다.
 
-## Set Up NordVPN {#set-up-nordvpn}
+    **Delete All**을 클릭하여 클릭 한 번으로 모든 설정 파일을 삭제하고 개인 키와 공개 키를 동시에 삭제할지 선택할 수 있습니다.
 
-[NordVPN](https://go.nordvpn.net/aff_c?offer_id=15&amp;aff_id=12016&amp;url_id=902){target="_blank"} is an online VPN service that combines speed and security.
+    ![mullvad delete](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_mullvad/mullvad9.png){class="glboxshadow"}
 
-1. Click [here](https://my.nordaccount.com/){target="_blank"} to log in with your NordVPN web account.
+## NordVPN 설정 {#set-up-nordvpn}
 
-    ![nordvpn](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/nordvpn_login.png){class="glboxshadow"}
-    
-    After logging in to the Nord dashboard, click NordVPN on the left side, then click **Set up NordVPN manually**.
+[NordVPN](https://go.nordvpn.net/aff_c?offer_id=15&amp;aff_id=12016&amp;url_id=902){target="_blank"}은 속도와 보안을 결합한 온라인 VPN 서비스입니다.
 
-    ![nordvpn](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/nordvpn_dashboard.png){class="glboxshadow"}
+1. [여기](https://my.nordaccount.com/){target="_blank"}를 클릭하여 NordVPN 웹 계정으로 로그인하세요.
 
-    Then you will find the **Access token**.
+    ![nordvpn](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/nordvpn_login.png){class="glboxshadow"}
 
-    ![nordvpn get credentials](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/manual_setup.png){class="glboxshadow"}
+    Nord 대시보드에 로그인한 후 왼쪽에서 NordVPN을 클릭한 다음 **Set up NordVPN manually**를 클릭하세요.
 
-    ![nordvpn get credentials](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/generate_new_token.png){class="glboxshadow"}
+    ![nordvpn](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/nordvpn_dashboard.png){class="glboxshadow"}
 
-    ![nordvpn get credentials](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/copy_access_token.png){class="glboxshadow"}
+    그러면 **Access token**을 찾을 수 있습니다.
 
-2. Log in to the router's web Admin Panel, go to **VPN** -> **WireGuard Client** -> **NordVPN**. 
+    ![nordvpn get credentials](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/manual_setup.png){class="glboxshadow"}
 
-    Input **Token**, then click **Save and Continue**. It will generate configuration files for each server.
+    ![nordvpn get credentials](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/generate_new_token.png){class="glboxshadow"}
 
-    ![nordvpn login](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/nordvpn1.png){class="glboxshadow"}
+    ![nordvpn get credentials](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/copy_access_token.png){class="glboxshadow"}
 
-3. Select servers.
+2. 라우터의 웹 관리 패널에 로그인하고 **VPN** -> **WireGuard Client** -> **NordVPN**으로 이동합니다.
 
-    Select the server(s) you want to connect to, and click **Apply**.
+    **Token**을 입력한 다음 **Save and Continue**를 클릭하세요. 각 서버에 대한 설정 파일이 생성됩니다.
 
-    ![nordvpn select servers](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/nordvpn2.png){class="glboxshadow"}
+    ![nordvpn login](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/nordvpn1.png){class="glboxshadow"}
 
-4. Start a connection.
+3. 서버를 선택합니다.
 
-    Select your preferred server, and click the three-dot icon on the right to start a connection.
+    연결하려는 서버를 선택하고 **Apply**를 클릭하세요.
 
-    ![nordvpn start](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/nordvpn3.png){class="glboxshadow"}
+    ![nordvpn select servers](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/nordvpn2.png){class="glboxshadow"}
 
-    Once connected, a green dot will appear next to the configuration file.
+4. 연결 시작합니다.
 
-    ![nordvpn connected](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/nordvpn4.png){class="glboxshadow"}
+    원하는 서버를 선택하고 오른쪽의 점 3개 아이콘을 클릭하여 연결을 시작합니다.
 
-    And the VPN connection details will be displayed on the **VPN Dashboard**.
+    ![nordvpn start](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/nordvpn3.png){class="glboxshadow"}
 
-    ![nordvpn connection status](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/nordvpn5.png){class="glboxshadow"}
+    연결되면 설정 파일 옆에 녹색 점이 나타납니다.
 
-5. Update servers.
+    ![nordvpn connected](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/nordvpn4.png){class="glboxshadow"}
 
-    You can click **Update Servers** to obtain the latest available server list, avoiding connection failures caused by server maintenance or shutdown.
+    그리고 **VPN Dashboard**에 VPN 연결 세부 정보가 표시됩니다.
 
-    ![nordvpn update servers](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/nordvpn6.png){class="glboxshadow"}
+    ![nordvpn connection status](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/nordvpn5.png){class="glboxshadow"}
 
-6. Edit credentials or logout.
+5. 서버 업데이트합니다.
 
-    Click the gear icon to edit your login credentials or log out.
+    **Update Servers**를 클릭하여 최신 사용 가능한 서버 목록을 가져와 서버 유지 관리 또는 종료로 인한 연결 실패를 방지하세요.
 
-    ![nordvpn edit credentials or logout](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/nordvpn7.png){class="glboxshadow"}
+    ![nordvpn update servers](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/nordvpn6.png){class="glboxshadow"}
 
-7. Delete All.
+6. 자격 증명 편집 또는 로그아웃합니다.
 
-    You can click **Delete All** to delete all configuration files with one click, and choose whether to delete the private and public keys simultaneously.
+    기어 아이콘을 클릭하여 로그인 자격 증명을 편집하거나 로그아웃하세요.
 
-    ![nordvpn delete](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/nordvpn8.png){class="glboxshadow"}
+    ![nordvpn edit credentials or logout](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/nordvpn7.png){class="glboxshadow"}
 
-## Set Up PIA (Private Internet Access) {#set-up-pia-private-internet-access}
+7. 모두 삭제합니다.
 
-[Official Website](https://privateinternetaccess.com/offer/GLiNET_71dx4t8bl){target="_blank"}
+    **Delete All**을 클릭하여 클릭 한 번으로 모든 설정 파일을 삭제하고 개인 키와 공개 키를 동시에 삭제할지 선택할 수 있습니다.
 
-In the web Admin Panel, go to **VPN** -> **WireGuard Client** -> **PIA**.
+    ![nordvpn delete](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_nordvpn/nordvpn8.png){class="glboxshadow"}
 
-1. Input **Username** and **Password**, then click **Save and Continue**. It will generate configuration files for each server.
+## PIA (Private Internet Access) 설정 {#set-up-pia-private-internet-access}
 
-    ![pia login](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_pia/pia1.png){class="glboxshadow"}
+[공식 웹사이트](https://privateinternetaccess.com/offer/GLiNET_71dx4t8bl){target="_blank"}
 
-2. Select servers.
+웹 관리 패널에서 **VPN** -> **WireGuard Client** -> **PIA**로 이동합니다.
 
-    Select the server(s) you want to connect to, and click **Apply**.
+1. **Username**과 **Password**를 입력한 다음 **Save and Continue**를 클릭하세요. 각 서버에 대한 설정 파일이 생성됩니다.
 
-    ![pia select servers](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_pia/pia2.png){class="glboxshadow"}
+    ![pia login](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_pia/pia1.png){class="glboxshadow"}
 
-3. Start a connection.
+2. 서버를 선택합니다.
 
-    Select your preferred server, and click the three-dot icon on the right to start a connection.
+    연결하려는 서버를 선택하고 **Apply**를 클릭하세요.
 
-    ![pia start](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_pia/pia3.png){class="glboxshadow"}
+    ![pia select servers](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_pia/pia2.png){class="glboxshadow"}
 
-    Once connected, a green dot will appear next to the configuration file.
+3. 연결 시작합니다.
 
-    ![pia connected](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_pia/pia4.png){class="glboxshadow"}
+    원하는 서버를 선택하고 오른쪽의 점 3개 아이콘을 클릭하여 연결을 시작합니다.
 
-    And the VPN connection details will be displayed on the **VPN Dashboard**.
+    ![pia start](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_pia/pia3.png){class="glboxshadow"}
 
-    ![pia connection status](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_pia/pia5.png){class="glboxshadow"}
+    연결되면 설정 파일 옆에 녹색 점이 나타납니다.
 
-4. Update servers.
+    ![pia connected](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_pia/pia4.png){class="glboxshadow"}
 
-    You can click **Update Servers** to obtain the latest available server list, avoiding connection failures caused by server maintenance or shutdown.
+    그리고 **VPN Dashboard**에 VPN 연결 세부 정보가 표시됩니다.
 
-    ![pia update servers](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_pia/pia6.png){class="glboxshadow"}
+    ![pia connection status](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_pia/pia5.png){class="glboxshadow"}
 
-5. Edit credentials or logout.
+4. 서버 업데이트합니다.
 
-    Click the gear icon to edit your login credentials or log out.
+    **Update Servers**를 클릭하여 최신 사용 가능한 서버 목록을 가져와 서버 유지 관리 또는 종료로 인한 연결 실패를 방지하세요.
 
-    ![pia edit credential or logout](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_pia/pia7.png){class="glboxshadow"}
+    ![pia update servers](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_pia/pia6.png){class="glboxshadow"}
 
-6. Delete All.
+5. 자격 증명 편집 또는 로그아웃합니다.
 
-    You can click **Delete All** to delete all configuration files with one click, and choose whether to delete the private and public keys simultaneously.
+    기어 아이콘을 클릭하여 로그인 자격 증명을 편집하거나 로그아웃하세요.
 
-    ![pia delete](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_pia/pia8.png){class="glboxshadow"}
+    ![pia edit credential or logout](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_pia/pia7.png){class="glboxshadow"}
 
-## Set Up PureVPN {#set-up-purevpn}
+6. 모두 삭제합니다.
 
-[Official Website](https://billing.purevpn.com/aff.php?aff=35535){target="_blank"}
+    **Delete All**을 클릭하여 클릭 한 번으로 모든 설정 파일을 삭제하고 개인 키와 공개 키를 동시에 삭제할지 선택할 수 있습니다.
 
-In the web Admin Panel, go to **VPN** -> **WireGuard Client** -> **PureVPN**.
+    ![pia delete](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_pia/pia8.png){class="glboxshadow"}
 
-1. Input **Username** and **Password**, then click **Save and Continue**.
+## PureVPN 설정 {#set-up-purevpn}
 
-    ![purevpn login](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_purevpn/purevpn1.png){class="glboxshadow"}
+[공식 웹사이트](https://billing.purevpn.com/aff.php?aff=35535){target="_blank"}
 
-    It will generate all available configuration files.
+웹 관리 패널에서 **VPN** -> **WireGuard Client** -> **PureVPN**으로 이동합니다.
 
-    ![purevpn config files](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_purevpn/purevpn2.png){class="glboxshadow"}
+1. **Username**과 **Password**를 입력한 다음 **Save and Continue**를 클릭하세요.
 
-2. Start a connection.
+    ![purevpn login](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_purevpn/purevpn1.png){class="glboxshadow"}
 
-    Select your preferred server, and click the three-dot icon on the right to start a connection.
+    사용 가능한 모든 설정 파일이 생성됩니다.
 
-    ![purevpn start](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_purevpn/purevpn3.png){class="glboxshadow"}
+    ![purevpn config files](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_purevpn/purevpn2.png){class="glboxshadow"}
 
-    Once connected, a green dot will appear next to the configuration file.
+2. 연결 시작합니다.
 
-    ![purevpn connected](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_purevpn/purevpn4.png){class="glboxshadow"}
+    원하는 서버를 선택하고 오른쪽의 점 3개 아이콘을 클릭하여 연결을 시작합니다.
 
-    And the VPN connection details will be displayed on the **VPN Dashboard**.
+    ![purevpn start](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_purevpn/purevpn3.png){class="glboxshadow"}
 
-    ![purevpn connection status](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_purevpn/purevpn5.png){class="glboxshadow"}
+    연결되면 설정 파일 옆에 녹색 점이 나타납니다.
 
-4. Update servers.
+    ![purevpn connected](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_purevpn/purevpn4.png){class="glboxshadow"}
 
-    You can click **Update Servers** to obtain the latest available server list, avoiding connection failures caused by server maintenance or shutdown.
+    그리고 **VPN Dashboard**에 VPN 연결 세부 정보가 표시됩니다.
 
-    ![purevpn update servers](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_purevpn/purevpn6.png){class="glboxshadow"}
+    ![purevpn connection status](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_purevpn/purevpn5.png){class="glboxshadow"}
 
-5. Edit credentials or logout.
+4. 서버 업데이트합니다.
 
-    Click the gear icon to edit your login credentials or log out.
+    **Update Servers**를 클릭하여 최신 사용 가능한 서버 목록을 가져와 서버 유지 관리 또는 종료로 인한 연결 실패를 방지하세요.
 
-    ![purevpn edit credential or logout](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_purevpn/purevpn7.png){class="glboxshadow"}
+    ![purevpn update servers](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_purevpn/purevpn6.png){class="glboxshadow"}
 
-6. Delete All.
+5. 자격 증명 편집 또는 로그아웃합니다.
 
-    You can click **Delete All** to delete all configuration files with one click, and choose whether to delete the private and public keys simultaneously.
+    기어 아이콘을 클릭하여 로그인 자격 증명을 편집하거나 로그아웃하세요.
 
-    ![purevpn delete](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_purevpn/purevpn8.png){class="glboxshadow"}
+    ![purevpn edit credential or logout](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_purevpn/purevpn7.png){class="glboxshadow"}
 
-## Set Up Surfshark {#set-up-surfshark}
+6. 모두 삭제합니다.
 
-[Official Website](https://get.surfshark.net/aff_c?offer_id=926&aff_id=1400){target="_blank"}
+    **Delete All**을 클릭하여 클릭 한 번으로 모든 설정 파일을 삭제하고 개인 키와 공개 키를 동시에 삭제할지 선택할 수 있습니다.
 
-In the web Admin Panel, go to **VPN** -> **WireGuard Client** -> **Surfshark**.
+    ![purevpn delete](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_purevpn/purevpn8.png){class="glboxshadow"}
 
-1. Input **Username** and **Password**, then click **Save and Continue**. It will generate configuration files for each server.
+## Surfshark 설정 {#set-up-surfshark}
 
-    ![surfshark login](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_surfshark/surfshark1.png){class="glboxshadow"}
+[공식 웹사이트](https://get.surfshark.net/aff_c?offer_id=926&aff_id=1400){target="_blank"}
 
-2. Select servers.
+웹 관리 패널에서 **VPN** -> **WireGuard Client** -> **Surfshark**로 이동합니다.
 
-    Select the server(s) you want to connect to, and click **Apply**.
+1. **Username**과 **Password**를 입력한 다음 **Save and Continue**를 클릭하세요. 각 서버에 대한 설정 파일이 생성됩니다.
 
-    ![surfshark select servers](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_surfshark/surfshark2.png){class="glboxshadow"}
+    ![surfshark login](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_surfshark/surfshark1.png){class="glboxshadow"}
 
-3. Start a connection.
+2. 서버를 선택합니다.
 
-    Select your preferred server, and click the three-dot icon on the right to start a connection.
+    연결하려는 서버를 선택하고 **Apply**를 클릭하세요.
 
-    ![surfshark start](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_surfshark/surfshark3.png){class="glboxshadow"}
+    ![surfshark select servers](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_surfshark/surfshark2.png){class="glboxshadow"}
 
-    Once connected, a green dot will appear next to the configuration file.
+3. 연결 시작합니다.
 
-    ![surfshark connected](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_surfshark/surfshark4.png){class="glboxshadow"}
+    원하는 서버를 선택하고 오른쪽의 점 3개 아이콘을 클릭하여 연결을 시작합니다.
 
-    And the VPN connection details will be displayed on the **VPN Dashboard**.
+    ![surfshark start](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_surfshark/surfshark3.png){class="glboxshadow"}
 
-    ![surfshark connection status](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_surfshark/surfshark5.png){class="glboxshadow"}
+    연결되면 설정 파일 옆에 녹색 점이 나타납니다.
 
-4. Update servers.
+    ![surfshark connected](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_surfshark/surfshark4.png){class="glboxshadow"}
 
-    You can click **Update Servers** to obtain the latest available server list, avoiding connection failures caused by server maintenance or shutdown.
+    그리고 **VPN Dashboard**에 VPN 연결 세부 정보가 표시됩니다.
 
-    ![surfshark update servers](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_surfshark/surfshark6.png){class="glboxshadow"}
+    ![surfshark connection status](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_surfshark/surfshark5.png){class="glboxshadow"}
 
-5. Edit credentials or logout.
+4. 서버 업데이트합니다.
 
-    Click the gear icon to edit your login credentials or log out.
+    **Update Servers**를 클릭하여 최신 사용 가능한 서버 목록을 가져와 서버 유지 관리 또는 종료로 인한 연결 실패를 방지하세요.
 
-    ![surfshark edit credential or logout](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_surfshark/surfshark7.png){class="glboxshadow"}
+    ![surfshark update servers](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_surfshark/surfshark6.png){class="glboxshadow"}
 
-6. Refresh.
+5. 자격 증명 편집 또는 로그아웃합니다.
 
-    You can click **Refresh** to update the public key when the VPN server cannot be connected.
+    기어 아이콘을 클릭하여 로그인 자격 증명을 편집하거나 로그아웃하세요.
 
-    ![surfshark refresh](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_surfshark/surfshark8.png){class="glboxshadow"}
+    ![surfshark edit credential or logout](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_surfshark/surfshark7.png){class="glboxshadow"}
 
-7. Delete All.
+6. 새로고침합니다.
 
-    You can click **Delete All** to delete all configuration files with one click, and choose whether to delete the private and public keys simultaneously.
+    VPN 서버에 연결할 수 없을 때 **Refresh**를 클릭하여 공개 키를 업데이트할 수 있습니다.
 
-    ![surfshark delete](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_surfshark/surfshark9.png){class="glboxshadow"}
+    ![surfshark refresh](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_surfshark/surfshark8.png){class="glboxshadow"}
 
-## Set Up Windscribe {#set-up-windscribe}
+7. 모두 삭제합니다.
 
-[Official Website](https://windscribe.com/yo/1u2h9ndl){target="_blank"}
+    **Delete All**을 클릭하여 클릭 한 번으로 모든 설정 파일을 삭제하고 개인 키와 공개 키를 동시에 삭제할지 선택할 수 있습니다.
 
-In the web Admin Panel, go to **VPN** -> **WireGuard Client** -> **Windscribe**.
+    ![surfshark delete](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_surfshark/surfshark9.png){class="glboxshadow"}
 
-1. Input **Username** and **Password**, then click **Save and Continue**. It will generate configuration files for each server.
+## Windscribe 설정 {#set-up-windscribe}
 
-    ![windscribe login](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_windscribe/windscribe1.png){class="glboxshadow"}
+[공식 웹사이트](https://windscribe.com/yo/1u2h9ndl){target="_blank"}
 
-2. Select servers.
+웹 관리 패널에서 **VPN** -> **WireGuard Client** -> **Windscribe**로 이동합니다.
 
-    Select the server(s) you want to connect to, and click **Apply**.
+1. **Username**과 **Password**를 입력한 다음 **Save and Continue**를 클릭하세요. 각 서버에 대한 설정 파일이 생성됩니다.
 
-    ![windscribe select servers](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_windscribe/windscribe2.png){class="glboxshadow"}
+    ![windscribe login](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_windscribe/windscribe1.png){class="glboxshadow"}
 
-    Then you will get a list of configuration files corresponding to the selected server.
+2. 서버를 선택합니다.
 
-    ![windscribe config files](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_windscribe/windscribe3.png){class="glboxshadow"}
+    연결하려는 서버를 선택하고 **Apply**를 클릭하세요.
 
-3. Start a connection.
+    ![windscribe select servers](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_windscribe/windscribe2.png){class="glboxshadow"}
 
-    Select your preferred server, and click the three-dot icon on the right to start a connection.
+    그러면 선택한 서버에 해당하는 설정 파일 목록을 얻게 됩니다.
 
-    ![windscribe start](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_windscribe/windscribe4.png){class="glboxshadow"}
+    ![windscribe config files](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_windscribe/windscribe3.png){class="glboxshadow"}
 
-    Once connected, a green dot will appear next to the configuration file.
+3. 연결 시작합니다.
 
-    ![windscribe connected](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_windscribe/windscribe5.png){class="glboxshadow"}
+    원하는 서버를 선택하고 오른쪽의 점 3개 아이콘을 클릭하여 연결을 시작합니다.
 
-    And the VPN connection details will be displayed on the **VPN Dashboard**.
+    ![windscribe start](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_windscribe/windscribe4.png){class="glboxshadow"}
 
-    ![windscribe connection status](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_windscribe/windscribe6.png){class="glboxshadow"}
+    연결되면 설정 파일 옆에 녹색 점이 나타납니다.
 
-4. Update servers.
+    ![windscribe connected](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_windscribe/windscribe5.png){class="glboxshadow"}
 
-    You can click **Update Servers** to obtain the latest available server list, avoiding connection failures caused by server maintenance or shutdown.
+    그리고 **VPN Dashboard**에 VPN 연결 세부 정보가 표시됩니다.
 
-    ![windscribe update servers](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_windscribe/windscribe7.png){class="glboxshadow"}
+    ![windscribe connection status](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_windscribe/windscribe6.png){class="glboxshadow"}
 
-5. Edit credentials or logout.
+4. 서버 업데이트합니다.
 
-    Click the gear icon to edit your login credentials or log out.
+    **Update Servers**를 클릭하여 최신 사용 가능한 서버 목록을 가져와 서버 유지 관리 또는 종료로 인한 연결 실패를 방지하세요.
 
-    ![windscribe edit credential or logout](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_windscribe/windscribe8.png){class="glboxshadow"}
+    ![windscribe update servers](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_windscribe/windscribe7.png){class="glboxshadow"}
 
-6. Refresh.
+5. 자격 증명 편집 또는 로그아웃합니다.
 
-    You can click **Refresh** to update the public key when the VPN server cannot be connected.
+    기어 아이콘을 클릭하여 로그인 자격 증명을 편집하거나 로그아웃하세요.
 
-    ![windscribe refresh](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_windscribe/windscribe9.png){class="glboxshadow"}
+    ![windscribe edit credential or logout](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_windscribe/windscribe8.png){class="glboxshadow"}
 
-7. Delete All.
+6. 새로고침합니다.
 
-    You can click **Delete All** to delete all configuration files with one click, and choose whether to delete the private and public keys simultaneously.
+    VPN 서버에 연결할 수 없을 때 **Refresh**를 클릭하여 공개 키를 업데이트할 수 있습니다.
 
-    ![windscribe delete](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_windscribe/windscribe10.png){class="glboxshadow"}
+    ![windscribe refresh](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_windscribe/windscribe9.png){class="glboxshadow"}
 
-## Set Up WireGuard Client Manually (for other providers) {#set-up-wireguard-client-manually-for-other-providers}
+7. 모두 삭제합니다.
 
-If you are using another WireGuard service provider, you can download the WireGuard configuration files and follow the steps below to set up the WireGuard Client. If you don't know how to download the configuration files, please refer to [this guide](../tutorials/how_to_get_configuration_files_from_wireguard_service_providers.md) or contact their support.
+    **Delete All**을 클릭하여 클릭 한 번으로 모든 설정 파일을 삭제하고 개인 키와 공개 키를 동시에 삭제할지 선택할 수 있습니다.
 
-In the web Admin Panel, go to **VPN** -> **WireGuard Client**.
+    ![windscribe delete](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_windscribe/windscribe10.png){class="glboxshadow"}
 
-1. Click **Add Manually**.
+## WireGuard 클라이언트 수동 설정 (기타 제공업체) {#set-up-wireguard-client-manually-for-other-providers}
 
-    ![add manually](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_wireguard_client/add_manually.png){class="glboxshadow"}
+다른 WireGuard 서비스 제공업체를 사용하는 경우 WireGuard 설정 파일을 다운로드하고 아래 단계에 따라 WireGuard 클라이언트를 설정할 수 있습니다. 설정 파일을 다운로드하는 방법을 모르는 경우 [이 가이드](../tutorials/how_to_get_configuration_files_from_wireguard_service_providers.md)를 참조하거나 지원팀에 문의하세요.
 
-2. It will create a group on the left sidebar.
+웹 관리 패널에서 **VPN** -> **WireGuard Client**로 이동합니다.
 
-    ![add a new group](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_wireguard_client/create_a_group.png){class="glboxshadow"}
+1. **Add Manually**를 클릭하세요.
 
-3. Set a descriptive name for the group (e.g., azirevpn). Then upload a configuration file (supported formats: zip, tar, gz, conf, txt) or manually add configuration details (in text form).
+    ![add manually](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_wireguard_client/add_manually.png){class="glboxshadow"}
 
-    ![set the new group name](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_wireguard_client/set_a_name.png){class="glboxshadow"}
+2. 왼쪽 사이드바에 그룹이 생성됩니다.
 
-    1. **Upload a configuration file**.
+    ![add a new group](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_wireguard_client/create_a_group.png){class="glboxshadow"}
 
-        Click on the upload area to upload your WireGuard configuration file, then click **Apply**.
+3. 그룹의 설명이 포함된 이름을 설정합니다(예: azirevpn). 그런 다음 설정 파일을 업로드하거나(지원 형식: zip, tar, gz, conf, txt) 수동으로 설정 세부 정보를 추가합니다(텍스트 형식).
 
-        ![upload profile](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_wireguard_client/upload_configuration_file.png){class="glboxshadow"}
+    ![set the new group name](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_wireguard_client/set_a_name.png){class="glboxshadow"}
 
-        ![after upload profile](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_wireguard_client/upload_configuration_file_apply.png){class="glboxshadow"}
+    1. **설정 파일 업로드하기**.
 
-    2. **Manually add configuration**.
-    
-        Click on **Manually Add Configuration** at the bottom of the upload area.
+        업로드 영역을 클릭하여 WireGuard 설정 파일을 업로드한 다음 **Apply**를 클릭하세요.
 
-        ![add wireguard by text](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_wireguard_client/manually_add_configuration.png){class="glboxshadow"}
+        ![upload profile](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_wireguard_client/upload_configuration_file.png){class="glboxshadow"}
 
-        Set a descriptive name, and paste the configuration into the text box. Then click **Apply**.
+        ![after upload profile](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_wireguard_client/upload_configuration_file_apply.png){class="glboxshadow"}
 
-        ![add wireguard by text](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_wireguard_client/text_mode.png){class="glboxshadow"}
-        <small>(Text Mode)</small>
+    2. **수동으로 설정 추가하기**.
 
-        If you want to verify each item, you can switch to the Item mode and check the config details. Then click **Apply**.
+        업로드 영역 하단의 **Manually Add Configuration**를 클릭하세요.
 
-        ![add wireguard by item mode](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_wireguard_client/item_mode.png){class="glboxshadow"}
-        <small>(Item Mode)</small>
+        ![add wireguard by text](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_wireguard_client/manually_add_configuration.png){class="glboxshadow"}
 
-4. Click the three-dot icon on the right side to start the connection.
+        설명이 포함된 이름을 설정하고 설정을 텍스트 상자에 붙여넣습니다. 그런 다음 **Apply**를 클릭하세요.
 
-    ![start the profile](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_wireguard_client/start_edit_delete.png){class="glboxshadow"}
+        ![add wireguard by text](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_wireguard_client/text_mode.png){class="glboxshadow"}
+        <small>(텍스트 모드)</small>
 
-5. Once connected, you can check the connection status on the **VPN Dashboard** page.
+        각 항목을 확인하려면 항목 모드로 전환하여 설정 세부 정보를 확인할 수 있습니다. 그런 다음 **Apply**를 클릭하세요.
 
-    ![vpn dashboard page](https://static.gl-inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_wireguard_client/vpn_dashboard_wireguard_status.png){class="glboxshadow"}
+        ![add wireguard by item mode](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_wireguard_client/item_mode.png){class="glboxshadow"}
+        <small>(항목 모드)</small>
 
-## Set Up WireGuard Server on GL.iNet Router
+4. 오른쪽의 점 3개 아이콘을 클릭하여 연결을 시작합니다.
 
-Do not want to subscribe to third-party VPN services? You may purchase two GL.iNet routers – set one as WireGuard server and the other as WireGuard server.
+    ![start the profile](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_wireguard_client/start_edit_delete.png){class="glboxshadow"}
 
-This is especially suitable for scenarios where your home network's ISP provides a Public IP, and you want to connect to your home network via VPN when away from home to ensure security and access to internal network resources. This eliminates the cost and hassle of continuously subscribing to commercial VPN services.
+5. 연결되면 **VPN Dashboard** 페이지에서 연결 상태를 확인할 수 있습니다.
 
-For WireGuard server setup, please check [here](wireguard_server.md).
+    ![vpn dashboard page](https://static.gl.inet.com/docs/router/en/4/interface_guide/wireguard_client/set_up_wireguard_client/vpn_dashboard_wireguard_status.png){class="glboxshadow"}
+
+## GL.iNet 라우터에 WireGuard 서버 설정
+
+제3자 VPN 서비스를 구독하지 않으시나요? GL.iNet 라우터 2대를 구매하여 한 대는 WireGuard 서버로, 다른 한 대는 WireGuard 클라이언트로 설정할 수 있습니다.
+
+이는 특히 집 네트워크의 ISP가 공용 IP를 제공하고 집에서 멀리 떨어져 있을 때 VPN을 통해 집 네트워크에 연결하여 보안과 내부 네트워크 리소스에 액세스하려는 시나리오에 적합합니다. 이렇게 하면 상용 VPN 서비스를 지속적으로 구독해야 하는 비용과 번거로움이 eliminated됩니다.
+
+WireGuard 서버 설정은 [여기](wireguard_server.md)를 확인하세요.
 
 ---
 
-WireGuard® is a registered trademark of Jason A.Donenfeld.
+WireGuard®는 Jason A.Donenfeld의 등록 상표입니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+질문이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}을 통해 연락하세요.
