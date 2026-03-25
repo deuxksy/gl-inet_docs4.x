@@ -1,116 +1,117 @@
-# How to set up and use Spitz AX (GL-X3000) in your recreational vehicle
+# Recreational Vehicle에서 Spitz AX (GL-X3000) 설정 및 사용 방법
 
-This guide shows you how to set up and use Spitz AX in your recreational vehicle. Before you start, you will or may need to prepare the following additional equipment and services: 
+이 가이드는 Recreational Vehicle(RV, 캠핑카)에서 Spitz AX를 설정하고 사용하는 방법을 안내합니다. 시작하기 전에 다음 추가 장비와 서비스를 준비해야 할 수 있습니다.
 
-- SIM card(s) or USB cable (for tethering), depending on which internet connection method you use. If you are using SIM card(s), ask your operator for the APN. 
-- A roof antenna if you want better coverage. 
-- [A subscription to Starlink](https://www.starlink.com/roam), if you go to areas without cellular coverage. 
-
----
-
-## 1. Install your Spitz AX and other equipment
-
-Before starting your journey, set up your Spitz AX by following these steps.
-
-### Step 1: Choose a location for your Spitz AX 
-
-You are recommended to choose a central and unobstructed location for maximum coverage. Ensure the location is within 1 meter from the power source, which is the length of the power adapter cable. 
-
-![location](https://static.gl-inet.com/docs/router/en/4/tutorials/set_up_and_use_in_recreational_vehicle/x3000-with-power-source.jpg){class="glboxshadow"}
-
-You can place your Spitz AX on a flat surface or mount it to the wall. If you choose to mount it on the wall, follow the next step. 
-
-### (Optional) Step 2: Install your Spitz AX on the wall 
-
-There are two ways to install your Spitz AX on the wall:
-- Use the supplied adhesive pad
-- Use the wall mounts
-
-Wall mounts are provided in the package. To mount your Spitz AX to the wall, follow the steps below:
-
-1.	Attach the mount to the wall using screws.
-2.	Snap your Spitz AX onto the mount. 
-
-![wall mount](https://static.gl-inet.com/docs/router/en/4/tutorials/set_up_and_use_in_recreational_vehicle/x3000-with-screws.jpg){class="glboxshadow"}
-
-### (Optional) Step 3: Install the RV roof antenna
-
-![roof](https://static.gl-inet.com/docs/router/en/4/tutorials/set_up_and_use_in_recreational_vehicle/x3000-with-roof-antenna.jpg){class="glboxshadow"}
-
-To get a better signal, use a roof antenna for your Spitz AX. You are recommended to use [MobileMark's LTMG942 multi-band antenna](https://www.mobilemark.com/product/ltmg942-4xlte-2xwifi-gnss/) which provides optimal network signals. If you want to use roof antennas from other brands, make sure they fulfill the following requirements: 
-
-- 4 cellular antennas, receiving frequency range 600M~6GHz.
-- 2 Wi-Fi antennas, receiving frequency range: 2.4G~2.5GHz, 5.15~5.84GHz
-
-![antennas](https://static.gl-inet.com/docs/router/en/4/tutorials/set_up_and_use_in_recreational_vehicle/x3000-with-six-antennas.jpg){class="glboxshadow"}
-
-**Note:** You can use a 7-in-1 antenna (which includes a GPS antenna) but you will only need to connect the six antennas on your Spitz AX. The DIV/GNSS interface of the Spitz AX supports GPS signals because the cellular antenna (receiving frequency of 600M~6GHz) covers the frequency of GPS. Spitz AX supports viewing your GPS location using the command line but does not currently support showing your location on the map.
-
-To avoid signal attenuation, the radio frequency cable from the roof antenna to your Spitz AX should not exceed 5 meters. (For example, when the radio frequency cable from MobileMark is 5 meters long, the signal reception at 3000MHz is reduced by 3dB, which is half the strength. The higher the frequency of the signal, the greater the attenuation.)
-
-[Learn how to replace the antennas on Spitz AX.](https://docs.gl-inet.com/router/en/4/tutorials/how_to_change_x3000_and_xe3000_antennas/) 
+- 사용하는 인터넷 연결 방법에 따라 SIM 카드 또는 USB 케이블(테더링용). SIM 카드를 사용하는 경우 통신사에 APN을 문의하세요.
+- 더 나은 커버리지를 위한 루프 안테나.
+- 셀룰러 커버리지가 없는 지역으로 이동하는 경우 [Starlink 구독](https://www.starlink.com/roam).
 
 ---
 
-## 2. Set up the internet for your Spitz AX 
+## 1. Spitz AX 및 기타 장비 설치
 
-To ensure you have internet access during your journey, set up the internet using SIM cards. 
+여정을 시작하기 전에 다음 단계에 따라 Spitz AX를 설정하세요.
 
-Spitz AX has a built-in 5GNR module and supports dual SIM cards. Different mobile network carriers offer different cellular packages for the SIM card and use different APNs. You will need to enter the APN in the settings, so confirm with your operator what the VPN is. 
+### 1단계: Spitz AX 설치 위치 선택
 
-To set up your SIM cards, follow these steps: 
+최적의 커버리지를 위해 중앙에 위치하고 장애물이 없는 곳을 선택하는 것이 좋습니다. 전원 어댑터 케이블 길이인 1미터 이내에 전원원이 있는지 확인하세요.
 
-1. Insert your SIM card(s). 
-![insert sim](https://static.gl-inet.com/docs/router/en/4/tutorials/set_up_and_use_in_recreational_vehicle/x3000-with-sim-card.jpg){class="glboxshadow"}
-2. Plug in the power adapter and turn on the router. 
+![location](https://static.gl.inet.com/docs/router/en/4/tutorials/set_up_and_use_in_recreational_vehicle/x3000-with-power-source.jpg){class="glboxshadow"}
 
-To enter your APN, follow these steps: 
+Spitz AX를 평평한 표면에 두거나 벽에 장착할 수 있습니다. 벽에 장착하기로 선택한 경우 다음 단계를 따르세요.
 
-1. enter `192.168.8.1` in a web browser and sign in. 
-2. You should see the name of your carrier in the upper left corner. Click **Manual Setup**.
-3. Next to **APN**, enter the APN. 
-4. Click **Apply**. 
+### (선택 사항) 2단계: 벽에 Spitz AX 설치
 
-If you are using two SIM cards, note that only one SIM card works at each time. You can manually select which SIM card to use each time. Alternatively, enable the [Auto Switch feature](https://docs.gl-inet.com/router/en/4/interface_guide/internet_cellular/#setup-for-dual-sim-models). If the router detects one of the SIM cards cannot access the internet properly, it will automatically switch to another SIM card. The switching takes about 1 minute to complete. 
+벽에 Spitz AX를 설치하는 두 가지 방법이 있습니다.
+- 제공된 접착 패드 사용
+- 벽 장착 브래킷 사용
 
----
+벽 장착 브래킷은 패키지에 포함되어 있습니다. 벽에 Spitz AX를 장착하려면 다음 단계를 따르세요.
 
-## 3. Use Spitz AX in different scenarios
+1. 나사를 사용하여 브래킷을 벽에 부착하세요.
+2. Spitz AX를 브래킷에 끼우세요.
 
-### On the road
+![wall mount](https://static.gl.inet.com/docs/router/en/4/tutorials/set_up_and_use_in_recreational_vehicle/x3000-with-screws.jpg){class="glboxshadow"}
 
-![on the road](https://static.gl-inet.com/docs/router/en/4/tutorials/set_up_and_use_in_recreational_vehicle/rv-connectivity_scene_rv-antennas.png){class="glboxshadow"}
+### (선택 사항) 3단계: RV 루프 안테나 설치
 
-When you are driving on the road, you should be able to connect to the internet via SIM card(s) which you set up in the previous step.
+![roof](https://static.gl.inet.com/docs/router/en/4/tutorials/set_up_and_use_in_recreational_vehicle/x3000-with-roof-antenna.jpg){class="glboxshadow"}
 
-### At a campground
+더 나은 신호를 얻으려면 Spitz AX용 루프 안테나를 사용하세요. 최적의 네트워크 신호를 제공하는 [MobileMark의 LTMG942 멀티밴드 안테나](https://www.mobilemark.com/product/ltmg942-4xlte-2xwifi-gnss/)를 사용하는 것이 좋습니다. 다른 브랜드의 루프 안테나를 사용하려는 경우 다음 요구사항을 충족하는지 확인하세요.
 
-![campground](https://static.gl-inet.com/docs/router/en/4/tutorials/set_up_and_use_in_recreational_vehicle/rv-connectivity_scene_repeater.png){class="glboxshadow"}
+- 4개의 셀룰러 안테나, 수신 주파수 범위 600M~6GHz.
+- 2개의 Wi-Fi 안테나, 수신 주파수 범위: 2.4G~2.5GHz, 5.15~5.84GHz
 
-If you stop at a campground during your trip, you can use the public Wi-Fi network provided by the site and save your cellular data. [Learn how to connect to an existing Wi-Fi network.](https://docs.gl-inet.com/router/en/4/interface_guide/internet_repeater/) 
+![antennas](https://static.gl.inet.com/docs/router/en/4/tutorials/set_up_and_use_in_recreational_vehicle/x3000-with-six-antennas.jpg){class="glboxshadow"}
 
-After you have connected to the Wi-Fi network once, Spitz AX can remember the network name and password. It will connect to the network automatically the next time you are around.
+**참고**: 7-in-1 안테나(GPS 안테나 포함)를 사용할 수 있지만 Spitz AX의 6개 안테나에만 연결하면 됩니다. Spitz AX의 DIV/GNSS 인터페이스는 GPS 신호를 지원합니다. 셀룰러 안테나(수신 주파수 600M~6GHz)가 GPS 주파수를 포함하기 때문입니다. Spitz AX는 명령줄을 사용하여 GPS 위치를 확인하는 기능을 지원하지만 현재 지도에 위치를 표시하는 기능은 지원하지 않습니다.
 
-### In areas without cellular coverage
+신호 감쇠를 방지하기 위해 루프 안테나에서 Spitz AX까지의 무선 주파수 케이블은 5미터를 초과하지 않아야 합니다. (예: MobileMark의 무선 주파수 케이블이 5미터인 경우 3000MHz에서의 신호 수신은 3dB(절반 강도) 감소합니다. 신호 주파수가 높을수록 감쇠가 커집니다.)
 
-![cellular](https://static.gl-inet.com/docs/router/en/4/tutorials/set_up_and_use_in_recreational_vehicle/rv-connectivity_scene_starlink.png){class="glboxshadow"}
-
-If you will drive to an area without cellular coverage (e.g., a sparsely populated desert area), use Starlink, a satellite internet service. In this way, when in areas with great cellular coverage, use the 5G signal received by the Spitz AX, and when in areas with no cellular coverage, use Starlink.
-
-When you set up the Starlink antenna, make sure it is unobstructed. Obstructions on both sides of the road (e.g., trees) will affect the reception, so try to park away from any obstructions. 
+[Spitz AX에서 안테나 교체 방법 알아보기](https://docs.gl-inet.com/router/en/4/tutorials/how_to_change_x3000_and_xe3000_antennas/)
 
 ---
 
-## 4. Set failover priorities 
-Spitz AX supports multi-WAN (failover and load balancing). You can set failover priorities for different networks based on your scenario. 
+## 2. Spitz AX용 인터넷 설정
 
-| Scenario| Priority |
-| --------| ------- |
-| In the campground (connected to its Wi-Fi network using repeater)    | <p> Assign a higher priority to repeater over cellular.</p> <p>As soon as you leave the campground, your router will automatically switch to cellular.</p>|
-| Starlink (ethernet) + cellular | Assign a higher priority to cellular over ethernet. <p>In areas with cellular coverage, your router will use your cellular network.</p> <p>When you get to areas without cellular coverage, your router will automatically switch to Starlink via ethernet.</p>|
+여정 중 인터넷 액세스를 보장하려면 SIM 카드를 사용하여 인터넷을 설정하세요.
 
-To set failover, read the [Failover](https://docs.gl-inet.com/router/en/4/interface_guide/multi-wan/) section.
+Spitz AX는 내장형 5GNR 모듈이 있으며 듀얼 SIM 카드를 지원합니다. 다른 모바일 네트워크 통신사는 SIM 카드에 대해 다른 셀룰러 패키지를 제공하며 다른 APN을 사용합니다. 설정에서 APN을 입력해야 하므로 통신사에 APN이 무엇인지 확인하세요.
+
+SIM 카드를 설정하려면 다음 단계를 따르세요.
+
+1. SIM 카드를 삽입하세요.
+![insert sim](https://static.gl.inet.com/docs/router/en/4/tutorials/set_up_and_use_in_recreational_vehicle/x3000-with-sim-card.jpg){class="glboxshadow"}
+2. 전원 어댑터를 연결하고 라우터의 전원을 켜세요.
+
+APN을 입력하려면 다음 단계를 따르세요.
+
+1. 웹 브라우저에 `192.168.8.1`을 입력하고 로그인하세요.
+2. 왼쪽 상단에 통신사 이름이 표시되어야 합니다. **Manual Setup**을 클릭하세요.
+3. **APN** 옆에 APN을 입력하세요.
+4. **Apply**를 클릭하세요.
+
+두 개의 SIM 카드를 사용하는 경우 각 시간마다 하나의 SIM 카드만 작동한다는 점에 유의하세요. 매번 사용할 SIM 카드를 수동으로 선택할 수 있습니다. 또는 [Auto Switch 기능](https://docs.gl-inet.com/router/en/4/interface_guide/internet_cellular/#setup-for-dual-sim-models)을 활성화하세요. 라우터가 SIM 카드 중 하나가 인터넷에 제대로 액세스할 수 없는 것을 감지하면 자동으로 다른 SIM 카드로 전환됩니다. 전환에는 약 1분이 소요됩니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+## 3. 다양한 시나리오에서 Spitz AX 사용
+
+### 도로 위에서
+
+![on the road](https://static.gl.inet.com/docs/router/en/4/tutorials/set_up_and_use_in_recreational_vehicle/rv-connectivity_scene_rv-antennas.png){class="glboxshadow"}
+
+도로를 운전할 때 이전 단계에서 설정한 SIM 카드를 통해 인터넷에 연결할 수 있어야 합니다.
+
+### 캠핑장에서
+
+![campground](https://static.gl.inet.com/docs/router/en/4/tutorials/set_up_and_use_in_recreational_vehicle/rv-connectivity_scene_repeater.png){class="glboxshadow"}
+
+여행 중 캠핑장에 멈추면 사이트에서 제공하는 공용 Wi-Fi 네트워크를 사용하고 셀룰러 데이터를 절약할 수 있습니다. [기존 Wi-Fi 네트워크에 연결하는 방법 알아보기](https://docs.gl-inet.com/router/en/4/interface_guide/internet_repeater/)
+
+Wi-Fi 네트워크에 한 번 연결하면 Spitz AX가 네트워크 이름과 비밀번호를 기억할 수 있습니다. 다음번에 근처에 있을 때 자동으로 네트워크에 연결됩니다.
+
+### 셀룰러 커버리지가 없는 지역에서
+
+![cellular](https://static.gl.inet.com/docs/router/en/4/tutorials/set_up_and_use_in_recreational_vehicle/rv-connectivity_scene_starlink.png){class="glboxshadow"}
+
+셀룰러 커버리지가 없는 지역(예: 인구가 희박한 사막 지역)으로 운전할 경우 위성 인터넷 서비스인 Starlink를 사용하세요. 이렇게 하면 셀룰러 커버리지가 좋은 지역에서는 Spitz AX가 수신하는 5G 신호를 사용하고, 셀룰러 커버리지가 없는 지역에서는 Starlink를 사용할 수 있습니다.
+
+Starlink 안테나를 설정할 때 장애물이 없는지 확인하세요. 도로 양쪽의 장애물(예: 나무)은 수신에 영향을 미치므로 장애물에서 멀리 떨어진 곳에 주차하세요.
+
+---
+
+## 4. Failover 우선순위 설정
+
+Spitz AX는 멀티 WAN(failover 및 로드 밸런싱)을 지원합니다. 시나리오에 따라 다른 네트워크의 failover 우선순위를 설정할 수 있습니다.
+
+| 시나리오 | 우선순위 |
+| -------- | ------- |
+| 캠핑장(Repeater를 통해 Wi-Fi 네트워크에 연결됨) | <p> 셀룰러보다 Repeater에 더 높은 우선순위를 할당하세요.</p> <p>캠핑장을 떠나는 즉시 라우터가 자동으로 셀룰러로 전환됩니다.</p>|
+| Starlink(이더넷) + 셀룰러 | 이더넷보다 셀룰러에 더 높은 우선순위를 할당하세요. <p>셀룰러 커버리지가 있는 지역에서는 라우터가 셀룰러 네트워크를 사용합니다.</p> <p>셀룰러 커버리지가 없는 지역에 도착하면 라우터가 자동으로 이더넷을 통해 Starlink로 전환됩니다.</p>|
+
+Failover를 설정하려면 [Failover](https://docs.gl-inet.com/router/en/4/interface_guide/multi-wan/) 섹션을 참조하세요.
+
+---
+
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl.inet.com/contacts/){target="_blank"}을 통해 문의해 주세요.
