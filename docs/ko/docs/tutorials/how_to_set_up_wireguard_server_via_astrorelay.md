@@ -1,66 +1,65 @@
-# How to set up WireGuard server via AstroRelay?
+# AstroRelay를 통해 WireGuard 서버 설정 방법
 
-This tutorial introduces the steps to set up a WireGuard server via AstroRelay on a GL.iNet router, which is ideal for users who need remote access to their home or office local services but do not have a public IP address from their ISP.
+이 튜토리얼은 GL.iNet 라우터에서 AstroRelay를 통해 WireGuard 서버를 설정하는 단계를 소개합니다. 이는 ISP에서 공용 IP 주소를 할당받지 않지만 집이나 사무실 로컬 서비스에 원격으로 액세스해야 하는 사용자에게 이상적입니다.
 
-[AstroRelay](https://www.astrorelay.com){target="_blank"} provides a secure reverse proxy tunnel, through which you can securely access resources behind NAT and firewalls.
+[AstroRelay](https://www.astrorelay.com){target="_blank"}은 보안 역방향 프록시 터널을 제공하여 NAT 및 방화벽 뒤의 리소스에 안전하게 액세스할 수 있습니다.
 
-1. Follow [this guide](../interface_guide/wireguard_server.md) to set up a WireGuard server on your GL.iNet router, even if you don't have a public IP address. 
+1. [이 가이드](../interface_guide/wireguard_server.md)를 따라 GL.iNet 라우터에 WireGuard 서버를 설정하세요. 공용 IP 주소가 없어도 됩니다.
 
-    ![set up wireguard server](https://static.gl-inet.com/docs/router/en/4/tutorials/set_up_wireguard_server_via_astrorelay/start_wg_server4x.jpg){class="glboxshadow"}
+    ![set up wireguard server](https://static.gl.inet.com/docs/router/en/4/tutorials/set_up_wireguard_server_via_astrorelay/start_wg_server4x.jpg){class="glboxshadow"}
 
-    Then click **Profiles** to export the WireGuard configuration. Here is an example config file.
+    그런 다음 **Profiles**를 클릭하여 WireGuard 설정을 내보내세요. 설정 파일 예시입니다.
 
-    ![wireguard config](https://static.gl-inet.com/docs/router/en/4/tutorials/set_up_wireguard_server_via_astrorelay/wireguard_config.png){class="glboxshadow"}
+    ![wireguard config](https://static.gl.inet.com/docs/router/en/4/tutorials/set_up_wireguard_server_via_astrorelay/wireguard_config.png){class="glboxshadow"}
 
-2. (Optional) If you need to access the VPN server's LAN remotely, enable **Allow Remote Access LAN**. Otherwise, skip this step.
+2. (선택 사항) VPN 서버의 LAN에 원격으로 액세스해야 하는 경우 **Allow Remote Access LAN**을 활성화하세요. 그렇지 않으면 이 단계를 건너뛰세요.
 
-    ??? "For firmware v4.7 and earlier"
+    ??? "펌웨어 v4.7 이하"
 
-        On the server's web admin panel, go to **VPN** -> **VPN Dashboard** -> **VPN Server** section. Click the gear icon on the right side of the WireGuard server.
+        서버의 웹 관리 패널에서 **VPN** -> **VPN Dashboard** -> **VPN Server** 섹션으로 이동하세요. WireGuard 서버 우측의 기어 아이콘을 클릭하세요.
 
-        ![server options 4.7](https://static.gl-inet.com/docs/router/en/4/tutorials/access_server_lan_via_domain_names/server_options_4.7.png){class="glboxshadow gl-90-desktop"}
+        ![server options 4.7](https://static.gl.inet.com/docs/router/en/4/tutorials/access_server_lan_via_domain_names/server_options_4.7.png){class="glboxshadow gl-90-desktop"}
 
-        Enable **Remote Access LAN**, and click **Apply**.
+        **Remote Access LAN**을 활성화하고 **Apply**를 클릭하세요.
 
-        ![server allow access lan 4.7](https://static.gl-inet.com/docs/router/en/4/tutorials/access_server_lan_via_domain_names/server-allow-access-lan-4.7.png){class="glboxshadow"}
+        ![server allow access lan 4.7](https://static.gl.inet.com/docs/router/en/4/tutorials/access_server_lan_via_domain_names/server-allow-access-lan-4.7.png){class="glboxshadow"}
 
-        **When enabled, this router and LAN devices can be accessed remotely via the VPN.**
+        **활성화되면 이 라우터와 LAN 장치에 VPN을 통해 원격으로 액세스할 수 있습니다.**
 
-    ??? "For firmware v4.8 and later"
+    ??? "펌웨어 v4.8 이상"
 
-        On the server's web admin panel, go to **VPN** -> **WireGuard Server**. Click **Options** in the upper right corner.
+        서버의 웹 관리 패널에서 **VPN** -> **WireGuard Server**로 이동하세요. 우측 상단에서 **Options**를 클릭하세요.
 
-        ![server options 4.8](https://static.gl-inet.com/docs/router/en/4/tutorials/access_server_lan_via_domain_names/server_options_4.8.png){class="glboxshadow gl-90-desktop"}
+        ![server options 4.8](https://static.gl.inet.com/docs/router/en/4/tutorials/access_server_lan_via_domain_names/server_options_4.8.png){class="glboxshadow gl-90-desktop"}
 
-        Enable **Allow Remote Access the LAN Subnet**, and click **Apply**.
+        **Allow Remote Access the LAN Subnet**을 활성화하고 **Apply**를 클릭하세요.
 
-        ![server allow access lan 4.8](https://static.gl-inet.com/docs/router/en/4/tutorials/access_server_lan_via_domain_names/server-allow-access-lan-4.8.png){class="glboxshadow"}
+        ![server allow access lan 4.8](https://static.gl.inet.com/docs/router/en/4/tutorials/access_server_lan_via_domain_names/server-allow-access-lan-4.8.png){class="glboxshadow"}
 
-        **When enabled, this router and LAN devices can be accessed remotely via the VPN.**
+        **활성화되면 이 라우터와 LAN 장치에 VPN을 통해 원격으로 액세스할 수 있습니다.**
 
-3. Sign up an AstroRelay account and follow this [tutorial](https://www.astrorelay.com/tutorial.html){target="_blank"} to complete first-time setup.
+3. AstroRelay 계정에 가입하고 이 [튜토리얼](https://www.astrorelay.com/tutorial.html){target="_blank"}을 따라 처음 설정을 완료하세요.
 
-    When adding a new domain, choose the server closest to your router.
+    새 도메인을 추가할 때 라우터와 가장 가까운 서버를 선택하세요.
 
-    ![astrorelay add a new domain](https://static.gl-inet.com/docs/router/en/4/tutorials/set_up_wireguard_server_via_astrorelay/astrorelay_add_a_new_domain.png){class="glboxshadow"}
+    ![astrorelay add a new domain](https://static.gl.inet.com/docs/router/en/4/tutorials/set_up_wireguard_server_via_astrorelay/astrorelay_add_a_new_domain.png){class="glboxshadow"}
 
-    When adding a new link, enter your router's **LAN IP address** into the **Destination Host IP** field, and enter **51820** into the **Destination Port** field.
+    새 링크를 추가할 때 라우터의 **LAN IP 주소**를 **Destination Host IP** 필드에 입력하고 **Destination Port** 필드에 **51820**을 입력하세요.
 
-    ![link for wireguard server](https://static.gl-inet.com/docs/router/en/4/tutorials/set_up_wireguard_server_via_astrorelay/astrorelay_wg_server.png){class="glboxshadow"}
+    ![link for wireguard server](https://static.gl.inet.com/docs/router/en/4/tutorials/set_up_wireguard_server_via_astrorelay/astrorelay_wg_server.png){class="glboxshadow"}
 
-    You will then get a link, such as **wg_server_test.arlab1.cc:33331**. Click it to copy the link.
+    그러면 **wg_server_test.arlab1.cc:33331**과 같은 링크가 생성됩니다. 클릭하여 링크를 복사하세요.
 
-    ![astrorelay link](https://static.gl-inet.com/docs/router/en/4/tutorials/set_up_wireguard_server_via_astrorelay/astrorelay_link.png){class="glboxshadow"}
+    ![astrorelay link](https://static.gl.inet.com/docs/router/en/4/tutorials/set_up_wireguard_server_via_astrorelay/astrorelay_link.png){class="glboxshadow"}
 
-4. Open the WireGuard configuration file, replace the value after **Endpoint** with the link you got in the previous step, and apply the changes.
+4. WireGuard 설정 파일을 열고 **Endpoint** 뒤의 값을 이전 단계에서 얻은 링크로 바꾸고 변경 사항을 적용하세요.
 
-    ![replace link in wireguard config](https://static.gl-inet.com/docs/router/en/4/tutorials/set_up_wireguard_server_via_astrorelay/replace_endpoint_in_wireguard_config.png){class="glboxshadow"}
+    ![replace link in wireguard config](https://static.gl.inet.com/docs/router/en/4/tutorials/set_up_wireguard_server_via_astrorelay/replace_endpoint_in_wireguard_config.png){class="glboxshadow"}
 
-5. Install the [WireGuard app](https://www.wireguard.com/install/){target="_blank"} on the device you want to use as a WireGuard client. Then upload the modified configuration file to the app and start the conneciton. Alternatively, upload it to another GL.iNet router so as to set it up a WireGuard client.
+5. WireGuard 클라이언트로 사용할 장치에 [WireGuard 앱](https://www.wireguard.com/install/){target="_blank"}을 설치하세요. 그런 다음 수정된 설정 파일을 앱에 업로드하고 연결을 시작하세요. 또는 다른 GL.iNet 라우터에 업로드하여 WireGuard 클라이언트로 설정할 수도 있습니다.
 
-    Once connected, you will be able to access your home or office local services remotely.
+    연결되면 집이나 사무실 로컬 서비스에 원격으로 액세스할 수 있습니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
-
+질문이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl.inet.com/contacts/){target="_blank"}을 통해 연락하세요.

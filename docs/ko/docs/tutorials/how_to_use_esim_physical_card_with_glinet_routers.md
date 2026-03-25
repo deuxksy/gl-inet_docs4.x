@@ -1,24 +1,24 @@
-# How to use the eSIM Physical Card with GL.iNet routers?
+# GL.iNet 라우터에서 eSIM 물리적 카드 사용 방법
 
-This guide will show you how to use the eSIM physical card purchased from the GL.iNet online store with GL.iNet routers. 
+이 가이드는 GL.iNet 온라인 스토어에서 구매한 eSIM 물리적 카드를 GL.iNet 라우터와 함께 사용하는 방법을 안내합니다.
 
-![eSIM Physical Card](https://static.gl-inet.com/docs/router/en/4/tutorials/set_up_the_simpoyo_esim_physical_card_with_android_devices/simpoyo-esim-physical-card.png){class="glboxshadow"}
+![eSIM Physical Card](https://static.gl.inet.com/docs/router/en/4/tutorials/set_up_the_simpoyo_esim_physical_card_with_android_devices/simpoyo-esim-physical-card.png){class="glboxshadow"}
 
-## Features
+## 기능
 
-The highlights of eSIM physical cards are as follows:
+eSIM 물리적 카드의 주요 기능은 다음과 같습니다:
 
-- Supports 4G and 5G networks for reliable and fast connections.
-- Manage your eSIM profiles effortlessly by adding, removing, or enabling them.
-- Select and purchase your preferred data packages from most eSIM stores worldwide at any time.
-- Works with eSIM profiles from most global eSIM stores.
-- Purchase eSIM profiles online without providing personal information, reducing the risk of privacy breaches.
-- Comes with a seed profile that includes 1GB of free data for the U.S. and Europe, plus 100MB of Global Data, valid for 1 year from the activation date.
-- Compatible with selected GL.iNet devices.
+- 안정적이고 빠른 연결을 위한 4G 및 5G 네트워크 지원
+- eSIM 프로필을 쉽게 추가, 제거 또는 활성화하여 관리
+- 전 세계 대부분의 eSIM 스토어에서 언제든지 선호하는 데이터 패키지를 선택하고 구매
+- 대부분의 글로벌 eSIM 스토어의 eSIM 프로필과 호환
+- 개인 정보를 제공하지 않고 온라인으로 eSIM 프로필을 구매하여 프라이버시 유출 위험 감소
+- 미국과 유럽용 1GB 무료 데이터, 글로벌 데이터 100MB가 포함된 시드 프로필 제공, 활성화 날짜로부터 1년간 유효
+- 선택된 GL.iNet 장치와 호환
 
-## Supported Models
+## 지원되는 모델
 
-| Router Model                   | Support   |
+| 라우터 모델                   | 지원   |
 | :----------------------------- | :-------: |
 | GL-X2000 (Spitz Plus)          | √         |
 | GL-X3000 (Spitz AX)            | √         |
@@ -31,201 +31,201 @@ The highlights of eSIM physical cards are as follows:
 | GL-E750V2 vSIM                 | X         |
 | GL-E5800 (Mudi 7)              | X         |
 
-**For models marked with ※**:
+**※ 표시된 모델의 경우**:
 
-1. The current stable firmware does not support eSIM. To use the eSIM function, you need to install the eSIM-supported firmware. [Contact us](https://www.gl-inet.com/contacts/){target="_blank"} for more instructions.
-    
-2. If you are using the ※ model with EP06-A module, eSIM is not supported because the Qualcomm software lacks specific AT command support.
-    
-3. If you are using the ※ model with EP06-E module, please refer to this [link](https://forum.gl-inet.com/t/upgrade-ep06-e-firmware-to-support-esim/48907){target="_blank"} to upgrade the module's firmware and install the eSIM-supported firmware in order to enable eSIM functionality.
+1. 현재 안정 펌웨어는 eSIM을 지원하지 않습니다. eSIM 기능을 사용하려면 eSIM 지원 펌웨어를 설치해야 합니다. 자세한 지침은 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}를 클릭하세요.
 
-**For models marked with X**:
+2. EP06-A 모듈이 장착된 ※ 모델을 사용하는 경우 Qualcomm 소프트웨어가 특정 AT 명령을 지원하지 않으므로 eSIM이 지원되지 않습니다.
 
-1. GL-E750V2 vSIM does not support eSIM functionality.
+3. EP06-E 모듈이 장착된 ※ 모델을 사용하는 경우 eSIM 기능을 활성화하려면 [이 링크](https://forum.gl-inet.com/t/upgrade-ep06-e-firmware-to-support-esim/48907){target="_blank"}를 참조하여 모듈 펌웨어를 업그레이드하고 eSIM 지원 펌웨어를 설치하세요.
 
-2. GL-E5800 (Mudi 7) comes with a built-in eSIM. Therefore, the eSIM physical card will be recognized as a regular SIM card without eSIM functionality on Mudi 7.
+**X 표시된 모델의 경우**:
 
-## Set up eSIM Physical Card
+1. GL-E750V2 vSIM은 eSIM 기능을 지원하지 않습니다.
 
-If you're using the eSIM Physical card for the first time, please watch this setup video or follow these steps below to set it up on your GL.iNet Router.
+2. GL-E5800 (Mudi 7)에는 내장 eSIM이 있습니다. 따라서 eSIM 물리적 카드는 Mudi 7에서 eSIM 기능 없이 일반 SIM 카드로 인식됩니다.
+
+## eSIM 물리적 카드 설정
+
+eSIM 물리적 카드를 처음 사용하는 경우 이 설정 비디오를 시청하거나 아래 단계에 따라 GL.iNet 라우터에 설정하세요.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/SCex_vuvgNQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-**Step 1:** Insert the eSIM Physical card into your router. Refer to the images below for detailed guidance.
+**1단계:** eSIM 물리적 카드를 라우터에 삽입하세요. 자세한 지침은 아래 이미지를 참조하세요.
 
-![E750V2](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/e750v2-sim-card.jpg){class="glboxshadow"}
+![E750V2](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/e750v2-sim-card.jpg){class="glboxshadow"}
 
-![X3000](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/x3000-sim-card.jpg){class="glboxshadow"}
+![X3000](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/x3000-sim-card.jpg){class="glboxshadow"}
 
-![XE3000](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/xe3000-sim-card.jpg){class="glboxshadow"}
+![XE3000](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/xe3000-sim-card.jpg){class="glboxshadow"}
 
-**Step 2:** Open a browser and type "192.168.8.1" in the address bar to log in to the GL.iNet Admin Panel.
+**2단계:** 브라우저를 열고 주소창에 "192.168.8.1"을 입력하여 GL.iNet 관리 패널에 로그인하세요.
 
-![log in to the GL.iNet Admin Panel](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/login-admin-panel.jpg){class="glboxshadow"}
+![log in to the GL.iNet Admin Panel](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/login-admin-panel.jpg){class="glboxshadow"}
 
-**Step 3:** Connect your device to the internet. 
+**3단계:** 장치를 인터넷에 연결하세요.
 
-Navigate to **INTERNET**, and click **Connect** (or **Auto Setup** in lower firmware version) to connect to the internet via Cellular.
+**INTERNET**으로 이동한 다음 **Connect**(또는 하위 펌웨어 버전의 **Auto Setup**)를 클릭하여 Cellular를 통해 인터넷에 연결하세요.
 
-*This eSIM physical card comes with a seed profile that includes 1GB of free data for the U.S. and Europe, plus 100MB of Global Data, valid for 1 year from the activation date. Please note that this data is only for purchasing and downloading eSIM profiles and is not intended for general internet access.*
+*이 eSIM 물리적 카드에는 미국과 유럽용 1GB 무료 데이터와 글로벌 데이터 100MB가 포함된 시드 프로필이 제공되며, 활성화 날짜로부터 1년간 유효합니다. 이 데이터는 eSIM 프로필을 구매하고 다운로드하는 용도로만 제공되며 일반 인터넷 액세스용이 아닙니다.*
 
-![initial setup connect](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/initial-setup-connect.jpg){class="glboxshadow"}
+![initial setup connect](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/initial-setup-connect.jpg){class="glboxshadow"}
 
-If the internet is connected successfully, the screen will appear as follows.
+인터넷 연결에 성공하면 화면이 다음과 같이 표시됩니다.
 
-![initial setup connected](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/initial-setup-connected.jpg){class="glboxshadow"}
+![initial setup connected](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/initial-setup-connected.jpg){class="glboxshadow"}
 
-## Manage Your eSIM Profile
+## eSIM 프로필 관리
 
-**Step 1:** Ensure your GL.iNet device has the latest firmware installed.
+**1단계:** GL.iNet 장치에 최신 펌웨어가 설치되어 있는지 확인하세요.
 
-Please make sure the Version is 4.0 or higher, and the Firmware Type number is 0319 or greater.
+Version이 4.0 이상이고 Firmware Type 번호가 0319 이상인지 확인하세요.
 
-![auto setup successfully](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/latest-firmware.png){class="glboxshadow"}
+![auto setup successfully](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/latest-firmware.png){class="glboxshadow"}
 
-If your firmware is **not up-to-date**, you can upgrade it either automatically online or manually.
+펌웨어가 최신이 **아닌 경우** 자동으로 또는 수동으로 업그레이드할 수 있습니다.
 
-<u>Option 1</u>: Online Firmware Upgrade
+<옵션 1>: 온라인 펌웨어 업그레이드
 
-1. Ensure your device is connected to the internet. 
-    
-2. In the web admin panel, navigate to **SYSTEM** > **Upgrade** > **Online Upgrade**, and click the **Install** button to automatically update to the latest firmware.
+1. 장치가 인터넷에 연결되어 있는지 확인하세요.
 
-    ![online upgrade](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/online-upgrade.png){class="glboxshadow"}
+2. 웹 관리 패널에서 **SYSTEM** > **Upgrade** > **Online Upgrade**로 이동한 다음 **Install** 버튼을 클릭하여 최신 펌웨어로 자동 업데이트하세요.
 
-<u>Option 2</u>: Manual Firmware Update
+    ![online upgrade](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/online-upgrade.png){class="glboxshadow"}
 
-1. Download firmware for the corresponding model that supports eSIM functionality from [here](https://dl.gl-inet.com/){target="_blank"}.
-    
-2. In the web admin panel, navigate to **SYSTEM** > **Upgrade** > **Local Upgrade**. Select the firmware file or drag it into the designated area to upgrade to the latest version.
+<옵션 2>: 수동 펌웨어 업데이트
 
-    ![local upgrade](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/local-upgrade.png){class="glboxshadow"}
+1. [여기](https://dl.gl-inet.com/){target="_blank"}에서 eSIM 기능을 지원하는 해당 모델의 펌웨어를 다운로드하세요.
+
+2. 웹 관리 패널에서 **SYSTEM** > **Upgrade** > **Local Upgrade**로 이동하세요. 펌웨어 파일을 선택하거나 지정된 영역으로 드래그하여 최신 버전으로 업그레이드하세요.
+
+    ![local upgrade](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/local-upgrade.png){class="glboxshadow"}
 
 !!! Note
 
-    1. Some models, such as Mudi (GL-E750), Puli (GL-XE300) and Spitz (GL-X750), do not support eSIM if they are equipped with Quectel EP06-A modules due to the Qualcomm software lacking support for specific AT commands.  
-    
-    2. If they have EP06-E modules installed, please refer to [this link](https://forum.gl-inet.com/t/48907){target="_blank"} to upgrade the module to the latest software for eSIM functionality.
+    1. Mudi (GL-E750), Puli (GL-XE300), Spitz (GL-X750)와 같은 일부 모델은 Quectel EP06-A 모듈이 장착된 경우 Qualcomm 소프트웨어가 특정 AT 명령을 지원하지 않으므로 eSIM을 지원하지 않습니다.
 
-**Step 2:** Navigate to the eSIM Management.
+    2. EP06-E 모듈이 장착된 경우 eSIM 기능을 위해 [이 링크](https://forum.gl-inet.com/t/48907){target="_blank"}를 참조하여 모듈을 최신 소프트웨어로 업그레이드하세요.
 
-After updating the firmware, wait for your device to reboot, then log in to the GL.iNet Admin Panel.
+**2단계:** eSIM 관리로 이동하세요.
 
-Navigate to **APPLICATIONS** > **eSIM Management**. Here you can view your eSIM current status.
+펌웨어 업데이트 후 장치가 재부팅될 때까지 기다린 다음 GL.iNet 관리 패널에 로그인하세요.
 
-![eSIM manage](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/esim-manage-status.jpg){class="glboxshadow"}
+**APPLICATIONS** > **eSIM Management**로 이동하세요. 여기서 eSIM 현재 상태를 볼 수 있습니다.
 
-Only one eSIM profile can be active at a time. A green dot indicates that the selected eSIM profile is currently active.
+![eSIM manage](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/esim-manage-status.jpg){class="glboxshadow"}
 
-## eSIM Management Guide
+한 번에 하나의 eSIM 프로필만 활성화할 수 있습니다. 녹색 점은 선택한 eSIM 프로필이 현재 활성화되어 있음을 나타냅니다.
 
-![eSIM manage](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/esim-management-interface-guide.jpg){class="glboxshadow"}
+## eSIM 관리 가이드
 
-**A. Current eSIM Status:**
+![eSIM manage](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/esim-management-interface-guide.jpg){class="glboxshadow"}
 
-This section displays the basic information of the eSIM and details of the currently active profile.
+**A. 현재 eSIM 상태:**
 
-- **EID:** The globally unique identifier of the eUICC (eSIM chip) used for identification and profile control.
-- **ICCID:** The Integrated Circuit Card Identifier of the currently active eSIM profile.
-- **IMSI:** The International Mobile Subscriber Identity of the currently active eSIM profile.
-- **eSIM OS Version:** The operating system version of the eUICC that defines its compatibility and capabilities.
-- **eSIM Storage (remain/total):** The available and total storage capacity on the eUICC for storing eSIM profiles.
-- **eSIM Profile Number:** The number of eSIM profiles currently stored on the eUICC.
+이 섹션에는 eSIM의 기본 정보와 현재 활성화된 프로필의 세부 정보가 표시됩니다.
 
-**B. Seed Profile:**
+- **EID:** eUICC(eSIM 칩)의 전역 고유 식별자로 식별 및 프로필 제어에 사용됩니다.
+- **ICCID:** 현재 활성화된 eSIM 프로필의 통합 회로 카드 식별자입니다.
+- **IMSI:** 현재 활성화된 eSIM 프로필의 국제 모바일 가입자 식별자입니다.
+- **eSIM OS Version:** eUICC의 운영 체제 버전으로 호환성 및 기능을 정의합니다.
+- **eSIM Storage (remain/total):** eSIM 프로필 저장을 위한 eUICC의 사용 가능 및 총 저장 용량입니다.
+- **eSIM Profile Number:** 현재 eUICC에 저장된 eSIM 프로필 수입니다.
 
-This section provides details about the seed profile. The seed profile comes preloaded with 1GB of free data for the U.S. and Europe, plus 100MB of global data, valid for 1 year from the activation date. This data allows you to download other profiles globally. You can also monitor the usage of the seed profile, including the remaining data, total data, and expiration date.
+**B. 시드 프로필:**
 
-**C. Normal Profile:**
+이 섹션에는 시드 프로필에 대한 세부 정보가 표시됩니다. 시드 프로필에는 미국과 유럽용 1GB 무료 데이터와 글로벌 데이터 100MB가 포함되어 있으며 활성화 날짜로부터 1년간 유효합니다. 이 데이터를 사용하여 전 세계적으로 다른 프로필을 다운로드할 수 있습니다. 시드 프로필의 사용량(남은 데이터, 총 데이터, 만료 날짜 포함)도 모니터링할 수 있습니다.
 
-This section displays information about the normal profiles. If you purchase an eSIM profile from an online store and upload the eSIM QR code using the **Add eSIM Profile (QR Code Install)** function, the profile will appear here after the upload is complete.
+**C. 일반 프로필:**
 
-**D. Add eSIM Profile (QR Code Install):**
+이 섹션에는 일반 프로필에 대한 정보가 표시됩니다. 온라인 스토어에서 eSIM 프로필을 구매하고 **Add eSIM Profile (QR Code Install)** 기능을 사용하여 eSIM QR 코드를 업로드하면 업로드 완료 후 프로필이 여기에 표시됩니다.
 
-This is the core function for uploading and installing eSIM profiles. When you purchase an eSIM profile from an online store, you will receive a QR code. Click this button to upload the QR code, which will then download and install the eSIM profile onto your router.
+**D. eSIM 프로필 추가 (QR 코드 설치):**
 
-**E. Export Log for Support:**
+이것은 eSIM 프로필을 업로드하고 설치하는 핵심 기능입니다. 온라인 스토어에서 eSIM 프로필을 구매하면 QR 코드를 받게 됩니다. 이 버튼을 클릭하여 QR 코드를 업로드하면 eSIM 프로필을 다운로드하여 라우터에 설치합니다.
 
-This section allows you to view all logs related to the operation of the eSIM. If you encounter any issues and require technical support, you can export these logs and share them with our support team via email at support@gl-inet.com.
+**E. 지원용 로그 내보내기:**
 
-**F. Top-up:**
+이 섹션에서 eSIM 작업과 관련된 모든 로그를 볼 수 있습니다. 문제가 발생하고 기술 지원이 필요한 경우 이러한 로그를 내보내고 support@gl-inet.com 이메일을 통해 지원팀과 공유하세요.
 
-If you run out of the complimentary and preloaded data provided by GL.iNet, or if the data has expired and you wish to continue using the service, you can click the **Top-up** button to scan a QR code and purchase additional data.
+**F. 충전:**
 
-**G. Recommended eSIM Profile Stores:**
+GL.iNet에서 제공하는 무료 및 사전 로드된 데이터를 모두 사용했거나 데이터가 만료되어 서비스를 계속 사용하려는 경우 **Top-up** 버튼을 클릭하여 QR 코드를 스캔하고 추가 데이터를 구매하세요.
 
-GL.iNet recommends two partner eSIM stores for your convenience: EIOTCLUB and Tuge. You can scan the QR codes or click link ([the EIOTCLUB eSIM Store](https://www.eiotclub.com/pages/esim){target="_blank"} or [the Tuge eSIM Store](https://esim_store.gl-inet.com/){target="_blank"}) to make a purchase based on your needs. You can also choose to buy eSIM packages from other third-party providers of your choice.
+**G. 추천 eSIM 프로필 스토어:**
 
-**H. Actions:**
+GL.iNet은 편의를 위해 두 개의 파트너 eSIM 스토어인 EIOTCLUB과 Tuge를 추천합니다. QR 코드를 스캔하거나 링크([EIOTCLUB eSIM 스토어](https://www.eiotclub.com/pages/esim){target="_blank"} 또는 [Tuge eSIM 스토어](https://esim_store.gl-inet.com/){target="_blank"})를 클릭하여 필요에 따라 구매할 수 있습니다. 다른 타사 제공업체에서 eSIM 패키지를 구매할 수도 있습니다.
 
-This section allows you to easily manage eSIM profiles, including enabling, switching or deleting them.
+**H. 작업:**
 
-## Top Up eSIM Seed Profile
+이 섹션에서 eSIM 프로필을 쉽게 관리할 수 있습니다. 활성화, 전환 또는 삭제가 포함됩니다.
 
-For initial setup or purchasing an eSIM profile, GL.iNet provides preloaded data: 100MB for global use and 1GB for Europe and the U.S. These plans are designed to be more expensive and are intended for situations where you need to download a new eSIM profile upon arriving in a location without internet access.
+## eSIM 시드 프로필 충전
 
-To top up your eSIM Seed Profile, simply click the **Top-up** button, scan the QR code and follow the instructions.
+초기 설정 또는 eSIM 프로필 구매를 위해 GL.iNet은 사전 로드된 데이터를 제공합니다: 글로벌용 100MB와 유럽 및 미국용 1GB입니다. 이 요금제는 더 비싸게 설계되었으며 인터넷 액세스 없는 위치에 도착했을 때 새 eSIM 프로필을 다운로드해야 하는 상황을 위해 설계되었습니다.
 
-![eSIM manage](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/esim_top-up.jpg){class="glboxshadow"}
+eSIM 시드 프로필을 충전하려면 **Top-up** 버튼을 클릭하여 QR 코드를 스캔하고 지침을 따르세요.
 
-## Purchase eSIM Profile and Install
+![eSIM manage](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/esim_top-up.jpg){class="glboxshadow"}
 
-After setting up your router, follow the steps below to purchase and activate your eSIM profile.
+## eSIM 프로필 구매 및 설치
 
-**Step 1:** Purchase an eSIM Profile from eSIM Stores.
+라우터 설정 후 다음 단계에 따라 eSIM 프로필을 구매하고 활성화하세요.
 
-<u>Option 1</u>: Purchase an eSIM profile from one of our recommended stores, [the EIOTCLUB eSIM Store](https://www.eiotclub.com/pages/esim){target="_blank"} or [the Tuge eSIM Store](https://esim_store.gl-inet.com){target="_blank"}. Please refer to the image below for the direct store links.
+**1단계:** eSIM 스토어에서 eSIM 프로필을 구매하세요.
+
+<옵션 1>: 추천 스토어인 [EIOTCLUB eSIM 스토어](https://www.eiotclub.com/pages/esim){target="_blank"} 또는 [Tuge eSIM 스토어](https://esim_store.gl-inet.com/){target="_blank"}에서 eSIM 프로필을 구매하세요. 직접 스토어 링크는 아래 이미지를 참조하세요.
 
 
-*All eSIM profile packages purchased from these two stores are fully compatible with our routers. If you have any questions, please contact our support team at support@gl-inet.com.*
+*이 두 스토어에서 구매한 모든 eSIM 프로필 패키지는 우리 라우터와 완전히 호환됩니다. 질문이 있으시면 support@gl-inet.com으로 지원팀에 문의하세요.*
 
-![eSIM recommend store](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/esim-profile-recommend-store-1.jpg){class="glboxshadow"}
+![eSIM recommend store](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/esim-profile-recommend-store-1.jpg){class="glboxshadow"}
 
-![eSIM recommend store](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/esim-profile-recommend-store-2.jpg){class="glboxshadow"}
+![eSIM recommend store](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/esim-profile-recommend-store-2.jpg){class="glboxshadow"}
 
-<u>Option 2</u>: Refer to [this link](https://forum.gl-inet.com/t/carriers-supported-by-gl-inet-physical-esim/54164){target="_blank"} to get a list of stores that have been tested by GL.iNet. Note that we cannot guarantee that all packages from these stores will be fully compatible with GL.iNet routers.
+<옵션 2>: [이 링크](https://forum.gl-inet.com/t/carriers-supported-by-gl-inet-physical-esim/54164){target="_blank"}를 참조하여 GL.iNet에서 테스트한 스토어 목록을 가져오세요. 이 스토어의 모든 패키지가 GL.iNet 라우터와 완전히 호환된다는 보장은 없습니다.
 
-*Since GL.iNet does not have partnerships with these stores, we are unable to assist with after-sales support or refunds related to these packages.*
+*GL.iNet은 이 스토어와 파트너십을 맺고 있지 않으므로 이 패키지와 관련된 판매 지원 또는 환불을 도와드릴 수 없습니다.*
 
-<u>Option 3</u>: Purchase an eSIM profile from other third-party providers of your choice.
+<옵션 3>: 선택한 다른 타사 제공업체에서 eSIM 프로필을 구매하세요.
 
-**Step 2**: Install Your eSIM Profile
+**2단계**: eSIM 프로필 설치
 
-After purchasing the eSIM profile, you will receive a QR code. Save this QR code to your computer. Then click the **Add eSIM Profile (QR Code Install)** button to upload and install your purchased eSIM profile.
+eSIM 프로필을 구매하면 QR 코드를 받게 됩니다. 이 QR 코드를 컴퓨터에 저장하세요. 그런 다음 **Add eSIM Profile (QR Code Install)** 버튼을 클릭하여 구매한 eSIM 프로필을 업로드하고 설치하세요.
 
-![add eSIM profile](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/add-esim-profile-1.jpg){class="glboxshadow"}
+![add eSIM profile](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/add-esim-profile-1.jpg){class="glboxshadow"}
 
-![add eSIM profile](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/add-esim-profile-2.jpg){class="glboxshadow"}
+![add eSIM profile](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/add-esim-profile-2.jpg){class="glboxshadow"}
 
-**Note:** As shown by the green arrow in the image above, a properly formatted QR code will display an activation code that begins with **LPA:**.
+**참고:** 위 이미지의 녹색 화살표와 같이 올바른 형식의 QR 코드는 **LPA:**로 시작하는 활성화 코드를 표시합니다.
 
-*However, some non-standard QR codes may produce only a raw activation code without the LPA prefix.
-If this occurs, please manually add "LPA:" to the beginning of the code before clicking the Download & Install button.*
+*그러나 일부 비표준 QR 코드는 LPA 접두사 없이 원시 활성화 코드만 생성할 수 있습니다.
+이 경우 Download & Install 버튼을 클릭하기 전에 코드 앞에 "LPA:"를 수동으로 추가하세요.*
 
-**Step 3:** Enable Your New Profile
+**3단계:** 새 프로필 활성화
 
-After successfully uploading the QR code, you will see your new eSIM profile listed under **Normal Profile**. Click **Enable** to activate your new eSIM profile. 
+QR 코드를 성공적으로 업로드하면 **Normal Profile** 아래에 새 eSIM 프로필이 표시됩니다. **Enable**를 클릭하여 새 eSIM 프로필을 활성화하세요.
 
-![enable your new profile](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/enable-your-new-profile.jpg){class="glboxshadow"}
+![enable your new profile](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/enable-your-new-profile.jpg){class="glboxshadow"}
 
-**Step 4:** Apply Your New eSIM Profile and Connect to the Internet
+**4단계:** 새 eSIM 프로필 적용 및 인터넷 연결
 
-After enabling your eSIM profile, navigate to **INTERNET** and click **Connect** to apply your eSIM profile and connect to the internet.
+eSIM 프로필을 활성화한 후 **INTERNET**로 이동하고 **Connect**를 클릭하여 eSIM 프로필을 적용하고 인터넷에 연결하세요.
 
-![connect to internet](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/enable-your-new-profile-connect.jpg){class="glboxshadow"}
+![connect to internet](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/enable-your-new-profile-connect.jpg){class="glboxshadow"}
 
-*Note: Some eSIM profiles may require additional settings, such as APN, PIN, or TTL. If needed, click **Manual Setup** or **SIM Card Settings** to configure these settings. In some cases, you may need to reboot the device to establish an internet connection.*
+*참고: 일부 eSIM 프로필은 APN, PIN 또는 TTL과 같은 추가 설정이 필요할 수 있습니다. 필요한 경우 **Manual Setup** 또는 **SIM Card Settings**를 클릭하여 이 설정을 구성하세요. 경우에 따라 인터넷 연결을 설정하려면 장치를 재부팅해야 할 수도 있습니다.*
 
-Once the eSIM profile is successfully set up, the screen will appear as follows:
+eSIM 프로필이 성공적으로 설정되면 화면이 다음과 같이 표시됩니다:
 
-![eSIM profile is successfully set up](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/enable-your-new-profile-successfully.jpg){class="glboxshadow"}
+![eSIM profile is successfully set up](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/enable-your-new-profile-successfully.jpg){class="glboxshadow"}
 
-**Step 5:** Easily Switch or Delete eSIM Profiles
+**5단계:** eSIM 프로필 쉽게 전환 또는 삭제
 
-You can easily switch between eSIM profiles by clicking **Enable** next to the profile you want to activate. To remove an eSIM profile, simply click **Delete**.
+활성화하려는 프로필 옆의 **Enable**를 클릭하여 eSIM 프로필 간에 쉽게 전환할 수 있습니다. eSIM 프로필을 제거하려면 **Delete**를 클릭하세요.
 
-![eSIM profile is successfully set up](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/switch-or-delete-esim-profile.jpg){class="glboxshadow"}
+![eSIM profile is successfully set up](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_set_up_the_esim/switch-or-delete-esim-profile.jpg){class="glboxshadow"}
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+질문이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl.inet.com/contacts/){target="_blank"}을 통해 연락하세요.

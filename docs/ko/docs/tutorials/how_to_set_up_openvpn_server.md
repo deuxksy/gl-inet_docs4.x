@@ -1,117 +1,117 @@
-# How to set up OpenVPN server on GL.iNet routers
+# GL.iNet 라우터에 OpenVPN 서버 설정 방법
 
-This tutorial will show you how to set up an OpenVPN server on GL.iNet routers. A VPN server allows you to establish a secure connection to your home or office network remotely. With a GL.iNet router, you can set up an OpenVPN server in a few minutes.
+이 튜토리얼은 GL.iNet 라우터에 OpenVPN 서버를 설정하는 방법을 안내합니다. VPN 서버를 사용하면 집이나 사무실 네트워크에 보안 연결을 원격으로 설정할 수 있습니다. GL.iNet 라우터를 사용하면 몇 분 만에 OpenVPN 서버를 설정할 수 있습니다.
 
-!!! note "Before you start, make sure you meet the following requirements"
-    
-    **Public IP address**
+!!! note "시작하기 전에 다음 요구 사항을 충족하는지 확인하세요"
 
-    Setting up an OpenVPN server requires a public IP address. To check if you have one, refer to [this link](https://docs.gl-inet.com/router/en/4/tutorials/how_to_check_if_isp_assigns_you_a_public_ip_address/).
+    **공용 IP 주소**
 
-    **Port forwarding**
+    OpenVPN 서버를 설정하려면 공용 IP 주소가 필요합니다. 공용 IP 주소가 있는지 확인하려면 [이 링크](https://docs.gl-inet.com/router/en/4/tutorials/how_to_check_if_isp_assigns_you_a_public_ip_address/)를 참조하세요.
 
-    If your GL.iNet router is connected behind a primary router, [set up port forwarding on the primary router](https://docs.gl-inet.com/router/en/4/tutorials/how_to_set_up_port_forwarding/).
+    **포트 포워딩**
 
-## 1. Log in to your router
+    GL.iNet 라우터가 기본 라우터 뒤에 연결된 경우 [기본 라우터에서 포트 포워딩을 설정하세요](https://docs.gl-inet.com/router/en/4/tutorials/how_to_set_up_port_forwarding/).
 
-Open a web browser and access the router's web admin panel (default IP: 192.168.8.1). Log in with your admin password.
+## 1. 라우터에 로그인하세요
 
-![log in](https://static.gl-inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/router-login.jpeg){class="glboxshadow"}
+웹 브라우저를 열고 라우터의 웹 관리 패널에 액세스하세요(기본 IP: 192.168.8.1). 관리자 비밀번호로 로그인하세요.
 
-## 2. Enable Dynamic DNS (Optional)
+![log in](https://static.gl.inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/router-login.jpeg){class="glboxshadow"}
 
-Setting up an OpenVPN server typically requires a **static public IP address**, which provides a fixed endpoint for other devices to access your VPN server. 
+## 2. Dynamic DNS 활성화 (선택 사항)
 
-However, if you do not have a static public IP address, e.g., a dynamic one instead, you may need to enable **Dynamic DNS (DDNS)** on your GL.iNet router. This allows persistent connectivity to the OpenVPN server even when your public IP address changes dynamically.
+OpenVPN 서버를 설정하려면 일반적으로 **고정 공용 IP 주소**가 필요합니다. 이는 다른 장치가 VPN 서버에 액세스할 수 있는 고정된 끝점을 제공합니다.
 
-Follow the steps below to enable Dynamic DNS.
+그러나 고정 공용 IP 주소가 없고 예를 들어 동적 IP 주소가 있는 경우 GL.iNet 라우터에서 **Dynamic DNS (DDNS)**를 활성화해야 할 수 있습니다. 이를 통해 공용 IP 주소가 동적으로 변경되더라도 OpenVPN 서버에 지속적으로 연결할 수 있습니다.
 
-1. In the router's web admin panel, go to **APPLICATIONS** > **Dynamic DNS**. 
-![dynamic DNS](https://static.gl-inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/click-dynamic-dns.jpeg){class="glboxshadow"}
-2. Toggle on **Enable DDNS**, read and agree to the **Terms of Service & Privacy Policy**, then click **Apply**. 
-![apply](https://static.gl-inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/dynamic-dns-click-apply.png){class="glboxshadow"}
+다음 단계에 따라 Dynamic DNS를 활성화하세요.
 
-## 3. Download configuration file
+1. 라우터의 웹 관리 패널에서 **APPLICATIONS** > **Dynamic DNS**로 이동하세요.
+![dynamic DNS](https://static.gl.inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/click-dynamic-dns.jpeg){class="glboxshadow"}
+2. **Enable DDNS**를 토글로 켜고 **서비스 약관 및 개인정보 처리방침**을 읽고 동의한 다음 **Apply**를 클릭하세요.
+![apply](https://static.gl.inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/dynamic-dns-click-apply.png){class="glboxshadow"}
 
-1. In the router's web admin panel, go to **VPN** > **OpenVPN Server**.
-2. Click **Generate Configuration**. 
-3. Keep the default settings as-is, then click **Export Client Configuration**. 
-![click export](https://static.gl-inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/click-export-client-configuration.jpeg){class="glboxshadow"}
-4. In the pop-up window, toggle the switch **Use DDNS Domain** to on if you have set up **Dynamic DNS** previously. 
-5. Click **Download**, then save the file. 
-6. At the top of **OpenVPN Server** page, click **Start**.
-![click start](https://static.gl-inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/openvpn-server-click-start.jpeg){class="glboxshadow"}
+## 3. 설정 파일 다운로드
 
-??? "(Optional) To access the local network of the VPN server, enable these settings:"
-    
-    For firmware v4.7 and earlier:
+1. 라우터의 웹 관리 패널에서 **VPN** > **OpenVPN Server**로 이동하세요.
+2. **Generate Configuration**을 클릭하세요.
+3. 기본 설정을 그대로 유지한 다음 **Export Client Configuration**을 클릭하세요.
+![click export](https://static.gl.inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/click-export-client-configuration.jpeg){class="glboxshadow"}
+4. 팝업 창에서 이전에 **Dynamic DNS**를 설정한 경우 **Use DDNS Domain** 스위치를 켭니다.
+5. **Download**를 클릭한 다음 파일을 저장하세요.
+6. **OpenVPN Server** 페이지 상단에서 **Start**를 클릭하세요.
+![click start](https://static.gl.inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/openvpn-server-click-start.jpeg){class="glboxshadow"}
 
-    1. In the left sidebar, click **VPN** > **VPN Dashboard**. 
-    2. Click the Options icon.
-    3. Toggle the switch to on for **Remote Access LAN**.
-    4. Click **Apply**.
+??? "(선택 사항) VPN 서버의 로컬 네트워크에 액세스하려면 다음 설정을 활성화하세요:"
 
-        ![remote access lan](https://static.gl-inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/toggle-enable-remote-access-lan.png){class="glboxshadow"}
+    펌웨어 v4.7 이하:
 
-    For firmware v4.8 and higher:
+    1. 왼쪽 사이드바에서 **VPN** > **VPN Dashboard**를 클릭하세요.
+    2. Options 아이콘을 클릭하세요.
+    3. **Remote Access LAN** 스위치를 켭니다.
+    4. **Apply**를 클릭하세요.
 
-    1. In the left sidebar, click **VPN** > **OpenVPN Server**.
-    2. Click **Options** in the upper right.
-    3. Toggle the switch to on for **Allow Remote Access the LAN Subnet**.
-    4. Click **Apply**.
+        ![remote access lan](https://static.gl.inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/toggle-enable-remote-access-lan.png){class="glboxshadow"}
 
-        ![remote access lan](https://static.gl-inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/enable-remote-access-lan-4.8.png){class="glboxshadow"}
+    펌웨어 v4.8 이상:
+
+    1. 왼쪽 사이드바에서 **VPN** > **OpenVPN Server**를 클릭하세요.
+    2. 우측 상단에서 **Options**를 클릭하세요.
+    3. **Allow Remote Access the LAN Subnet** 스위치를 켭니다.
+    4. **Apply**를 클릭하세요.
+
+        ![remote access lan](https://static.gl.inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/enable-remote-access-lan-4.8.png){class="glboxshadow"}
 
 
-## 4. Connect to OpenVPN server
+## 4. OpenVPN 서버에 연결
 
-To connect to the OpenVPN server, you will need an OpenVPN client. You can set it up by using one of these methods below: 
+OpenVPN 서버에 연결하려면 OpenVPN 클라이언트가 필요합니다. 다음 방법 중 하나를 사용하여 설정할 수 있습니다.
 
-??? "Method 1: A third-party OpenVPN client app (Use this method if you don't have an additional router that supports setting up an OpenVPN client)" 
+??? "방법 1: 서드파티 OpenVPN 클라이언트 앱 (OpenVPN 클라이언트 설정을 지원하는 추가 라우터가 없는 경우 이 방법 사용)"
 
-    In this tutorial, we will use the OpenVPN Connect app, the official app developed by OpenVPN Inc, as an example. 
+    이 튜토리얼에서는 OpenVPN Inc에서 개발한 공식 앱인 OpenVPN Connect 앱을 예로 사용합니다.
 
-    1. On another device, connect to a different Wi-Fi network (or connect to cellular if you are using a mobile device.)
-    2. Send the configuration file you downloaded earlier (e.g., by email) to the device, then download the file to it. 
-    3. Download OpenVPN Connect for your device operating system:
+    1. 다른 장치에서 다른 Wi-Fi 네트워크에 연결하세요(모바일 장치를 사용하는 경우 셀룰러에 연결).
+    2. 이전에 다운로드한 설정 파일을(예: 이메일로) 장치로 보낸 다음 파일을 다운로드하세요.
+    3. 장치 운영 체제에 맞는 OpenVPN Connect를 다운로드하세요:
         * [Windows](https://openvpn.net/client/client-connect-vpn-for-windows/)
         * [Mac](https://openvpn.net/client-connect-vpn-for-mac-os/)
         * [Android](https://play.google.com/store/apps/details?id=net.openvpn.openvpn&hl=en&gl=US&pli=1)
         * [iOS](https://apps.apple.com/us/app/openvpn-connect-openvpn-app/id590379981)
         * [Linux](https://openvpn.net/openvpn-client-for-linux/)
-    4. In the app, read the terms and conditions, then select **Agree**. 
-    5. Select **Upload File**.
-    ![upload file](https://static.gl-inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/tap-upload-file.png){class="glboxshadow"}
-    6. Select **Browse**, then select the configuration file you downloaded previously. 
-    7. Select **OK**.
-        ![tap ok](https://static.gl-inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/tap-ok.png){class="glboxshadow"} 
-    8. Select **Connect** > **OK** > **Allow**. 
+    4. 앱에서 이용약관을 읽고 **Agree**를 선택하세요.
+    5. **Upload File**을 선택하세요.
+![upload file](https://static.gl.inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/tap-upload-file.png){class="glboxshadow"}
+    6. **Browse**를 선택한 다음 이전에 다운로드한 설정 파일을 선택하세요.
+    7. **OK**를 선택하세요.
+        ![tap ok](https://static.gl.inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/tap-ok.png){class="glboxshadow"}
+    8. **Connect** > **OK** > **Allow**를 선택하세요.
 
-    You will see the word "Connected" at the top of the VPN profile. 
-    ![connected status](https://static.gl-inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/connected-status.png){class="glboxshadow"} 
+    VPN 프로필 상단에 "Connected" 단어가 표시됩니다.
+    ![connected status](https://static.gl.inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/connected-status.png){class="glboxshadow"}
 
-??? "Method 2: A router that supports setting up an OpenVPN client"
+??? "방법 2: OpenVPN 클라이언트 설정을 지원하는 라우터"
 
-    You can use any routers that support setting up the OpenVPN client manual configuration. In this tutorial, we will use GL.iNet's travel router [Beryl AX (GL-MT3000)](https://www.gl-inet.com/products/gl-mt3000/) as an example. 
+    OpenVPN 클라이언트 수동 설정을 지원하는 모든 라우터를 사용할 수 있습니다. 이 튜토리얼에서는 GL.iNet의 트래블 라우터 [Beryl AX (GL-MT3000)](https://www.gl-inet.com/products/gl-mt3000/)을 예로 사용합니다.
 
-    1. On another device, connect to a different Wi-Fi network (or connect to cellular if you are using a mobile device.). 
-    2. In a web browser's address, enter the URL to your router admin panel (e.g., 192.168.8.1).
-    3. Enter your password, then click **Login**. 
-    4. In the left sidebar, click **VPN** > **OpenVPN Client**. 
-    ![click openvpn client](https://static.gl-inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/click-openvpn-client.png){class="glboxshadow"} 
-    5. Click **Add Manually**. 
-    ![click add manually](https://static.gl-inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/click-add-manually.png){class="glboxshadow"} 
-    6. Enter a name in the field, then click the check icon. 
-    7. Upload the configuration file you downloaded earlier. 
-    ![select a file](https://static.gl-inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/click-select-a-file.png){class="glboxshadow"} 
-    8. Click **Apply**. 
-    9. Click the three-dot icon, then click **Start**. 
-    10. Connect a device to the router running the OpenVPN client. 
+    1. 다른 장치에서 다른 Wi-Fi 네트워크에 연결하세요(모바일 장치를 사용하는 경우 셀룰러에 연결).
+    2. 웹 브라우저 주소창에 라우터 관리 패널 URL을 입력하세요(예: 192.168.8.1).
+    3. 비밀번호를 입력한 다음 **Login**을 클릭하세요.
+    4. 왼쪽 사이드바에서 **VPN** > **OpenVPN Client**를 클릭하세요.
+![click openvpn client](https://static.gl.inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/click-openvpn-client.png){class="glboxshadow"}
+    5. **Add Manually**를 클릭하세요.
+![click add manually](https://static.gl.inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/click-add-manually.png){class="glboxshadow"}
+    6. 필드에 이름을 입력한 다음 확인 아이콘을 클릭하세요.
+    7. 이전에 다운로드한 설정 파일을 업로드하세요.
+![select a file](https://static.gl.inet.com/docs/router/en/4/tutorials/build_your_own_openvpn_server/click-select-a-file.png){class="glboxshadow"}
+    8. **Apply**를 클릭하세요.
+    9. 점 3개 아이콘을 클릭한 다음 **Start**를 클릭하세요.
+    10. OpenVPN 클라이언트를 실행하는 라우터에 장치를 연결하세요.
 
-## 5. Verify VPN connection
+## 5. VPN 연결 확인
 
-Open a web browser and search for your IP address and location. If they match the VPN server's IP (instead of your Internet service provider's IP) and location, the VPN connection is successful.
+웹 브라우저를 열고 IP 주소와 위치를 검색하세요. VPN 서버의 IP(인터넷 서비스 제공업체의 IP가 아님)와 위치와 일치하면 VPN 연결이 성공한 것입니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+질문이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}을 통해 연락하세요.

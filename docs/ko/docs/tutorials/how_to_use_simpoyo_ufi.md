@@ -1,19 +1,19 @@
-# How to use SIMPoYo uFi?
+# SIMPoYo uFi 사용 방법
 
-SIMPoYo uFi is our compact Plug & Play USB dongle series with Wi-Fi hotspot, designed for fast and reliable connectivity anywhere. It works seamlessly with most GL.iNet routers, as well as laptops, power banks, car USB ports, and other USB power sources. It comes with 10GB of free data for 30 days, valid in the UK and 34 other European countries.
-<br><small>*Available Only: [EU](https://store-eu.gl-inet.com/) & [UK Stores](https://store-uk.gl-inet.com/)</small>
+SIMPoYo uFi는 Wi-Fi 핫스팟이 포함된 컴팩트한 Plug & Play USB 동글 시리즈로, 어디서나 빠르고 안정적인 연결을 위해 설계되었습니다. 대부분의 GL.iNet 라우터와 완벽하게 작동하며 노트북, 파워뱅크, 차량 USB 포트 및 기타 USB 전원과도 호환됩니다. 30일간 UK 및 34개 유럽 국가에서 유효한 10GB 무료 데이터가 포함되어 있습니다.
+<br><small>*[EU 스토어](https://store-eu.gl-inet.com/) & [UK 스토어](https://store-uk.gl-inet.com/) 전용*</small>
 
-This guide will show you how to use the SIMPoYo uFi USB dongle (SP-N150C4), including LED indication, how to activate its built-in SIM card, use the dongle on different devices, top up data, and manage uFi settings.
+이 가이드는 SIMPoYo uFi USB 동글(SP-N150C4)을 사용하는 방법을 안내합니다. LED 표시, 내장 SIM 카드 활성화, 다양한 장치에서 동글 사용, 데이터 충전, uFi 설정 관리가 포함됩니다.
 
-![SIMPoYo uFi](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/sp-n150c4.jpg){class="glboxshadow"}
+![SIMPoYo uFi](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/sp-n150c4.jpg){class="glboxshadow"}
 
-## LED Indication
+## LED 표시
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>LED Indication</title>
+    <title>LED 표시</title>
     <style>
         table {
             border-collapse: collapse;
@@ -34,284 +34,284 @@ This guide will show you how to use the SIMPoYo uFi USB dongle (SP-N150C4), incl
     <table>
         <thead>
             <tr>
-                <th>LED Type</th>
-                <th>Color</th>
-                <th>Description</th>
+                <th>LED 유형</th>
+                <th>색상</th>
+                <th>설명</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td rowspan="3">4G LED</td>
-                <td>Green</td>
-                <td>LTE Connected</td>
+                <td>녹색</td>
+                <td>LTE 연결됨</td>
             </tr>
             <tr>
-                <td>Blue</td>
-                <td>WCDMA Connected</td>
+                <td>파란색</td>
+                <td>WCDMA 연결됨</td>
             </tr>
             <tr>
-                <td>Red Blinking</td>
-                <td>No Signal / No SIM Card / Out of Service</td>
+                <td>빨간색 점멸</td>
+                <td>신호 없음 / SIM 카드 없음 / 서비스 외</td>
             </tr>
             <tr>
                 <td rowspan="3">Wi-Fi LED</td>
-                <td>Green</td>
-                <td>Device(s) connected to Wi-Fi</td>
+                <td>녹색</td>
+                <td>장치가 Wi-Fi에 연결됨</td>
             </tr>
             <tr>
-                <td>Blue</td>
-                <td>No device connected to Wi-Fi</td>
+                <td>파란색</td>
+                <td>Wi-Fi에 연결된 장치 없음</td>
             </tr>
             <tr>
-                <td>OFF</td>
-                <td>Wi-Fi is Disabled</td>
+                <td>꺼짐</td>
+                <td>Wi-Fi 비활성화됨</td>
             </tr>
                 <td rowspan="2">4G LED + Wi-Fi LED</td>
-                <td>White</td>
-                <td>Device Powered On</td>
+                <td>흰색</td>
+                <td>장치 전원 켜짐</td>
             </tr>
             <tr>
-                <td>OFF</td>
-                <td>Device Powered Off</td>
+                <td>꺼짐</td>
+                <td>장치 전원 꺼짐</td>
         </tbody>
     </table>
 </body>
 </html>
 
-## Activate SIM Card
+## SIM 카드 활성화
 
-SIMPoYo uFi comes with a pre-installed SIM card, which needs to be activated before use.
+SIMPoYo uFi에는 사전 설치된 SIM 카드가 포함되어 있으며 사용 전 활성화해야 합니다.
 
-Watch this video or follow the steps below to activate the SIMPoYo uFi SIM card.
+비디오를 시청하거나 아래 단계에 따라 SIMPoYo uFi SIM 카드를 활성화하세요.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0UokDjzp7Ek" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-**Step 1**. Find the ICCID number on the information label on the back of the SIMPoYo uFi.
+**1단계**. SIMPoYo uFi 뒷면 정보 라벨에서 ICCID 번호를 찾으세요.
 
-**Step 2**. Scan the QR code or visit [https://w.simpoyo.com/activate/](https://w.simpoyo.com/activate/){target="_blank"} and enter your ICCID number to register.
+**2단계**. QR 코드를 스캔하거나 [https://w.simpoyo.com/activate/](https://w.simpoyo.com/activate/){target="_blank"}을 방문하여 ICCID 번호를 입력하고 등록하세요.
 
-**Step 3**. Enjoy 10GB of Free Data. As a new user, you'll instantly receive 10GB of free 4G data, valid for 30 days in the UK and 34 other European countries.
+**3단계**. 10GB 무료 데이터를 즐기세요. 새로운 사용자로서 UK 및 34개 유럽 국가에서 30일간 유효한 10GB 무료 4G 데이터를 즉시 받게 됩니다.
 
-## Internet Setup
+## 인터넷 설정
 
-### Connect to a GL.iNet Router
+### GL.iNet 라우터에 연결
 
-SIMPoYo uFi works seamlessly with most GL.iNet travel and home routers – simply plug it into your router and get instant 4G LTE access anytime and anywhere.
+SIMPoYo uFi는 대부분의 GL.iNet 트래블 및 홈 라우터와 완벽하게 작동합니다. 라우터에 꽂기만 하면 언제 어디서나 즉시 4G LTE를 사용할 수 있습니다.
 
-Watch this video or follow the steps below to connect SIMPoYo uFi to a GL.iNet router.
+비디오를 시청하거나 아래 단계에 따라 SIMPoYo uFi를 GL.iNet 라우터에 연결하세요.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sU2u4En04so" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-**Step 1**. Plug the SIMPoYo uFi into the USB port of your GL.iNet router.
+**1단계**. SIMPoYo uFi를 GL.iNet 라우터의 USB 포트에 꽂으세요.
 
-![setup1](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/setup1.png){class="glboxshadow"}
+![setup1](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/setup1.png){class="glboxshadow"}
 
-**Step 2**. Connect a device to your router, then open a browser and visit `192.168.8.1` to log in to the router's web Admin Panel. If you changed the router's IP address, log in with the new one.
+**2단계**. 장치를 라우터에 연결한 다음 브라우저를 열고 `192.168.8.1`을 방문하여 라우터의 웹 관리 패널에 로그인하세요. 라우터의 IP 주소를 변경한 경우 새 주소로 로그인하세요.
 
-![setup2](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/setup2.png){class="glboxshadow"}
+![setup2](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/setup2.png){class="glboxshadow"}
 
-**Step 3**. On the Admin Panel, navigate to **INTERNET** -> **Tethering** and click **Connect**.
+**3단계**. 관리 패널에서 **INTERNET** -> **Tethering**로 이동하고 **Connect**를 클릭하세요.
 
-![setup3](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/setup3.png){class="glboxshadow"}
+![setup3](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/setup3.png){class="glboxshadow"}
 
-**Step 4**. Once connected, you will see the network details, with a blue dot at the upper left corner.
+**4단계**. 연결되면 좌측 상단에 파란색 점이 있는 네트워크 세부 정보가 표시됩니다.
 
-![setup4](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/setup4.png){class="glboxshadow"}
+![setup4](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/setup4.png){class="glboxshadow"}
 
-Now you can connect your devices to the router via cable or Wi-Fi, or connect to the SIMPoYo uFi's Wi-Fi directly to enjoy internet access.
+이제 장치를 라우터에 케이블이나 Wi-Fi를 통해 연결하거나 SIMPoYo uFi의 Wi-Fi에 직접 연결하여 인터넷을 즐기실 수 있습니다.
 
-- Connect to the router via cable: Plug an Ethernet cable into the router's LAN port and your device. Ideal for wire-only devices or stable, interference-free connections.
+- 케이블을 통해 라우터에 연결: 이더넷 케이블을 라우터의 LAN 포트와 장치에 꽂으세요. 케이블 전용 장치나 안정적이고 간섭 없는 연결에 적합합니다.
 
-- Connect to the router via Wi-Fi: Find the Wi-Fi SSID and Key on the router's bottom label, then connect your device to it. Suitable for multiple devices (2.4 GHz & 5 GHz), wider coverage needs, or personalized network settings on router.
+- Wi-Fi를 통해 라우터에 연결: 라우터 하단 라벨에서 Wi-Fi SSID와 Key를 찾은 다음 장치를 연결하세요. 여러 장치(2.4GHz 및 5GHz), 더 넓은 범위 또는 라우터에서 개인화된 네트워크 설정에 적합합니다.
 
-- Connect to SIMPoYo uFi via Wi-Fi: Find the Wi-Fi SSID and Key on the SIMPoYo uFi's device label, then connect your devices (up to 8) to it. Functions as a standalone 2.4 GHz hotspot for added flexibility when needed.
+- Wi-Fi를 통해 SIMPoYo uFi에 연결: SIMPoYo uFi 장치 라벨에서 Wi-Fi SSID와 Key를 찾은 다음 장치(최대 8개)를 연결하세요. 필요할 때 추가 유연성을 제공하는 독립형 2.4GHz 핫스팟으로 작동합니다.
 
-### Connect to a Computer
+### 컴퓨터에 연결
 
-**Step 1**. Plug the SIMPoYo uFi into the USB port of your computer (e.g., desktop or laptop). It will automatically be recognized as a USB Ethernet device, making your device online right away.
+**1단계**. SIMPoYo uFi를 컴퓨터(예: 데스크톱 또는 랩톱)의 USB 포트에 꽂으세요. 자동으로 USB 이더넷 장치로 인식되어 장치가 즉시 온라인 상태가 됩니다.
 
-**Step 2**. Other devices (e.g. smartphones, tables, etc.) can connect to the SIMPoYo uFi's 2.4 GHz Wi-Fi network to access the internet simultaneously.
+**2단계**. 기타 장치(예: 스마트폰, 태블릿 등)는 SIMPoYo uFi의 2.4GHz Wi-Fi 네트워크에 연결하여 동시에 인터넷에 액세스할 수 있습니다.
 
-![multi-device](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/multi-device.jpg){class="glboxshadow"}
+![multi-device](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/multi-device.jpg){class="glboxshadow"}
 
-### Connect to a USB Power Source
+### USB 전원에 연결
 
-**Step 1**. Plug the SIMPoYo uFi into any USB power source, such as a wall charger, power bank, or car charger.
+**1단계**. SIMPoYo uFi를 벽면 충전기, 파워뱅크, 차량 충전기 등 모든 USB 전원에 꽂으세요.
 
-**Step 2**. Once powered on, the SIMPoYo uFi will broadcast a Wi-Fi network with the SSID **SIMPoYo-XXX**.
+**2단계**. 전원이 켜지면 SIMPoYo uFi는 **SIMPoYo-XXX** SSID로 Wi-Fi 네트워크를 브로드캐스트합니다.
 
-**Step 3**. Locate the Wi-Fi password (Key) on the device label. Use this password to connect your smartphone, tablet, laptop, or other devices to the SIMPoYo uFi's Wi-Fi for internet access.
+**3단계**. 장치 라벨에서 Wi-Fi 비밀번호(Key)를 찾으세요. 이 비밀번호를 사용하여 스마트폰, 태블릿, 랩톱 또는 기타 장치를 SIMPoYo uFi의 Wi-Fi에 연결하여 인터넷에 액세스하세요.
 
-## Top-up SIMPoYo Plans
+## SIMPoYo 요금제 충전
 
-When your data runs out or expires, simply scan the QR code on your SIMPoYo uFi or visit [https://w.simpoyo.com](https://w.simpoyo.com){target="_blank"} to top up your plan.
+데이터가 소진되거나 만료되면 SIMPoYo uFi의 QR 코드를 스캔하거나 [https://w.simpoyo.com](https://w.simpoyo.com){target="_blank"}을 방문하여 요금제를 충전하세요.
 
-!!! note "Supported Countries & Regions"
+!!! note "지원되는 국가 및 지역"
 
-    - **United Kingdom**
+    - **영국**
 
-    - **Europe**
+    - **유럽**
 
-        Andorra, Austria, Belgium, Bulgaria, Croatia, Cyprus, Czech Republic, Denmark, Estonia, Finland, France, Germany, Gibraltar (UK), Greece, Hungary, Iceland, Ireland, Italy, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Netherlands, Norway, Poland, Portugal, Réunion (France), Romania, Slovakia, Slovenia, Spain, Sweden, Switzerland.
+        안도라, 오스트리아, 벨기에, 불가리아, 크로아티아, 키프로스, 체코 공화국, 덴마크, 에스토니아, 핀란드, 프랑스, 독일, 지브롤터(영국), 그리스, 헝가리, 아이슬란드, 아일랜드, 이탈리아, 라트비아, 리히텐슈타인, 리투아니아, 룩셈부르크, 몰타, 네덜란드, 노르웨이, 폴란드, 포르투갈, 레위니옹(프랑스), 루마니아, 슬로바키아, 슬로베니아, 스페인, 스웨덴, 스위스.
 
-    - **Middle East & North Africa**
+    - **중동 및 북아프리카**
 
-        Egypt, Iran, Israel, Kuwait, Qatar, Saudi Arabia, United Arab Emirates.
+        이집트, 이란, 이스라엘, 쿠웨이트, 카타르, 사우디아라비아, 아랍에미리트.
 
-    - **Asia**
+    - **아시아**
 
-        Indonesia, Japan, Pakistan, Philippines, Singapore, South Korea, Turkey, Vietnam, China Mainland, Hong Kong (China), Taiwan (China).
+        인도네시아, 일본, 파키스탄, 필리핀, 싱가포르, 한국, 터키, 베트남, 중국 본토, 홍콩(중국), 대만(중국).
 
-## Manage SIMPoYo uFi
+## SIMPoYo uFi 관리
 
-You can log in to the SIMPoYo uFi Admin Panel to manage your network settings.
+SIMPoYo uFi 관리 패널에 로그인하여 네트워크 설정을 관리할 수 있습니다.
 
-### Log in Admin Panel
+### 관리 패널 로그인
 
-1. Connect a device to the SIMPoYo uFi's Wi-Fi network.
+1. 장치를 SIMPoYo uFi의 Wi-Fi 네트워크에 연결하세요.
 
-2. Open a browser and enter `192.168.1.1` to access the SIMPoYo uFi Admin Panel.
+2. 브라우저를 열고 `192.168.1.1`을 입력하여 SIMPoYo uFi 관리 패널에 액세스하세요.
 
-3. Log in with the Admin Password (which is the same as the SIMPoYo uFi's Wi-Fi password by default).
+3. 관리자 비밀번호로 로그인하세요(기본값은 SIMPoYo uFi의 Wi-Fi 비밀번호와 동일).
 
-    ![log in](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/0-simpoyo-login.png){class="glboxshadow"}
+    ![log in](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/0-simpoyo-login.png){class="glboxshadow"}
 
-### Check Network Details
+### 네트워크 세부 정보 확인
 
-1. Choose **Status** from the top menu and navigate to **Device & Network**. You will enter the home page where the device's network status is displayed.
+1. 상단 메뉴에서 **Status**를 선택하고 **Device & Network**로 이동하세요. 장치의 네트워크 상태가 표시되는 홈 페이지로 이동합니다.
 
-    ![network status](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/1.1-device-network.png){class="glboxshadow"}
+    ![network status](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/1.1-device-network.png){class="glboxshadow"}
 
-2. Switch to **Cellular Network** from the left sidebar, and you can check the cellular network details, such as the signal strength.
+2. 왼쪽 사이드바에서 **Cellular Network**로 전환하고 신호 강도와 같은 셀룰러 네트워크 세부 정보를 확인할 수 있습니다.
 
-    ![cellular network](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/1.2-cellular-network.png){class="glboxshadow"}
+    ![cellular network](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/1.2-cellular-network.png){class="glboxshadow"}
 
-### Check Data Usage
+### 데이터 사용량 확인
 
-1. Choose **Data Usage** from the top menu, and you will see the download, upload and total data consumption and duration.
+1. 상단 메뉴에서 **Data Usage**를 선택하면 다운로드, 업로드 및 총 데이터 소비량과 기간을 볼 수 있습니다.
 
-    ![data usage](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/2-data-usage.png){class="glboxshadow"}
+    ![data usage](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/2-data-usage.png){class="glboxshadow"}
 
-    Note: Data is for reference only. Please refer to your bill for accuracy.
+    참고: 데이터는 참고용입니다. 정확한 청구서를 확인하세요.
 
-2. If you want to reset the data usage, click the **Clear History** button to reset.
+2. 데이터 사용량을 재설정하려면 **Clear History** 버튼을 클릭하여 재설정하세요.
 
-### Change Wi-Fi Settings
+### Wi-Fi 설정 변경
 
-1. Choose **Settings** from the top menu and navigate to **Wi-Fi Settings**. 
+1. 상단 메뉴에서 **Settings**를 선택하고 **Wi-Fi Settings**로 이동하세요.
 
-    ![wifi settings](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/3.1-wifi-settings.png){class="glboxshadow"}
+    ![wifi settings](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/3.1-wifi-settings.png){class="glboxshadow"}
 
-2. Customize your SIMPoYo uFi's Wi-Fi network name and password, then click **Apply**.
+2. SIMPoYo uFi의 Wi-Fi 네트워크 이름과 비밀번호를 사용자 정의한 다음 **Apply**를 클릭하세요.
 
-### Set APN
+### APN 설정
 
-If your SIM card requires manual APN configuration, follow the steps below.
+SIM 카드에 수동 APN 구성이 필요한 경우 아래 단계를 따르세요.
 
-1. Choose **Settings** from the top menu and navigate to **Cellular Settings**. 
+1. 상단 메뉴에서 **Settings**를 선택하고 **Cellular Settings**로 이동하세요.
 
-    ![cellular settings](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/3.2-cellular-settings.png){class="glboxshadow"}
+    ![cellular settings](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/3.2-cellular-settings.png){class="glboxshadow"}
 
-2. Switch the **APN Mode** to **Manual**.
+2. **APN Mode**를 **Manual**로 전환하세요.
 
-3. Fill in the information provided by your mobile operator, then click **Apply**.
+3. 모바일 통신사에서 제공하는 정보를 입력한 다음 **Apply**를 클릭하세요.
 
-### Enable Roaming
+### 로밍 활성화
 
-Roaming lets your SIM card work with local operators in other regions/countries, so you stay connected away from your home network.
+로밍을 사용하면 SIM 카드가 다른 지역/국가의 현지 통신사와 작동하여 홈 네트워크를 벗어난 곳에서도 연결을 유지할 수 있습니다.
 
-Follow the steps below to enable roaming.
+아래 단계에 따라 로밍을 활성화하세요.
 
-1. Choose **Settings** from the top menu and navigate to **Roaming**. 
+1. 상단 메뉴에서 **Settings**를 선택하고 **Roaming**으로 이동하세요.
 
-    ![roaming](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/3.3-roaming.png){class="glboxshadow"}
+    ![roaming](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/3.3-roaming.png){class="glboxshadow"}
 
-2. Select **Enable** and click **Apply**.
+2. **Enable**를 선택하고 **Apply**를 클릭하세요.
 
-### Enable PIN Code
+### PIN 코드 활성화
 
-A PIN code is a short (usually 4-8 digit) security password for your SIM card, which locks the card to prevent unauthorized use. If the SIM is stolen or put in another device, it cannot be activated or used without the PIN code.
+PIN 코드는 SIM 카드의 짧은(일반적으로 4-8자리) 보안 비밀번호로 카드를 잠금하여 무단 사용을 방지합니다. SIM이 도난당하거나 다른 장치에 삽입되면 PIN 코드 없이 활성화하거나 사용할 수 없습니다.
 
-Follow the steps below to enable PIN code.
+아래 단계에 따라 PIN 코드를 활성화하세요.
 
-1. Choose **Settings** from the top menu and navigate to **PIN Settings**. 
+1. 상단 메뉴에서 **Settings**를 선택하고 **PIN Settings**으로 이동하세요.
 
-    ![pin settings](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/3.4-pin-settings.png){class="glboxshadow"}
+    ![pin settings](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/3.4-pin-settings.png){class="glboxshadow"}
 
-2. Select **Enable**, set your PIN code and click **Apply**.
+2. **Enable**를 선택하고 PIN 코드를 설정한 다음 **Apply**를 클릭하세요.
 
-### Change Admin Password
+### 관리자 비밀번호 변경
 
-The default admin password is the same as the Wi-Fi password. For security purposes, please change it during the initial setup.
+기본 관리자 비밀번호는 Wi-Fi 비밀번호와 동일합니다. 보안을 위해 초기 설정 중에 변경하세요.
 
-1. Choose **Settings** from the top menu and navigate to **Admin Settings**. 
+1. 상단 메뉴에서 **Settings**를 선택하고 **Admin Settings**로 이동하세요.
 
-    ![admin settings](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/3.5-admin-settings.png){class="glboxshadow"}
+    ![admin settings](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/3.5-admin-settings.png){class="glboxshadow"}
 
-2. Customize the Admin Password and Login Timeout, then click **Apply**.
+2. 관리자 비밀번호와 로그인 시간 초과를 사용자 정의한 다음 **Apply**를 클릭하세요.
 
-3. If you want to reset your SIMPoYo uFi to default settings, click the **Factory Default Setting** button to reset.
+3. SIMPoYo uFi를 기본 설정으로 재설정하려면 **Factory Default Setting** 버튼을 클릭하여 재설정하세요.
 
-### DHCP Settings
+### DHCP 설정
 
-By default, the SIMPoYo uFi's IP address is `192.168.1.1`, with its DHCP server enabled to assign IP addresses to connected devices.
+기본적으로 SIMPoYo uFi의 IP 주소는 `192.168.1.1`이며 연결된 장치에 IP 주소를 할당하기 위해 DHCP 서버가 활성화되어 있습니다.
 
-If you want to change its IP address or customize the DHCP settings, follow the steps below.
+IP 주소를 변경하거나 DHCP 설정을 사용자 정의하려면 아래 단계를 따르세요.
 
-1. Choose **Settings** from the top menu and navigate to **Advanced** -> **DHCP**. 
+1. 상단 메뉴에서 **Settings**를 선택하고 **Advanced** -> **DHCP**로 이동하세요.
 
-    ![dhcp](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/3.6-dhcp.jpg){class="glboxshadow"}
+    ![dhcp](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/3.6-dhcp.jpg){class="glboxshadow"}
 
-2. It allows you to change the device's IP address, enable or disable the DHCP server, and set the IP range and lease time. Configure the DHCP settings and click **Apply**.
+2. 장치의 IP 주소를 변경하고 DHCP 서버를 활성화/비활성화하며 IP 범위와 임대 시간을 설정할 수 있습니다. DHCP 설정을 구성하고 **Apply**를 클릭하세요.
 
-### MAC Filter
+### MAC 필터
 
-MAC Filter lets you control which devices can access your WLAN by managing their MAC addresses, enhancing your network's security.
+MAC 필터를 사용하면 MAC 주소를 관리하여 WLAN에 액세스할 수 있는 장치를 제어하여 네트워크 보안을 강화할 수 있습니다.
 
-The MAC Filter is disabled by default. If you want to enable it, follow the steps below.
+MAC 필터는 기본적으로 비활성화되어 있습니다. 활성화하려면 아래 단계를 따르세요.
 
-1. Choose **Settings** from the top menu and navigate to **Advanced** -> **MAC Filter**. 
+1. 상단 메뉴에서 **Settings**를 선택하고 **Advanced** -> **MAC Filter**로 이동하세요.
 
-    ![mac filter](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/3.6-mac-filter-1.png){class="glboxshadow"}
+    ![mac filter](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/3.6-mac-filter-1.png){class="glboxshadow"}
 
-    The **User list** at the top shows the connected devices' details. Check if the device you want to control is in the list. If not, re-connect it to SIMPoYo uFi's Wi-Fi. 
+    상단의 **User list**에는 연결된 장치의 세부 정보가 표시됩니다. 제어하려는 장치가 목록에 있는지 확인하세요. 없다면 SIMPoYo uFi의 Wi-Fi에 다시 연결하세요.
 
-2. Switch the **MAC Filter Mode** to **Black List** / **White List**. 
+2. **MAC Filter Mode**를 **Black List** / **White List**로 전환하세요.
 
-    ![mac filter](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/3.6-mac-filter-2.png){class="glboxshadow"}
+    ![mac filter](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/3.6-mac-filter-2.png){class="glboxshadow"}
 
-3. Copy the MAC address of the device you want to block / allow into the list and click **Apply**.
+3. 차단/허용하려는 장치의 MAC 주소를 목록에 복사하고 **Apply**를 클릭하세요.
 
-### Upgrade
+### 업그레이드
 
-1. Choose **Upgrade** from the top menu, navigate to **Device Info**, and you will see the SIMPoYo uFi's device info, including:
+1. 상단 메뉴에서 **Upgrade**를 선택하고 **Device Info**로 이동하여 다음 정보를 포함한 SIMPoYo uFi의 장치 정보를 볼 수 있습니다:
 
-    - Hardware info (e.g., hardware version, MAC address, IMEI, ICCID)
-    - Software info (e.g., software version)
-    - WebUI info (e.g., WebUI version)
+    - 하드웨어 정보(예: 하드웨어 버전, MAC 주소, IMEI, ICCID)
+    - 소프트웨어 정보(예: 소프트웨어 버전)
+    - WebUI 정보(예: WebUI 버전)
 
-    ![upgrade](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/4.1-upgrade.jpg){class="glboxshadow"}
-    
-2. You can upgrade the software version if available.
+    ![upgrade](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/4.1-upgrade.jpg){class="glboxshadow"}
 
-    Switch to **Online Update** from the left sidebar and click on **Check New Update** button to see if there's any new version available.
+2. 사용 가능한 경우 소프트웨어 버전을 업그레이드할 수 있습니다.
 
-    ![online upgrade](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/4.2-online-update.png){class="glboxshadow"}
+    왼쪽 사이드바에서 **Online Update**로 전환하고 **Check New Update** 버튼을 클릭하여 새 버전을 사용할 수 있는지 확인하세요.
 
-    Or switch to **Local Update** from the left sidebar, upload a file, and click **Apply** to upgrade manually.
+    ![online upgrade](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/4.2-online-update.png){class="glboxshadow"}
 
-    ![local upgrade](https://static.gl-inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/4.3-local-update.png){class="glboxshadow"}
+    또는 왼쪽 사이드바에서 **Local Update**로 전환하고 파일을 업로드한 다음 **Apply**를 클릭하여 수동으로 업그레이드하세요.
 
-## Accessories Guide
+    ![local upgrade](https://static.gl.inet.com/docs/router/en/4/tutorials/how_to_use_simpoyo_ufi/4.3-local-update.png){class="glboxshadow"}
 
-The following accessories are included in the package:
+## 액세서리 가이드
 
-- **1 USB-C to USB-A adapter cable**: Suitable for plugging the SIMPoYo uFi into devices with only a USB Type-C interface (e.g., laptops).
+패키지에는 다음 액세서리가 포함되어 있습니다:
 
-- **1 USB-A to USB-A adapter cable**: Lets you flexibly connect the SIMPoYo uFi to a USB port (e.g., on a computer or USB power source), avoiding direct contact between the SIMPoYo uFi's native port and the target port. This helps prevent damage to the metal interface from sudden impacts.
+- **1개의 USB-C to USB-A 어댑터 케이블**: USB Type-C 인터페이스만 있는 장치(예: 랩톱)에 SIMPoYo uFi를 꽂을 수 있습니다.
 
-- **1 SIM eject tool (a pin)**: Use it to eject SIM cards from devices (e.g., smartphones) for installation into the SIMPoYo uFi, or to press the uFi's reset pinhole if needed.
+- **1개의 USB-A to USB-A 어댑터 케이블**: USB 포트(예: 컴퓨터 또는 USB 전원)에 SIMPoYo uFi를 유연하게 연결할 수 있으며 SIMPoYo uFi의 기본 포트와 대상 포트 간의 직접 접촉을 방지합니다. 이는 급격한 충격으로 인한 금속 인터페이스 손상을 방지하는 데 도움이 됩니다.
+
+- **1개의 SIM 꺼내기 도구(핀)**: 스마트폰과 같은 장치에서 SIM 카드를 꺼내 SIMPoYo uFi에 설치하거나 필요한 경우 uFi의 재설정 핀홀을 누르는 데 사용합니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+질문이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}을 통해 연락하세요.
