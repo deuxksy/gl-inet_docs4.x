@@ -1,18 +1,18 @@
 # ZeroTier
 
-ZeroTier is a software-based virtual private network (VPN) that enables secure, encrypted communications between devices over the internet. It creates a private, virtual network that allows devices to communicate as if they were on the same local network, regardless of their physical location or network topology. ZeroTier is designed to be easy to set up and use, and offers features such as end-to-end encryption, network segmentation, and network bridging capabilities.
+ZeroTier는 인터넷을 통해 장치 간 보안 암호화 통신을 활성화하는 소프트웨어 기반 가상 사설망(VPN)입니다. 물리적 위치나 네트워크 토폴로지에 관계없이 장치가 동일한 로컬 네트워크에 있는 것처럼 통신할 수 있는 개인용 가상 네트워크를 만듭니다. ZeroTier는 설정 및 사용이 쉽고 엔드 투엔 암호화, 네트워크 분할, 네트워크 브리징 기능과 같은 기능을 제공하도록 설계되었습니다.
 
-The ZeroTier feature on GL.iNet routers, available since firmware v4.2, allows the router to join a ZeroTier virtual network. Once connected, you can access the router remotely, including its WAN and LAN resources.
+GL.iNet 라우터의 ZeroTier 기능은 펌웨어 v4.2부터 사용할 수 있으며 라우터가 ZeroTier 가상 네트워크에 연결할 수 있습니다. 연결되면 WAN 및 LAN 리소스를 포함하여 라우터를 원격으로 액세스할 수 있습니다.
 
-**Note**: 
+**참고**:
 
-1. It is not recommended to use the ZeroTier simultaneously with any of the following features or services, as this may cause routing conflicts: OpenVPN Client, WireGuard Client, GoodCloud Site to Site, Tailscale, AstroWarp.
+1. 다음 기능이나 서비스와 동시에 ZeroTier를 사용하면 라우팅 충돌이 발생할 수 있으므로 권장하지 않습니다: OpenVPN Client, WireGuard Client, GoodCloud Site to Site, Tailscale, AstroWarp.
 
-2. This feature is currently in beta, and may have some bugs.
+2. 이 기능은 현재 베타이며 일부 버그가 있을 수 있습니다.
 
-## Supported Models
+## 지원되는 모델
 
-??? "Supported Models"
+??? "지원되는 모델"
     - GL-E5800 (Mudi 7)
     - GL-MT5000 (Brume 3)
     - GL-MT3600BE (Beryl 7)
@@ -29,7 +29,7 @@ The ZeroTier feature on GL.iNet routers, available since firmware v4.2, allows t
     - GL-AXT1800 (Slate AX)
     - GL-A1300 (Slate Plus)
 
-??? "Unsupported Models"
+??? "지원되지 않는 모델"
     - GL-X2000 (Spitz Plus)
     - GL-SFT1200 (Opal)
     - GL-MT1300 (Beryl)
@@ -44,216 +44,216 @@ The ZeroTier feature on GL.iNet routers, available since firmware v4.2, allows t
     - GL-S1300 (Convexa-S)
     - GL-X300B (Collie)
 
-## Set up ZeroTier network
+## ZeroTier 네트워크 설정
 
-Two versions of ZeroTier Central are available: New Central and Legacy Central.
+ZeroTier Central의 두 가지 버전을 사용할 수 있습니다: New Central과 Legacy Central.
 
-- **New Central**: A newer version of ZeroTier Central with improved usability and new features. It is recommended for new users for the best experience and latest tools.
+- **New Central**: 개선된 사용성과 새로운 기능을 갖춘은 최신 버전의 ZeroTier Central입니다. 최상의 경험과 최신 도구를 위해서 새로운 사용자에게 권장됩니다.
 
-- **Legacy Central**: For accounts created before November 2025. Legacy Central continues to support existing users managing their networks. 
+- **Legacy Central**: 2025년 11월 이전에 생성된 계정용입니다. Legacy Central은 기존 사용자가 네트워크를 관리할 수 있도록 계속 지원합니다.
 
-Both versions can be used in parallel, but there is no direct migration path at this time. 
+두 버전을 병렬로 사용할 수 있지만 현재는 직접 마이그레이션 경로가 없습니다.
 
-Please select the appropriate version to proceed.
+적절한 버전을 선택하여 진행하세요.
 
 ### New Central
 
-The following is an example using the GL-MT3600BE.
+다음은 GL-MT3600BE를 사용한 예입니다.
 
-1. Visit [ZeroTier official website](https://www.zerotier.com/){target="_blank"} and sign in with your account.
+1. [ZeroTier 공식 웹사이트](https://www.zerotier.com/){target="_blank"}를 방문하여 계정으로 로그인하세요.
 
-    ![create organization](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/new_central/zerotier_login.jpg){class="glboxshadow"}
+    ![create organization](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/new_central/zerotier_login.jpg){class="glboxshadow"}
 
-2. Create an organization.
+2. 조직을 생성합니다.
 
-    ![create organization](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/new_central/create_org.png){class="glboxshadow"}
+    ![create organization](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/new_central/create_org.png){class="glboxshadow"}
 
-3. Select a plan. Here we choose Personal plan as an example, which includes 10 devices, 1 network admin, and 1 network. If you need to create more networks, add more devices, or add custom routes and DNS, choose Essential or Scale plan.
+3. 플랜을 선택합니다. 여기서는 Personal 플랜을 예로 듭니다. 이 플랜은 10개의 장치, 1명의 네트워크 관리자, 1개의 네트워크를 포함합니다. 더 많은 네트워크를 생성하거나 더 많은 장치를 추가하거나 사용자 정의 경로와 DNS를 추가하려면 Essential 또는 Scale 플랜을 선택하세요.
 
-    ![select plan](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/new_central/select_plan.png){class="glboxshadow"}
+    ![select plan](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/new_central/select_plan.png){class="glboxshadow"}
 
-4. Now your ZeroTier network has been created. Take note of the **Network ID**, which is a 16-character alphanumeric combination in the upper right corner, as it will be required when connecting other devices later.
+4. 이제 ZeroTier 네트워크가 생성되었습니다. 우측 상단의 **Network ID**를 기록해 두세요. 16자 영숫자 조합으로 나중에 다른 장치를 연결할 때 필요합니다.
 
-    ![network id](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/new_central/zt_network_id.png){class="glboxshadow"}
+    ![network id](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/new_central/zt_network_id.png){class="glboxshadow"}
 
-5. Enable ZeroTier on GL.iNet router.
+5. GL.iNet 라우터에서 ZeroTier를 활성화합니다.
 
-    Log in to your router's web Admin Panel, and navigate to **APPLICATIONS** -> **ZeroTier**. 
+    라우터의 웹 관리 패널에 로그인하고 **APPLICATIONS** -> **ZeroTier**로 이동합니다.
 
-    Enable ZeroTier, enter the Network ID on the same page, and click **Apply**.
+    ZeroTier를 활성화하고 동일한 페이지에 Network ID를 입력한 다음 **Apply**를 클릭하세요.
 
-    ![enable zerotier](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/new_central/enable_zerotier.png){class="glboxshadow"}
+    ![enable zerotier](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/new_central/enable_zerotier.png){class="glboxshadow"}
 
-    After a short while, the interface will indicate that authorization is required. Click the **ZeroTier Central** hyperlink to redirect to the ZeroTier Central.
+    잠시 후 인터페이스에 승인이 필요하다고 표시됩니다. **ZeroTier Central** 하이퍼링크를 클릭하여 ZeroTier Central로 리디렉션합니다.
 
-    ![authorize 1](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/new_central/authorize1.png){class="glboxshadow"}
+    ![authorize 1](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/new_central/authorize1.png){class="glboxshadow"}
 
-6. Authorize your device on ZeroTier Central.
+6. ZeroTier Central에서 장치를 승인합니다.
 
-    On the ZeroTier Central, locate the Pending device and authorize it.
+    ZeroTier Central에서 보류 중인 장치를 찾아 승인하세요.
 
-    ![authorize 2](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/new_central/authorize2.png){class="glboxshadow"}
+    ![authorize 2](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/new_central/authorize2.png){class="glboxshadow"}
 
-    Once authorized, the page displays as follows.
+    승인되면 페이지가 아래와 같이 표시됩니다.
 
-    ![authorized 1](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/new_central/authorized1.png){class="glboxshadow"}
+    ![authorized 1](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/new_central/authorized1.png){class="glboxshadow"}
 
-7. Add another device (such as a computer or smartphone) to the same ZeroTier network by following [this guide](https://docs.zerotier.com/platforms/){target="_blank"}.
+7. [이 가이드](https://docs.zerotier.com/platforms/){target="_blank"}를 따라 동일한 ZeroTier 네트워크에 다른 장치(예: 컴퓨터 또는 스마트폰)를 추가합니다.
 
-    Below is an example using a Windows 10 Pro laptop. 
-    
-    1. Install ZeroTier on the laptop from [here](https://www.zerotier.com/download/){target="_blank"}. 
+    다음은 Windows 10 Pro 노트북을 사용한 예입니다.
 
-    2. Launch ZeroTier. The ZeroTier icon will appear in the system tray at the bottom right corner of your desktop.
-        
-    3. Right-click the icon, select **Join New Network**, and enter the **Network ID** obtained in step 4 in the pop-up window.
-        
-        ![laptop join network](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/new_central/laptop_join_network.png){class="glboxshadow"}
+    1. [여기](https://www.zerotier.com/download/){target="_blank"}에서 노트북에 ZeroTier를 설치합니다.
 
-        Then go to ZeroTier Central, locate the Pending device and authorize it.
+    2. ZeroTier를 실행합니다. 바탕화 우측 하단 시스템 트레이에 ZeroTier 아이콘이 나타납니다.
 
-        ![authorize 3](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/new_central/authorize3.png){class="glboxshadow"}
+    3. 아이콘을 마우스 오른쪽 버튼으로 클릭하고 **Join New Network**를 선택한 다음 팝업 창에서 4단계에서 얻은 **Network ID**를 입력합니다.
 
-    4. Once authorized, the page displays as follows. You will see the details of member devices, such as **Device ID**, **Name**, **Status**, **Managed IP**, and **Public IP**. 
+        ![laptop join network](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/new_central/laptop_join_network.png){class="glboxshadow"}
 
-        ![authorized 2](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/new_central/authorized2.png){class="glboxshadow"}
+        그런 다음 ZeroTier Central로 이동하여 보류 중인 장치를 찾아 승인합니다.
 
-        **Tips**: You can click the three-dot icon on the right to edit member device settings, including the device name, Managed IP(s), and advanced settings.
+        ![authorize 3](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/new_central/authorize3.png){class="glboxshadow"}
 
-8. Click the router's **Managed IP** to copy it. You can then use this Managed IP to access the router from your laptop that is on the same ZeroTier network.
+    4. 승인되면 페이지가 아래와 같이 표시됩니다. **Device ID**, **Name**, **Status**, **Managed IP**, **Public IP** 등 구성원 장치의 세부 정보를 볼 수 있습니다.
 
-    ![zerotier virtual ip](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/new_central/zerotier_virtual_ip.png){class="glboxshadow"}
+        ![authorized 2](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/new_central/authorized2.png){class="glboxshadow"}
 
-9. Test connectivity.
+        **팁**: 오른쪽의 점 3개 아이콘을 클릭하여 장치 이름, Managed IP, 고급 설정 등 구성원 장치 설정을 편집할 수 있습니다.
 
-    On the laptop connected to the same ZeroTier network, open a web browser and enter the router's Managed IP obtained in the previous step.
+8. 라우터의 **Managed IP**를 클릭하여 복사합니다. 그런 다음 동일한 ZeroTier 네트워크에 있는 노트북에서 이 Managed IP를 사용하여 라우터에 액세스할 수 있습니다.
 
-    If you can access the router's web Admin Panel, the ZeroTier connection is successful.
+    ![zerotier virtual ip](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/new_central/zerotier_virtual_ip.png){class="glboxshadow"}
 
-    ![web admin panel](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/new_central/connectivity_test1.png){class="glboxshadow"}
+9. 연결성을 테스트합니다.
 
-    You can also `ping` the router's Managed IP from your laptop to test connectivity. If you receive a successful response, the ZeroTier connection is successfully established.
+    동일한 ZeroTier 네트워크에 연결된 노트북에서 웹 브라우저를 열고 이전 단계에서 얻은 라우터의 Managed IP를 입력합니다.
 
-    ![ping test](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/new_central/connectivity_test2.png){class="glboxshadow"}
+    라우터의 웹 관리 패널에 액세스할 수 있으면 ZeroTier 연결이 성공한 것입니다.
+
+    ![web admin panel](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/new_central/connectivity_test1.png){class="glboxshadow"}
+
+    노트북에서 라우터의 Managed IP로 `ping`을 수행하여 연결성을 테스트할 수도 있습니다. 성공적인 응답을 받으면 ZeroTier 연결이 성공적으로 설정된 것입니다.
+
+    ![ping test](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/new_central/connectivity_test2.png){class="glboxshadow"}
 
 ### Legacy Central
 
-The following is an example using the GL-MT2500.
+다음은 GL-MT2500를 사용한 예입니다.
 
-1. Create your first ZeroTier network.
+1. 첫 번째 ZeroTier 네트워크를 생성합니다.
 
-    Refer to the ZeroTier official [Getting Started Guide](https://docs.zerotier.com/getting-started/getting-started/){target="_blank"} to create a ZeroTier account and network. Remember to take note of the Network ID, which is a 16-character alphanumeric combination, as it will be required when connecting other devices later.
+    ZeroTier 공식 [시작 가이드](https://docs.zerotier.com/getting-started/getting-started/){target="_blank"}를 참조하여 ZeroTier 계정과 네트워크를 생성하세요. 나중에 다른 장치를 연결할 때 필요하므로 Network ID(16자 영숫자 조합)를 기록해 두세요.
 
-    ![zerotier network id](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/zerotier_network_id.png){class="glboxshadow"}
+    ![zerotier network id](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/zerotier_network_id.png){class="glboxshadow"}
 
-2. Enable ZeroTier on GL.iNet router.
+2. GL.iNet 라우터에서 ZeroTier를 활성화합니다.
 
-    Log in to your router's web Admin Panel, and navigate to **APPLICATIONS** -> **ZeroTier**.
+    라우터의 웹 관리 패널에 로그인하고 **APPLICATIONS** -> **ZeroTier**로 이동합니다.
 
-    Enable ZeroTier, enter the Network ID on the same page, and click **Apply**.
+    ZeroTier를 활성화하고 동일한 페이지에 Network ID를 입력한 다음 **Apply**를 클릭하세요.
 
-    ![enable zerotier](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/zerotier_enable.png){class="glboxshadow"}
+    ![enable zerotier](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/zerotier_enable.png){class="glboxshadow"}
 
-    After a short while, the interface will indicate that authorization is required. 
-    
-    Click the **ZeroTier Central** hyperlink to redirect to the ZeroTier Central.
+    잠시 후 인터페이스에 승인이 필요하다고 표시됩니다.
 
-    ![zerotier central](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/zerotier_central.png){class="glboxshadow"}
+    **ZeroTier Central** 하이퍼링크를 클릭하여 ZeroTier Central로 리디렉션하세요.
 
-3. Authorize your device on ZeroTier Central.
+    ![zerotier central](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/zerotier_central.png){class="glboxshadow"}
 
-    On your ZeroTier Central, navigate to the **Members** section. Locate the new device and click the **Auth** checkbox to authorize it. Customize the name of the device if desired.
-    
-    ![zerotier members, auth](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/zerotier_members_auth.png){class="glboxshadow"}
+3. ZeroTier Central에서 장치를 승인합니다.
 
-    After a short while, ZeroTier will assign a **Managed IP** to the device. Take note of this IP address, as it will be used in the testing step.
+    ZeroTier Central에서 **Members** 섹션으로 이동합니다. 새 장치를 찾아 **Auth** 체크박스를 클릭하여 승인합니다. 원하는 경우 장치 이름을 사용자 정의할 수 있습니다.
 
-    ![zerotier managed ip](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/managed_ip.png){class="glboxshadow"}
+    ![zerotier members, auth](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/zerotier_members_auth.png){class="glboxshadow"}
 
-4. Add another device (such as a computer or smartphone) to the same ZeroTier network by following [this guide](https://docs.zerotier.com/platforms/){target="_blank"}.
+    잠시 후 ZeroTier가 장치에 **Managed IP**를 할당합니다. 테스트 단계에서 사용할 IP 주소를 기록해 두세요.
 
-5. Test connectivity.
+    ![zerotier managed ip](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/managed_ip.png){class="glboxshadow"}
 
-    On another device connected to the same ZeroTier network, open a web browser and enter the router's ZeroTier Managed IP obtained in the previous step.
+4. [이 가이드](https://docs.zerotier.com/platforms/){target="_blank"}를 따라 동일한 ZeroTier 네트워크에 다른 장치(예: 컴퓨터 또는 스마트폰)를 추가합니다.
 
-    You will be able to access the router's web Admin Panel.
+5. 연결성을 테스트합니다.
 
-    ![web admin panel](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/web_admin_panel.png)
+    동일한 ZeroTier 네트워크에 연결된 다른 장치에서 웹 브라우저를 열고 이전 단계에서 얻은 라우터의 ZeroTier Managed IP를 입력합니다.
 
-    You can also use the `ping` command to test connectivity. Please refer to the ZeroTier [Quickstart Guide](https://docs.zerotier.com/quickstart/#6-test-your-connection){target="_blank"}.
+    라우터의 웹 관리 패널에 액세스할 수 있습니다.
 
-## Allow Remote Access WAN
+    ![web admin panel](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/web_admin_panel.png)
 
-If this option is enabled, resources on the device's WAN side can be accessed through the ZeroTier virtual network.
+    연결성을 테스트하기 위해 `ping` 명령을 사용할 수도 있습니다. ZeroTier [Quickstart Guide](https://docs.zerotier.com/quickstart/#6-test-your-connection){target="_blank"}를 참조하세요.
 
-For example, as shown in the topology below, if this function is enabled, you can access the `GL-AXT1800` via its IP address (`192.168.29.1`) from `leo-phone`. This is because the GL-AXT1800 is the upper-layer device of the `GL-MT2500`, and the latter is connected to the same ZeroTier network as leo-phone.
+## 원격 액세스 WAN 허용
 
-![remote access wan topology](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/zerotier_access_wan_topology.png){class="glboxshadow"}
+이 옵션을 활성화하면 장치의 WAN 측 리소스를 ZeroTier 가상 네트워크를 통해 액세스할 수 있습니다.
 
-**Note**: This feature requires routing rules to be added to the ZeroTier network to take effect. One custom route can be added for free in Legacy Central, while in New Central you can only configure custom routes with an Essential plan or higher. Click [here](https://www.zerotier.com/pricing/) for details.
+예를 들어 아래 토폴로지와 같이 이 기능을 활성화하면 `leo-phone`에서 `GL-AXT1800`의 IP 주소(`192.168.29.1`)를 통해 액세스할 수 있습니다. 이는 `GL-AXT1800`가 `GL-MT2500`의 상위 장치이며 후자가 leo-phone과 동일한 ZeroTier 네트워크에 연결되어 있기 때문입니다.
 
-The following steps use Legacy Central as an example.
+![remote access wan topology](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/zerotier_access_wan_topology.png){class="glboxshadow"}
 
-1. Log in to your router's web Admin Panel, and navigate to **APPLICATIONS** -> **ZeroTier**. 
+**참고**: 이 기능이 적용되려면 ZeroTier 네트워크에 경로 규칙을 추가해야 합니다. Legacy Central에서는 무료로 맞춤 사용자 정의 경로를 하나 추가할 수 있지만 New Central에서는 Essential 플랜 이상에서만 사용자 정의 경로를 구성할 수 있습니다. 자세한 내용은 [여기](https://www.zerotier.com/pricing/)를 클릭하세요.
 
-    Enable **Allow Remote Access WAN**, and click **Apply**.
+다음 단계는 Legacy Central을 예로 사용합니다.
 
-    ![enable allow remote access wan](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/enable_allow_remote_access_wan_1.png){class="glboxshadow"}
+1. 라우터의 웹 관리 패널에 로그인하고 **APPLICATIONS** -> **ZeroTier**로 이동합니다.
 
-    It will prompt you to configure routing rules. Keep this webpage open or take note of the route details (Destination and Via), as these will be required in the next step.
+    **Allow Remote Access WAN**을 활성화하고 **Apply**를 클릭하세요.
 
-    ![enable allow remote access wan](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/enable_allow_remote_access_wan_2.png){class="glboxshadow"}
+    ![enable allow remote access wan](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/enable_allow_remote_access_wan_1.png){class="glboxshadow"}
 
-2. Go to **ZeroTier Central** and locate the **Advanced** section. 
+    경로 규칙을 구성하라는 메시지가 표시됩니다. 이 웹페이지를 열어 두거나 경로 세부 정보(Destination 및 Via)를 기록해 두세요. 다음 단계에서 필요합니다.
 
-    Enter the route details (Destination and Via) obtained in the previous step, then click **Submit**.
+    ![enable allow remote access wan](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/enable_allow_remote_access_wan_2.png){class="glboxshadow"}
 
-    ![add route](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/add_routes_1.png){class="glboxshadow"}
+2. **ZeroTier Central**로 이동하여 **Advanced** 섹션을 찾습니다.
 
-    Once the route is added, the **Managed Routes** section will display as shown below.
+    이전 단계에서 얻은 경로 세부 정보(Destination 및 Via)를 입력하고 **Submit**를 클릭하세요.
 
-    ![add route](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/add_routes_2.png){class="glboxshadow"}
+    ![add route](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/add_routes_1.png){class="glboxshadow"}
 
-3. You can now access the `GL-AXT1800` via its IP address (`192.168.29.1`) on other devices. In fact, you can access all devices within the `192.168.29.0/24` subnet.
+    경로가 추가되면 **Managed Routes** 섹션이 아래와 같이 표시됩니다.
 
-    ![access axt1800](https://static.gl-inet.com/docs/router/en/4/tutorials/tailscale/tailscale_access_axt1800.jpg){class="glboxshadow gl-50-desktop"}
+    ![add route](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/add_routes_2.png){class="glboxshadow"}
 
-## Allow Remote Access LAN
+3. 이제 다른 장치에서 `GL-AXT1800`의 IP 주소(`192.168.29.1`)를 통해 액세스할 수 있습니다. 실제로는 `192.168.29.0/24` 서브넷 내의 모든 장치에 액세스할 수 있습니다.
 
-If this option is enabled, resources on the device's LAN side can be accessed through the ZeroTier virtual network.
+    ![access axt1800](https://static.gl.inet.com/docs/router/en/4/tutorials/tailscale/tailscale_access_axt1800.jpg){class="glboxshadow gl-50-desktop"}
 
-For example, as shown in the topology below, if this function is enabled, you can SSH log in to `Ubuntu` via its IP address (`192.168.8.110`) from `leo-phone`. This is because `Ubuntu` is the lower-layer device of the `GL-MT2500`, and the latter is connected to the same ZeroTier network as leo-phone.
+## 원격 액세스 LAN 허용
 
-![remote access lan topology](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/zerotier_access_lan_topology.png){class="glboxshadow"}
+이 옵션을 활성화하면 장치의 LAN 측 리소스를 ZeroTier 가상 네트워크를 통해 액세스할 수 있습니다.
 
-**Note**: This feature requires routing rules to be added to the ZeroTier network to take effect. One custom route can be added for free in Legacy Central, while in New Central you can only configure custom routes with an Essential plan or higher. Click [here](https://www.zerotier.com/pricing/) for details.
+예를 들어 아래 토폴로지와 같이 이 기능을 활성화하면 `leo-phone`에서 `Ubuntu`의 IP 주소(`192.168.8.110`)를 통해 SSH 로그인할 수 있습니다. 이는 `Ubuntu`가 `GL-MT2500`의 하위 장치이며 후자가 leo-phone과 동일한 ZeroTier 네트워크에 연결되어 있기 때문입니다.
 
-The following steps use Legacy Central as an example.
+![remote access lan topology](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/zerotier_access_lan_topology.png){class="glboxshadow"}
 
-1. Log in to your router's web Admin Panel, and navigate to **APPLICATIONS** -> **ZeroTier**. 
+**참고**: 이 기능이 적용되려면 ZeroTier 네트워크에 경로 규칙을 추가해야 합니다. Legacy Central에서는 무료로 맞춤 사용자 정의 경로를 하나 추가할 수 있지만 New Central에서는 Essential 플랜 이상에서만 사용자 정의 경로를 구성할 수 있습니다. 자세한 내용은 [여기](https://www.zerotier.com/pricing/)를 클릭하세요.
 
-    Enable **Allow Remote Access LAN**, and click **Apply**.
+다음 단계는 Legacy Central을 예로 사용합니다.
 
-    ![enable allow remote access lan](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/enable_allow_remote_access_lan_1.png){class="glboxshadow"}
+1. 라우터의 웹 관리 패널에 로그인하고 **APPLICATIONS** -> **ZeroTier**로 이동합니다.
 
-    It will prompt you to configure routing rules. Keep this webpage open or take note of the route details (Destination and Via), as these will be required in the next step.
+    **Allow Remote Access LAN**을 활성화하고 **Apply**를 클릭하세요.
 
-    ![enable allow remote access lan](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/enable_allow_remote_access_lan_2.png){class="glboxshadow"}
+    ![enable allow remote access lan](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/enable_allow_remote_access_lan_1.png){class="glboxshadow"}
 
-2. Go to **ZeroTier Central** and locate the **Advanced** section.
+    경로 규칙을 구성하라는 메시지가 표시됩니다. 이 웹페이지를 열어 두거나 경로 세부 정보(Destination 및 Via)를 기록해 두세요. 다음 단계에서 필요합니다.
 
-    Enter the route details (Destination and Via) obtained in the previous step, then click **Submit**.
+    ![enable allow remote access lan](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/enable_allow_remote_access_lan_2.png){class="glboxshadow"}
 
-    ![add route](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/add_routes_3.png){class="glboxshadow"}
+2. **ZeroTier Central**로 이동하여 **Advanced** 섹션을 찾습니다.
 
-    Once the route is added, the **Managed Routes** section will display as shown below.
+    이전 단계에서 얻은 경로 세부 정보(Destination 및 Via)를 입력하고 **Submit**를 클릭하세요.
 
-    ![add route](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/add_routes_4.png){class="glboxshadow"}
+    ![add route](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/add_routes_3.png){class="glboxshadow"}
 
-3. You can now ping or SSH log in to the `Ubuntu` via its IP address (`192.168.8.110`) on other devices. In fact, you can access all devices within the `192.168.8.0/24` subnet.
+    경로가 추가되면 **Managed Routes** 섹션이 아래와 같이 표시됩니다.
 
-    ![access ubuntu](https://static.gl-inet.com/docs/router/en/4/tutorials/zerotier/zerotier_access_ubuntu.jpg){class="glboxshadow gl-80-desktop"}
+    ![add route](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/add_routes_4.png){class="glboxshadow"}
+
+3. 이제 다른 장치에서 `Ubuntu`의 IP 주소(`192.168.8.110`)를 통해 ping하거나 SSH 로그인할 수 있습니다. 실제로는 `192.168.8.0/24` 서브넷 내의 모든 장치에 액세스할 수 있습니다.
+
+    ![access ubuntu](https://static.gl.inet.com/docs/router/en/4/tutorials/zerotier/zerotier_access_ubuntu.jpg){class="glboxshadow gl-80-desktop"}
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+질문이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl.inet.com/contacts/){target="_blank"}을 통해 연락하세요.

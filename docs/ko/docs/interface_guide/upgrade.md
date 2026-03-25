@@ -1,67 +1,67 @@
-# Upgrade
+# 업그레이드
 
-On the left side of the web Admin Panel, go to **SYSTEM** -> **Upgrade** to update your router's firmware.
+웹 관리 패널 왼쪽�에서 **SYSTEM** -> **Upgrade**로 이동하여 라우터의 펌웨어를 업데이트합니다.
 
-For some cellular models, you can also upgrade the module version if needed.
+일부 셀룰러 모델의 경우 필요한 경우 모듈 버전도 업그레이드할 수 있습니다.
 
 !!! Note
 
-    Please keep the power on during the upgrade. Do **NOT** power off the router. The device will automatically reboot after upgrade, which may take a few minutes.
+    업그레이드 중 전원이 켜지 않도록 하세요. 라우터의 전원을 **절대로 끄지 마세요**. 장치는 업그레이드 후 자동으로 재부팅되며 몇 분 정도 소요될 수 있습니다.
 
-## Firmware Upgrade
+## 펌웨어 업그레이드
 
-### Online Upgrade
+### 온라인 업그레이드
 
-You can find the current firmware version here.
+현재 펌웨어 버전을 여기서 확인할 수 있습니다.
 
-![upgrade](https://static.gl-inet.com/docs/router/en/4/interface_guide/upgrade/online_upgrade.png){class="glboxshadow"}
+![upgrade](https://static.gl.inet.com/docs/router/en/4/interface_guide/upgrade/online_upgrade.png){class="glboxshadow"}
 
-- **Accept Preview Plan**
+- **프리뷰 플랜 수락하기**
 
-    If this option is enabled, you can try new features before the final version is issued and provide us with feedback. Set it once and it stays on, and you always have the option to turn it off. Note that these upgrades may not be stable. Please check [What's New?](https://www.gl-inet.com/whats-new/){target="_blank"} for the latest firmware features.
+    이 옵션을 활성화하면 최종 버전이 발행되기 전에 새로운 기능을 시도하고 피드백을 제공할 수 있습니다. 한 번 설정하면 유지되며 언제든 끌 수 있는 옵션입니다. 이러한 업그레이드는 안정적이지 않을 수 있습니다. 최신 펌웨어 기능은 [What's New?](https://www.gl-inet.com/whats-new/){target="_blank"}에서 확인하세요.
 
-If your router is connected to the Internet, it will check for available firmware updates.
+라우터가 인터넷에 연결되어 있으면 사용 가능한 펌웨어 업데이트를 확인합니다.
 
-![upgrade reminder](https://static.gl-inet.com/docs/router/en/4/interface_guide/upgrade/upgrade_reminder.png){class="glboxshadow"}
+![upgrade reminder](https://static.gl.inet.com/docs/router/en/4/interface_guide/upgrade/upgrade_reminder.png){class="glboxshadow"}
 
-**Note**: When trying to perform an online upgrade, if it displays **Download Failed**, please navigate to System -> Time Zone, and fix the time zone error (sync to browser).
+**참고**: 온라인 업그레이드를 시도할 때 **Download Failed**가 표시되면 System -> Time Zone로 이동하여 시간대 오류를 수정하세요(브라우저와 동기화).
 
-![online download failed](https://static.gl-inet.com/docs/router/en/4/interface_guide/upgrade/online_download_failed.jpg){class="glboxshadow gl-50-desktop"}
+![online download failed](https://static.gl.inet.com/docs/router/en/4/interface_guide/upgrade/online_download_failed.jpg){class="glboxshadow gl-50-desktop"}
 
-![time zone](https://static.gl-inet.com/docs/router/en/4/interface_guide/upgrade/time_zone.png){class="glboxshadow"}
+![time zone](https://static.gl.inet.com/docs/router/en/4/interface_guide/upgrade/time_zone.png){class="glboxshadow"}
 
-### Local Upgrade
+### 로컬 업그레이드
 
-Select a firmware file or drag and drop it to upgrade. You can download the firmware from our [download center](https://dl.gl-inet.com){target="_blank"}.
+펌웨어 파일을 선택하거나 드래그 앤 드롭하여 업그레이드합니다. [다운로드 센터](https://dl.gl-inet.com){target="_blank"}에서 펌웨어를 다운로드할 수 있습니다.
 
-![local upgrade](https://static.gl-inet.com/docs/router/en/4/interface_guide/upgrade/local_upgrade.png){class="glboxshadow"}
+![local upgrade](https://static.gl.inet.com/docs/router/en/4/interface_guide/upgrade/local_upgrade.png){class="glboxshadow"}
 
-After uploaded, it will verify the firmware.
+업로드 후 펌웨어를 확인합니다.
 
-![local upgrade uploaded](https://static.gl-inet.com/docs/router/en/4/interface_guide/upgrade/local_upgrade_uploaded.png){class="glboxshadow"}
+![local upgrade uploaded](https://static.gl.inet.com/docs/router/en/4/interface_guide/upgrade/local_upgrade_uploaded.png){class="glboxshadow"}
 
-- **Keep Settings:** If this option is enabled, current settings will be retained and you will be prompted to reinstall any user-installed packages after the upgrade has completed. Do NOT check this option when downgrading firmware.
+- **설정 유지:** 이 옵션을 활성화하면 현재 설정이 유지되며 업그레이드 완료 후 사용자 설치 패키지를 재설치하라는 메시지가 표시됩니다. 펌웨어를 다운그레이드할 때는 이 옵션을 선택하지 마세요.
 
-Click **Install** to upgrade. 
+**Install**을 클릭하여 업그레이드합니다.
 
-## Modem Upgrade
+## 모뎁 업그레이드
 
-GL.iNet cellular routers allow users to upgrade the cellular modem firmware through the web Admin Panel. 
+GL.iNet 셀룰러 라우터를 통해 웹 관리 패널에서 셀룰러 모뎁 펌웨어를 업그레이드할 수 있습니다.
 
-You may try a cellular module upgrade when cellular networking fails or experiences instability. We recommend contacting technical support for troubleshooting before performing the modem upgrade.
+셀룰러 네트워킹이 실패하거나 불안정한 경우 셀룰러 모듈 업그레이드를 시도할 수 있습니다. 모뎁 업그레이드를 수행하기 전에 문제 해결을 위해 기술 지원에 문의하는 것이 좋습니다.
 
-### Online Upgrade
+### 온라인 업그레이드
 
-You can find the current cellular modem version here. If your router is connected to the Internet, it will automatically check for the latest cellular modem version from the manufacturer's server, simplifying the update process.
+여기서 현재 셀룰러 모뎁 버전을 확인할 수 있습니다. 라우터가 인터넷에 연결되어 있으면 제조사의 서버에서 최신 셀룰러 모뎁 버전을 자동으로 확인하여 업데이트 프로세스를 간소화합니다.
 
-![modem online upgrade](https://static.gl-inet.com/docs/router/en/4/interface_guide/upgrade/modem_online_upgrade.png){class="glboxshadow"}
+![modem online upgrade](https://static.gl.inet.com/docs/router/en/4/interface_guide/upgrade/modem_online_upgrade.png){class="glboxshadow"}
 
-### Local Upgrade
+### 로컬 업그레이드
 
-Manually upload a modem firmware file from your computer to update the cellular modem if needed.
+필요한 경우 컴퓨터에서 셀룰러 모뎁 펌웨어 파일을 수동으로 업로드하여 셀룰러 모뎁을 업데이트합니다.
 
-![modem local upgrade](https://static.gl-inet.com/docs/router/en/4/interface_guide/upgrade/modem_local_upgrade.png){class="glboxshadow"}
+![modem local upgrade](https://static.gl.inet.com/docs/router/en/4/interface_guide/upgrade/modem_local_upgrade.png){class="glboxshadow"}
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+질문이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl.inet.com/contacts/){target="_blank"}을 통해 연락하세요.
