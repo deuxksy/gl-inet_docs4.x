@@ -1,79 +1,79 @@
 # LAN
 
-On the left side of the web Admin Panel, go to **NETWORK** -> **LAN**.
+웹 관리 패널 왼쪽에서 **NETWORK** -> **LAN**으로 이동합니다.
 
-LAN is the network that your device is connected to when it is connected via the main Wi-Fi or via an Ethernet cable.
+LAN은 장치가 주요 Wi-Fi 또는 이더넷 케이블을 통해 연결될 때 연결되는 네트워크입니다.
 
-It includes Basic settings, DHCP server settings and Address Reservation.
+기본 설정, DHCP 서버 설정 및 주소 예약이 포함됩니다.
 
-## Basic Settings
+## 기본 설정
 
-You can set the subnet within the IPv4 private address ranges: `192.168.0.0/16`, `172.16.0.0/12`, `10.0.0.0/8`
+IPv4 프라이빗 주소 범위 내에서 서브넷을 설정할 수 있습니다: `192.168.0.0/16`, `172.16.0.0/12`, `10.0.0.0/8`
 
 ![lan basic settings](https://static.gl-inet.com/docs/router/en/4/interface_guide/lan/basic_settings.jpg){class="glboxshadow"}
 
-- **Router IP Address**
+- **라우터 IP 주소**
 
-    This is the address that you would enter into your browser's address bar to access the router's admin page. 
-    
-    It is **192.168.8.1** by default. You can change it if it conflicts with your network.
+    브라우저 주소 표시줄에 입력하여 라우터 관리 페이지에 액세스하는 주소입니다.
 
-- **Netmask**
-    
-    Defaults to **255.255.255.0**. You can also select **255.255.0.0** if you need a larger subnet with more IP addresses.
+    기본값은 **192.168.8.1**입니다. 네트워크와 충돌하는 경우 변경할 수 있습니다.
 
-- **AP Isolation**
+- **서브넷 마스크**
 
-    You can isolate client devices into a separate network segment. These devices will not be able to communicate with other devices on the same network.
+    기본값은 **255.255.255.0**입니다. 더 많은 IP 주소가 필요한 더 큰 서브넷이 필요한 경우 **255.255.0.0**을 선택할 수도 있습니다.
 
-## DHCP Server
+- **AP 격리**
 
-The **DHCP Server** is enabled by default. The DHCP server automatically assigns IP addresses and other communication parameters to each client devices.
+    클라이언트 장치를 별도의 네트워크 세그먼트로 격리할 수 있습니다. 이러한 장치는 동일한 네트워크의 다른 장치와 통신할 수 없게 됩니다.
 
-If the DHCP server is disabled, you will need to configure network settings for client devices manually. Click [here](../tutorials/manually_configure_static_ip.md) to learn how to manually configure a static IP.
+## DHCP 서버
 
-You can change the starting and ending IP addresses to suit your needs — for example, if your network expands or shrinks, if IP address conflicts occur, or if the subnet mask range is modified.
+**DHCP 서버**는 기본적으로 활성화되어 있습니다. DHCP 서버는 각 클라이언트 장치에 IP 주소 및 기타 통신 매개변수를 자동으로 할당합니다.
+
+DHCP 서버를 비활성화하면 클라이언트 장치의 네트워크 설정을 수동으로 구성해야 합니다. 수동으로 고정 IP를 구성하는 방법을 알아보려면 [여기](../tutorials/manually_configure_static_ip.md)를 클릭하세요.
+
+네트워크 확장 또는 축소, IP 주소 충돌 발생, 서브넷 마스크 범위 수정 등 필요에 따라 시작 및 종료 IP 주소를 변경할 수 있습니다.
 
 ![dhcp simple settings](https://static.gl-inet.com/docs/router/en/4/interface_guide/lan/dhcp_server.png){class="glboxshadow"}
 
-Click **Advanced** for further configuration if needed.
+필요한 경우 **Advanced**를 클릭하여 추가 구성을 진행하세요.
 
 ![dhcp advanced settings 1](https://static.gl-inet.com/docs/router/en/4/interface_guide/lan/dhcp_advanced_1.png){class="glboxshadow"}
 
 ![dhcp advanced settings 2](https://static.gl-inet.com/docs/router/en/4/interface_guide/lan/dhcp_advanced_2.png){class="glboxshadow"}
 
-- **Lease Time**: The period for which a DHCP-assigned IP address is valid for a device.
+- **임대 시간**: DHCP가 할당한 IP 주소가 장치에 대해 유효한 기간입니다.
 
-- **Gateway**: The device that routes traffic between the local network and external networks such as the Internet.
+- **게이트웨이**: LAN과 인터넷과 같은 외부 네트워크 간의 트래픽을 라우팅하는 장치입니다.
 
-- **DNS Server 1**: The primary server that translates domain names into IP addresses.
+- **DNS 서버 1**: 도메인 이름을 IP 주소로 변환하는 기본 서버입니다.
 
-- **DNS Server 2**: The secondary server used for domain name resolution if the primary DNS server is unavailable.
+- **DNS 서버 2**: 기본 DNS 서버를 사용할 수 없을 때 도메인 이름 확인을 위해 사용되는 보조 서버입니다.
 
-- **LPR Server**: (Line Printer Remote Server) A service that manages print jobs and allows network devices to send print requests to remote printers. Multiple LPR printer ports can be configured.
+- **LPR 서버**: (Line Printer Remote Server) 인쇄 작업을 관리하고 네트워크 장치가 원격 프린터로 인쇄 요청을 보낼 수 있도록 하는 서비스입니다. 여러 LPR 프린터 포트를 구성할 수 있습니다.
 
-## Address Reservation
+## 주소 예약
 
-When you specify a reserved IP address for a client within the LAN, the client always receives the same IP address each time it accesses the router's DHCP server. You can assign reserved IP addresses to computers or servers that require permanent IP settings.
+LAN 내 클라이언트를 위해 예약된 IP 주소를 지정하면 클라이언트가 라우터의 DHCP 서버에 액세스할 때마다 항상 동일한 IP 주소를 받습니다. 영구적인 IP 설정이 필요한 컴퓨터나 서버에 예약된 IP 주소를 할당할 수 있습니다.
 
-**Note:** Configured clients have to reconnect the router to activate.
+**참고:** 구성된 클라이언트는 활성화하기 위해 라우터에 다시 연결해야 합니다.
 
-Click **Add** to reserve an IP.
+**추가**를 클릭하여 IP를 예약합니다.
 
 ![Address Reservation 1](https://static.gl-inet.com/docs/router/en/4/interface_guide/lan/address_reservation_1.png){class="glboxshadow"}
 
-You will see a pop-up window.
+팝업 창이 나타납니다.
 
 ![Address Reservation 2](https://static.gl-inet.com/docs/router/en/4/interface_guide/lan/address_reservation_2.png){class="glboxshadow"}
 
-Select the **MAC** from the dropdown list, and the **IP** corresponding to the selected MAC will be auto-filled. Give it a descriptive name. Then click **Submit**.
+드롭다운 목록에서 **MAC**를 선택하면 선택된 MAC에 해당하는 **IP**가 자동으로 채워집니다. 설명이 포함된 이름을 지정합니다. 그런 다음 **제출**을 클릭합니다.
 
 ![Address Reservation 3](https://static.gl-inet.com/docs/router/en/4/interface_guide/lan/address_reservation_3.png){class="glboxshadow"}
 
-After adding a new IP address reservation, you will get the page as shown below, which means you have set it up successfully.
+새 IP 주소 예약을 추가한 후 아래와 같은 페이지가 표시되며, 성공적으로 설정된 것입니다.
 
 ![Address Reservation 4](https://static.gl-inet.com/docs/router/en/4/interface_guide/lan/address_reservation_4.jpg){class="glboxshadow"}
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+질문이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}를 통해 연락하세요.
