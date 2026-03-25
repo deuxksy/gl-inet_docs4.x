@@ -4,7 +4,7 @@
 
 **Language / 언어 / Sprache / Idioma / 言語:**
 
-[English](#english) | [한국어](#한국어) | [Deutsch](#deutsch) | [Español](#español) | [日本語](#日本語)
+[English](#english) | [한국어](README_KO.md) | [Deutsch](#deutsch) | [Español](#español) | [日本語](#日本語)
 
 </div>
 
