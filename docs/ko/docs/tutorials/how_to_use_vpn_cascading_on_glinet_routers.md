@@ -1,95 +1,95 @@
-# How to use VPN Cascading on GL.iNet routers?
+# GL.iNet 라우터에서 VPN Cascading 사용 방법
 
-## Introduction
+## 소개
 
-VPN Cascading is often referred to as "Double VPN" in some contexts, but it may differ slightly on GL.iNet routers . The core concept is illustrated below.
+VPN Cascading은 일부 맥락에서 "Double VPN"이라고도 불리지만 GL.iNet 라우터에서는 약간 다를 수 있습니다. 핵심 개념은 아래와 같습니다.
 
-![gl.inet vpn cascading](https://static.gl-inet.com/docs/router/en/4/tutorials/vpn_cascading/mt2500_vpn-cascading.jpg){class="glboxshadow"}
+![gl.inet vpn cascading](https://static.gl.inet.com/docs/router/en/4/tutorials/vpn_cascading/mt2500_vpn-cascading.jpg){class="glboxshadow"}
 
-**VPN 1 (Router as VPN Server)**: When the router acts as a VPN server, clients connected to this server will access the internet via the router's ISP network by default.
+**VPN 1 (라우터를 VPN 서버로 사용)**: 라우터가 VPN 서버로 작동할 때 이 서버에 연결된 클라이언트는 기본적으로 라우터의 ISP 네트워크를 통해 인터넷에 액세스합니다.
 
-**VPN 2 (Router as VPN Client)**: The router also acts as a VPN client, connecting to a third-party VPN service.
+**VPN 2 (라우터를 VPN 클라이언트로 사용)**: 라우터는 또한 제3자 VPN 서비스에 연결되는 VPN 클라이언트로도 작동합니다.
 
-**VPN Cascading**: The router will forward traffic from the VPN 1 tunnel to the VPN 2 tunnel, allowing devices connected to the router via VPN 1 to access the internet through the third-party VPN service (VPN 2) instead of the router's ISP network.
+**VPN Cascading**: 라우터는 VPN 1 터널의 트래픽을 VPN 2 터널로 전달하여 VPN 1을 통해 라우터에 연결된 장치가 라우터의 ISP 네트워크 대신 제3자 VPN 서비스(VPN 2)를 통해 인터넷에 액세스할 수 있게 합니다.
 
-## How to enable VPN Cascading
+## VPN Cascading 활성화
 
-### For firmware v4.7 and earlier
+### 펌웨어 v4.7 이하
 
-1. First, set your router as a VPN server. WireGuard protocol is recommended for faster speed. Please refer to [this link](../interface_guide/wireguard_server.md){target="_blank"}.
+1. 먼저 라우터를 VPN 서버로 설정하세요. 더 빠른 속도를 위해 WireGuard 프로토콜을 권장합니다. [이 링크](../interface_guide/wireguard_server.md){target="_blank"}를 참조하세요.
 
-2. Export a configuration file from your router and upload it to a client device, which will be connecting to the router via VPN.
+2. 라우터에서 설정 파일을 내보내고 VPN을 통해 라우터에 연결할 클라이언트 장치에 업로드하세요.
 
-3. Set your router as a VPN client, connecting to a third-party VPN service. WireGuard protocol is recommended for faster speed. Please refer to [this link](../interface_guide/wireguard_client.md){target="_blank"}.
+3. 제3자 VPN 서비스에 연결되도록 라우터를 VPN 클라이언트로 설정하세요. 더 빠른 속도를 위해 WireGuard 프로토콜을 권장합니다. [이 링크](../interface_guide/wireguard_client.md){target="_blank"}를 참조하세요.
 
-4. Once connected, the **VPN Dashboard** page will display as below, where the router has been set as a VPN server and a VPN client simultaneously.
+4. 연결되면 **VPN Dashboard** 페이지가 아래와 같이 표시됩니다. 라우터가 동시에 VPN 서버와 VPN 클라이언트로 설정되었습니다.
 
-    ![vpn dashboard](https://static.gl-inet.com/docs/router/en/4/tutorials/vpn_cascading/4.7-vpn-dashboard.png){class="glboxshadow"}
+    ![vpn dashboard](https://static.gl.inet.com/docs/router/en/4/tutorials/vpn_cascading/4.7-vpn-dashboard.png){class="glboxshadow"}
 
-    Turn to the VPN Server section on the same page and click **Global Options**.
+    같은 페이지의 VPN Server 섹션으로 이동하고 **Global Options**를 클릭하세요.
 
-    ![global options](https://static.gl-inet.com/docs/router/en/4/tutorials/vpn_cascading/4.7-global-options.png){class="glboxshadow"}
+    ![global options](https://static.gl.inet.com/docs/router/en/4/tutorials/vpn_cascading/4.7-global-options.png){class="glboxshadow"}
 
-    Enable **VPN Cascading** and click **Apply**.
+    **VPN Cascading**을 활성화하고 **Apply**를 클릭하세요.
 
-    ![enable vpn cascading](https://static.gl-inet.com/docs/router/en/4/tutorials/vpn_cascading/enable_vpn_cascading.png){class="glboxshadow gl-80-desktop"}
+    ![enable vpn cascading](https://static.gl.inet.com/docs/router/en/4/tutorials/vpn_cascading/enable_vpn_cascading.png){class="glboxshadow gl-80-desktop"}
 
-5. The VPN Cascading is enabled. Devices connected to your router via VPN will access the Internet through the third-party VPN service, instead of the router's ISP network.
+5. VPN Cascading이 활성화되었습니다. VPN을 통해 라우터에 연결된 장치는 라우터의 ISP 네트워크 대신 제3자 VPN 서비스를 통해 인터넷에 액세스합니다.
 
-### For firmware v4.8 and higher
+### 펌웨어 v4.8 이상
 
-1. First, set your router as a VPN server. WireGuard protocol is recommended for faster speed. Please refer to [this link](../interface_guide/wireguard_server.md){target="_blank"}.
+1. 먼저 라우터를 VPN 서버로 설정하세요. 더 빠른 속도를 위해 WireGuard 프로토콜을 권장합니다. [이 링크](../interface_guide/wireguard_server.md){target="_blank"}를 참조하세요.
 
-2. Export a configuration file from your router and upload it to a client device, which will be connecting to the router via VPN.
+2. 라우터에서 설정 파일을 내보내고 VPN을 통해 라우터에 연결할 클라이언트 장치에 업로드하세요.
 
-3. Set your router as a VPN client, connecting to a third-party VPN service. WireGuard protocol is recommended for faster speed. Please refer to [this link](../interface_guide/wireguard_client.md){target="_blank"}.
+3. 제3자 VPN 서비스에 연결되도록 라우터를 VPN 클라이언트로 설정하세요. 더 빠른 속도를 위해 WireGuard 프로토콜을 권장합니다. [이 링크](../interface_guide/wireguard_client.md){target="_blank"}를 참조하세요.
 
-4. In the web admin panel, navigate to **VPN Dashboard**. Choose the corresponding instructions below based on your VPN mode.
+4. 웹 관리 패널에서 **VPN Dashboard**로 이동하세요. VPN 모드에 따라 아래 지침을 따르세요.
 
     ??? "Global Mode"
-    
-        If your VPN mode is Global Mode, once the VPN client is enabled (as shown below), the VPN Cascading will be enabled automatically. 
-        
-        Devices connected to your router via VPN will access the Internet through the third-party VPN service, instead of the router's ISP network.
 
-        ![vpn connected global mode](https://static.gl-inet.com/docs/router/en/4/tutorials/vpn_cascading/4.8-global-mode.png){class="glboxshadow"}
+        VPN 모드가 Global Mode인 경우 VPN 클라이언트가 활성화되면(아래와 같이) VPN Cascading이 자동으로 활성화됩니다.
+
+        VPN을 통해 라우터에 연결된 장치는 라우터의 ISP 네트워크 대신 제3자 VPN 서비스를 통해 인터넷에 액세스합니다.
+
+        ![vpn connected global mode](https://static.gl.inet.com/docs/router/en/4/tutorials/vpn_cascading/4.8-global-mode.png){class="glboxshadow"}
 
     ??? "Policy Mode"
-    
-        If your VPN mode is Policy Mode, you need to set up the VPN tunnel rule.
-        
-        Click the greyed-out box on the left.
 
-        ![traffic from](https://static.gl-inet.com/docs/router/en/4/interface_guide/vpn_dashboard/4.8/traffic_from_1.png){class="glboxshadow"}
+        VPN 모드가 Policy Mode인 경우 VPN 터널 규칙을 설정해야 합니다.
 
-        Select the traffic source to apply to this rule. To enable VPN Cascading, please select **All Clients**, or select **Specified Connection Types** and then **WireGuard/OpenVPN Server**.
+        왼쪽 회색 상자를 클릭하세요.
 
-        ![select traffic source](https://static.gl-inet.com/docs/router/en/4/tutorials/vpn_cascading/select_traffic.jpg){class="glboxshadow"}
+        ![traffic from](https://static.gl.inet.com/docs/router/en/4/interface_guide/vpn_dashboard/4.8/traffic_from_1.png){class="glboxshadow"}
 
-        - **All Clients**: It includes all LAN devices, devices from Drop-in Gateway, devices from Guest network, and devices connected to your router via VPN. 
-        
-            If you want the traffic from all devices to apply the same tunnel rule, select **All Clients** and click **Apply**.
+        이 규칙을 적용할 트래픽 소스를 선택하세요. VPN Cascading을 활성화하려면 **All Clients**를 선택하거나 **Specified Connection Types**를 선택한 다음 **WireGuard/OpenVPN Server**를 선택하세요.
 
-            ![all clients](https://static.gl-inet.com/docs/router/en/4/tutorials/vpn_cascading/all_clients.png){class="glboxshadow"}
+        ![select traffic source](https://static.gl.inet.com/docs/router/en/4/tutorials/vpn_cascading/select_traffic.jpg){class="glboxshadow"}
 
-        - **Specified Connection Types**: It allows you to specify those devices connected to the router through a specific method (e.g., devices connected via VPN) to apply this tunnel rule. 
+        - **All Clients**: 모든 LAN 장치, Drop-in Gateway의 장치, 게스트 네트워크의 장치, VPN을 통해 라우터에 연결된 장치가 포함됩니다.
 
-            If you want to specify the VPN clients of your router to apply different rule from other devices, select **WireGuard/OpenVPN Server** and click **Apply**.
-        
-            ![specified connection](https://static.gl-inet.com/docs/router/en/4/tutorials/vpn_cascading/specified_connection_types.png){class="glboxshadow"}
-            
-            This is an example of VPN tunnel rules in Policy Mode.
-            
-            ![vpn dashboard](https://static.gl-inet.com/docs/router/en/4/tutorials/vpn_cascading/4.8-vpn-dashboard.png){class="glboxshadow"}
+            모든 장치의 트래픽에 동일한 터널 규칙을 적용하려면 **All Clients**를 선택하고 **Apply**를 클릭하세요.
 
-5. The VPN Cascading is enabled. Devices connected to your router via VPN will access the Internet through the third-party VPN service, instead of the router's ISP network.
+            ![all clients](https://static.gl.inet.com/docs/router/en/4/tutorials/vpn_cascading/all_clients.png){class="glboxshadow"}
 
-6. **Connection Test**: On a laptop connected to the router via VPN, open a browser and visit [What Is My IP](https://whatismyipaddress.com/){target="_blank"} to check its public IP. 
+        - **Specified Connection Types**: 특정 방법(예: VPN을 통해 연결된 장치)을 통해 라우터에 연결된 장치에 이 터널 규칙을 적용할 수 있습니다.
 
-    If it shows the laptop's IP address is in the region of the third-party VPN server (which is Buenos Aires in this instruction), it indicates that VPN Cascading has taken effect.
+            라우터의 VPN 클라이언트에 다른 규칙을 적용하려면 **WireGuard/OpenVPN Server**를 선택하고 **Apply**를 클릭하세요.
 
-    ![vpn test](https://static.gl-inet.com/docs/router/en/4/tutorials/vpn_cascading/4.8-ipcheck.png){class="glboxshadow"}
+            ![specified connection](https://static.gl.inet.com/docs/router/en/4/tutorials/vpn_cascading/specified_connection_types.png){class="glboxshadow"}
+
+            이것은 Policy Mode에서의 VPN 터널 규칙 예시입니다.
+
+            ![vpn dashboard](https://static.gl.inet.com/docs/router/en/4/tutorials/vpn_cascading/4.8-vpn-dashboard.png){class="glboxshadow"}
+
+5. VPN Cascading이 활성화되었습니다. VPN을 통해 라우터에 연결된 장치는 라우터의 ISP 네트워크 대신 제3자 VPN 서비스를 통해 인터넷에 액세스합니다.
+
+6. **연결 테스트**: VPN을 통해 라우터에 연결된 노트북에서 브라우저를 열고 [What Is My IP](https://whatismyipaddress.com/){target="_blank"}을 방문하여 공용 IP를 확인하세요.
+
+    노트북의 IP 주소가 제3자 VPN 서버 지역(이 지침에서는 부에노스아이레스)에 있으면 VPN Cascading이 적용된 것입니다.
+
+    ![vpn test](https://static.gl.inet.com/docs/router/en/4/tutorials/vpn_cascading/4.8-ipcheck.png){class="glboxshadow"}
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+질문이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl.inet.com/contacts/){target="_blank"}을 통해 연락하세요.
