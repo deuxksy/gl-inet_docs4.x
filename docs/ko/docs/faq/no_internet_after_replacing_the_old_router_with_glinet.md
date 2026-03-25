@@ -1,15 +1,15 @@
-# What should I do if I have no Internet after replacing the old router with a GL.iNet router
+# 기존 라우터를 GL.iNet 라우터로 교체한 후 인터넷 연결 안됨
 
-If you cannot access the internet after replacing your old router with a GL.iNet router, your new router may fail to obtain an IP address (via DHCP or PPPoE) when its WAN port is connected to the modem.
+기존 라우터를 GL.iNet 라우터로 교체한 후 인터넷에 액세스할 수 없는 경우, 새 라우터의 WAN 포트를 모뎀에 연결할 때 IP 주소(DHCP 또는 PPPoE 통해)를 얻지 못할 수 있습니다.
 
-Your Internet Service Provider may have **MAC binding** enabled, which only allows your previous router's MAC address to connect to the network.
+인터넷 서비스 공급자가 **MAC 바인딩**을 활성화했을 수 있으며, 이는 이전 라우터의 MAC 주소만 네트워크에 연결할 수 있게 합니다.
 
-Try the following methods to resolve this issue.
+다음 방법으로 이 문제를 해결해 보세요.
 
-- Clone your old router's MAC address to your new GL.iNet router.
-- Reboot your modem. If the problem persists, power it off for 30 minutes and then power it on again.
-- Contact your Internet Service Provider to reset the modem.
+- 기존 라우터의 MAC 주소를 새 GL.iNet 라우터로 복제하세요.
+- 모뎀을 재부팅하세요. 문제가 지속되면 30분 동안 전원을 끈 후 다시 켜세요.
+- 인터넷 서비스 공급자에 연락하여 모뎀을 초기화하세요.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}을 통해 연락하세요.

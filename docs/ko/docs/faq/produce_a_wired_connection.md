@@ -1,13 +1,13 @@
-# How to connect an Ethernet-only device to Wi-Fi with a GL.iNet router?
+# GL.iNet 라우터로 유선 전용 장치를 Wi-Fi에 연결하는 방법은 무엇인가요?
 
-If your device only supports Ethernet connectivity but needs to connect to a wireless network, a GL.iNet router can bridge this gap.
+장치가 Ethernet 연결만 지원하지만 무선 네트워크에 연결해야 하는 경우 GL.iNet 라우터가 이 격차를 해결할 수 있습니다.
 
-A GL.iNet router can act as an Ethernet-to-Wi-Fi bridge for devices that only have a wired connection, allowing them to join a wireless network. This is achieved by configuring the router as Repeater.
+GL.iNet 라우터는 유선 연결만 있는 장치에 대해 Ethernet-to-Wi-Fi 브리지 역할을 하여 무선 네트워크에 참여할 수 있게 합니다. 이는 라우터를 Repeater로 구성하여 달성합니다.
 
-Please connect your device to the LAN port of the router and then set up [repeater](../interface_guide/internet_repeater.md).
+장치를 라우터의 LAN 포트에 연결한 다음 [Repeater](../interface_guide/internet_repeater.md)를 설정하세요.
 
-![repeatertop](https://static.gl-inet.com/docs/router/en/4/faq/troubleshooting/produce_a_wired_connection/repeatertop.jpg){class=glboxshadow"}
+![repeatertop](https://static.gl.inet.com/docs/router/en/4/faq/troubleshooting/produce_a_wired_connection/repeatertop.jpg){class=glboxshadow}
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}을 통해 연락하세요.
