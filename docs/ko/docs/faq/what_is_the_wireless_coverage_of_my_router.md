@@ -1,41 +1,41 @@
-# What is the wireless coverage of my router?
+# 라우터의 무선 커버리지는 얼마인가요?
 
-The router's theoretical wireless coverage is a reference value tested in an open, interference-free environment. In actual home or office scenarios, the coverage range will be reduced due to environmental obstacles and interference, and signal strength may vary in different areas. 
+라우터의 이론적 무선 커버리지는 개방된 간섭 없는 환경에서 테스트된 참조 값입니다. 실제 가정이나 사무실 환경에서는 환경적 장애물과 간섭으로 인해 커버리지 범위가 줄어들며, 신호 강도는 영역에 따라 달라질 수 있습니다.
 
-Here are some key factors affecting wireless coverage range.
+무선 커버리지 범위에 영향을 미치는 주요 요소는 다음과 같습니다.
 
-## Wireless Chipset
+## 무선 칩셋
 
-As the core processing unit for Wi-Fi functions, the wireless chipset is responsible for signal encoding, decoding, and transmission control. 
+Wi-Fi 기능의 핵심 처리 장치로서 무선 칩셋은 신호 인코딩, 디코딩 및 전송 제어를 담당합니다.
 
-Routers equipped with high-performance chipsets (such as those supporting Wi-Fi 6/6E or later protocols) can significantly improve signal transmission efficiency and anti-interference ability, achieving wider effective coverage even in complex environments. 
+고성능 칩셋(Wi-Fi 6/6E 또는 이후 프로토콜을 지원하는 칩셋 등)을 장착한 라우터는 신호 전송 효율과 방해 방지 능력을 크게 향상시켜 복잡한 환경에서도 더 넓은 유효 커버리지를 달성할 수 있습니다.
 
-Older or low-end chipsets, however, are limited by processing capabilities, which impairs signal transmission distance and stability.
+그러나 오래되거나 저가형 칩셋은 처리 능력에 제한이 있어 신호 전송 거리와 안정성에 영향을 줍니다.
 
-## Wireless Band
+## 무선 대역
 
-2.4 GHz Wi-Fi has stronger penetration and a longer coverage range but lower bandwidth, while 5 GHz Wi-Fi offers higher speed but weaker penetration, resulting in a shorter coverage range.
+2.4 GHz Wi-Fi는 더 강한 투과력과 더 긴 커버리지 범위를 제공하지만 대역폭이 낮고, 5 GHz Wi-Fi는 더 높은 속도를 제공하지만 투과력이 약해 커버리지 범위가 짧습니다.
 
-## TX power
+## TX 전력
 
-The router's TX power (wireless transmitter power) serves as the foundational parameter for signal transmission. 
+라우터의 TX 전력(무선 송신기 전력)은 신호 전송의 기본 매개변수입니다.
 
-In a multi-router environment, some users may reduce TX power to minimize signal interference, alleviating overlaps with nearby Wi-Fi networks and improving network stability. However, this will directly shorten the Wi-Fi coverage range. 
+다중 라우터 환경에서 일부 사용자는 신호 간섭을 최소화하기 위해 TX 전력을 줄여 근처 Wi-Fi 네트워크와의 중복을 완화하고 네트워크 안정성을 향상시킬 수 있습니다. 그러나 이로 인해 Wi-Fi 커버리지 범위가 직접 줄어듭니다.
 
-You can adjust your router's TX power as needed in the [WIRELESS](../interface_guide/wireless.md) page of the web Admin Panel.
+웹 관리 패널의 [WIRELESS](../interface_guide/wireless.md) 페이지에서 필요에 따라 라우터의 TX 전력을 조정할 수 있습니다.
 
-## Router Location
+## 라우터 위치
 
-Placing the router in a central, elevated location (e.g., on a shelf or cabinet) minimizes obstructions. Avoid placing it near corners, behind furniture, or next to interference sources for optimal coverage.
+라우터를 중앙에 배치하고 높은 곳(예: 선반 또는 캐비닛)에 배치하면 장애물이 최소화됩니다. 최적의 커버리지를 위해 모서리, 가구 뒤 또는 간섭원 근처에 두지 마세요.
 
-## Physical Obstacles
+## 물리적 장애물
 
-Solid walls (especially concrete, brick, or metal walls), floors, and large furniture block or weaken Wi-Fi signals. Multi-story buildings or partitioned spaces will significantly reduce coverage compared to open areas.
+단단한 벽(특히 콘크리트, 벽돌 또는 금속 벽), 바닥 및 대형 가구는 Wi-Fi 신호를 차단하거나 약화시킵니다. 다층 건물 또는 분할된 공간은 개방된 영역에 비해 커버리지가 크게 줄어듭니다.
 
-## Wireless Interference
+## 무선 간섭
 
-Other wireless devices (e.g., neighboring routers, smart home hubs, smart cameras) and household appliances (e.g., microwaves) can cause signal interference, narrowing the effective Wi-Fi coverage. 
+다른 무선 장치(예: 인근 라우터, 스마트 홈 허브, 스마트 카메라) 및 가전 제품(예: 전자레인지)은 신호 간섭을 일으켜 유효 Wi-Fi 커버리지를 좁힐 수 있습니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}을 통해 연락하세요.

@@ -1,33 +1,33 @@
-# What is the device capacity of my router?
+# 라우터의 장치 용량은 얼마인가요?
 
-Device capacity refers to the maximum number of devices a router can support stably. 
+장치 용량은 라우터가 안정적으로 지원할 수 있는 최대 장치 수를 나타냅니다.
 
-Unlike some fixed hardware specifications, the actual number of devices your router can handle is not an absolute value, but varies significantly based on real-world environment and usage habits. Here are some key factors affecting device capacity.
+일부 고정된 하드웨어 사양과 달리 실제로 라우터가 처리할 수 있는 장치 수는 절대적인 값이 아니며 실제 환경과 사용 습관에 따라 크게 달라집니다. 장치 용량에 영향을 미치는 주요 요소는 다음과 같습니다.
 
-## Traffic Intensity
+## 트래픽 강도
 
-High-bandwidth activities (e.g., 4K video streaming, online gaming, large file transfers) consume more router CPU and memory resources. The more devices running such tasks concurrently, the fewer total devices the router can support stably.
+대역폭 활동(예: 4K 비디오 스트리밍, 온라인 게임, 대용 파일 전송)은 더 많은 라우터 CPU 및 메모리 리소스를 소비합니다. 동시에 이러한 작업을 수행하는 장치가 많을수록 라우터가 안정적으로 지원할 수 있는 총 장치 수는 줄어듭니다.
 
-## Connection Methods
+## 연결 방식
 
-Wireless devices (2.4GHz / 5GHz Wi-Fi) require more router processing power than wired Ethernet devices. Older client devices with outdated Wi-Fi chips or weak signal reception may also increase the router's resource load, reducing overall capacity.
+무선 장치(2.4GHz / 5GHz Wi-Fi)는 유선 이더넷 장치보다 더 많은 라우터 처리 능력이 필요합니다. 오래된 Wi-Fi 칩을 가진 장치나 신호 수신이 약한 클라이언트 장치는 라우터의 리소스 부하를 증가시켜 전체 용량을 줄일 수 있습니다.
 
-## Hardware Performance
+## 하드웨어 성능
 
-The router's CPU, memory, and wireless module specifications directly determine its ability to handle concurrent connections. Higher-performance hardware can manage more devices without lag or disconnections.
+라우터의 CPU, 메모리 및 무선 모듈 사양은 동시 연결 처리 능력을 직접적으로 결정합니다. 고성능 하드웨어는 더 많은 장치를 지연 없이 관리할 수 있습니다.
 
-## Wireless Interference
+## 무선 간섭
 
-Wi-Fi signal interference from neighboring routers, household appliances (microwaves, Bluetooth devices), or physical obstacles (concrete walls, metal furniture) degrades connection stability, indirectly limiting the effective number of supported devices.
+인근 라우터, 가전 제품(전자레인지, 블루투스 장치) 또는 물리적 장애물(콘크리트 벽, 금속 가구)은 Wi-Fi 신호 간섭을 일으켜 연결 안정성을 떨�어지게 하여间接적으로 지원되는 장치 수를 제한합니다.
 
-## Enabled Features
+## 활성화된 기능
 
-Enabled router features like [VPN](../tutorials/build_your_own_wireguard_home_server_with_two_glinet_routers.md), [AdGuard Home](../interface_guide/adguardhome.md), [Parental Control](../interface_guide/parental_control.md), or [Tailscale](../interface_guide/tailscale.md) consume additional system resources, which may reduce the router's available capacity for device connections.
+[VPN](../tutorials/build_your_own_wireguard_home_server_with_two_glinet_routers.md), [AdGuard Home](../interface_guide/adguardhome.md), [Parental Control](../interface_guide/parental_control.md) 또는 [Tailscale](../interface_guide/tailscale.md)과 같은 활성화된 라우터 기능은 추가 시스템 리소스를 소모하며 장치 연결을 위한 라우터의 가용 용량을 줄일 수 있습니다.
 
-## Network Topology
+## 네트워크 토폴로지
 
-Long-term continuous operation, or connecting multiple sub-devices (e.g., smart home hubs that link to multiple sensors), can accumulate resource usage and lower the stable device count over time.
+장기간 연속 작동 또는 여러 하위 장치(예: 여러 센서에 연결되는 스마트 홈 허브)를 연결하면 리소스 사용이 누적되고 시간이 지남에 따라 안정적인 장치 수가 줄어들 수 있습니다.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}을 통해 연락하세요.

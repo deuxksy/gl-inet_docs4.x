@@ -1,23 +1,23 @@
-# Stuck on "Reverting" during firmware reset
+# 펌웨어 초기화 중 "되돌리는 중"에서 멈춤
 
-If your router is stuck on "Reverting" during a firmware reset, follow the steps below to resolve the issue.
+펌웨어 초기화 중 라우터가 "되돌리는 중"에서 멈추가 된 경우 다음 단계에 따라 문제를 해결하세요.
 
-![stuck on reverting](https://static.gl-inet.com/docs/router/en/4/faq/troubleshooting/stuck_on_reverting/reverting.png){class="glboxshadow"}
+![stuck on reverting](https://static.gl.inet.com/docs/router/en/4/faq/troubleshooting/stuck_on_reverting/reverting.png){class="glboxshadow"}
 
-After each step, check if the issue is resolved. If resolved, skip the remaining steps.
+각 단계 후 문제가 해결되었는지 확인하세요. 해결되면 나머지 단계를 건너뛰세요.
 
-1. Wait for at least 10 minutes to see if the reverting process completes on its own. The reverting process can sometimes take longer than expected.
+1. 되돌리기 프로세스가 자체로 완료될 때까지 최소 10분 기다리세요. 되돌리기 프로세스는 때로는 예상보다 더 오래 걸릴 수 있습니다.
 
-2. If the reverting process does not complete after 10 minutes, power off your router by unplugging the power cable. Wait for 30 seconds, then plug the power cable back in and wait for the router to boot up.
+2. 10분이 지나도 되돌리기 프로세스가 완료되지 않으면 전원 케이블을 분리하여 라우터의 전원을 끄세요. 30초 기다린 후 전원 케이블을 다시 연결하고 라우터가 부팅될 때까지 기다리세요.
 
-3. Open a web browser, access `192.168.8.1` and log in. If the revert operation succeeded, you will be directed to the setup guide.
+3. 웹 브라우저를 열고 `192.168.8.1`에 액세스한 후 로그인하세요. 되돌리기 작업이 성공하면 설정 가이드로 리디렉션됩니다.
 
-4. Enable the private/incognito mode of your browser and access `192.168.8.1`. If the reverting process was successful, you will be directed to the setup guide.
+4. 브라우저의 시크릿/시크릿 모드를 활성화하고 `192.168.8.1`에 액세스하세요. 되돌리기 프로세스가 성공하면 설정 가이드로 리디렉션됩니다.
 
-5. Use a different browser (e.g., Chrome, Edge, Safari) to access `192.168.8.1`. If the reverting process was successful, you will be directed to the setup guide.
+5. 다른 브라우저(예: Chrome, Edge, Safari)를 사용하여 `192.168.8.1`에 액세스하세요. 되돌리기 프로세스가 성공하면 설정 가이드로 리디렉션됩니다.
 
-6. If you still cannot access the router's web Admin Panel or the router is not functioning properly, try resetting the router to its factory default settings by following [this](repair_network_or_reset_firmware.md/#reset-to-factory) guide.
+6. 여전히 라우터의 웹 관리 패널에 액세스할 수 없거나 라우터가 제대로 작동하지 않는 경우 [이](repair_network_or_reset_firmware.md/#reset-to-factory) 가이드에 따라 라우터를 공장 기본 설정으로 재설정하세요.
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl.inet.com/contacts/){target="_blank"}을 통해 연락하세요.

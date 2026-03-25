@@ -1,23 +1,23 @@
-# Where to find the Device ID, MAC address and Serial Number?
+# 장치 ID, MAC 주소 및 시리얼 번호를 찾을 수 있는 위치는 어디인가요?
 
-## Method 1
+## 방법 1
 
-Find these information on the bottom of your router.
+라우터 바닥에서 이 정보를 찾으세요.
 
-For the newer models, the bottom label is similar to the image below, where it displays the device's basic information. For example, in the picture below, its MAC is **E4:95:6E:40:DB:A1**, Device ID is **hh0dba1**, and Serial Number is **7c0be4bb45d96057**.
+최신 모델의 경우 바닥 라벨은 아래 이미지와 유사하며 장치의 기본 정보가 표시됩니다. 예를 들어 아래 그림에서 MAC은 **E4:95:6E:40:DB:A1**, 장치 ID는 **hh0dba1**, 시리얼 번호는 **7c0be4bb45d96057**입니다.
 
-![label of gl-x750](https://static.gl-inet.com/docs/router/en/4/tutorials/where_to_find_the_device_id_mac_sn/back_label_new.png){class="glboxshadow"}
+![label of gl-x750](https://static.gl.inet.com/docs/router/en/4/tutorials/where_to_find_the_device_id_mac_sn/back_label_new.png){class="glboxshadow"}
 
-For older models, there's no Device ID on the bottom label, but you can find the DDNS, and the first 7 characters of the DDNS is the Device ID. Take the image below as an example, its MAC is **E4:95:6E:40:DB:A1**, Devicd ID is **hh0dba1**, and Serial Number is **7c0be4bb45d96057**.
+이전 모델의 경우 바닥 라벨에 장치 ID가 없지만 DDNS를 찾을 수 있으며 DDNS의 처음 7자리가 장치 ID입니다. 아래 이미지를 예로 들면 MAC은 **E4:95:6E:40:DB:A1**, 장치 ID는 **hh0dba1**, 시리얼 번호는 **7c0be4bb45d96057**입니다.
 
-![label of gl-ar150](https://static.gl-inet.com/docs/router/en/4/tutorials/where_to_find_the_device_id_mac_sn/back_label_old.png){class="glboxshadow"}
+![label of gl-ar150](https://static.gl.inet.com/docs/router/en/4/tutorials/where_to_find_the_device_id_mac_sn/back_label_old.png){class="glboxshadow"}
 
-## Method 2
+## 방법 2
 
-Log in to the web Admin Panel, navigate to SYSTEM -> Overview, and you will find details about your device.
+웹 관리 패널에 로그인하여 SYSTEM -> 개요로 이동하면 장치에 대한 세부 정보를 찾을 수 있습니다.
 
-![device overview](https://static.gl-inet.com/docs/router/en/4/tutorials/where_to_find_the_device_id_mac_sn/overview_device_info.png){class="glboxshadow"}
+![device overview](https://static.gl.inet.com/docs/router/en/4/tutorials/where_to_find_the_device_id_mac_sn/overview_device_info.png){class="glboxshadow"}
 
 ---
 
-Still have questions? Visit our [Community Forum](https://forum.gl-inet.com){target="_blank"} or [Contact us](https://www.gl-inet.com/contacts/){target="_blank"}.
+여전히 궁금한 점이 있으신가요? [커뮤니티 포럼](https://forum.gl-inet.com){target="_blank"}을 방문하거나 [문의하기](https://www.gl-inet.com/contacts/){target="_blank"}을 통해 연락하세요.
